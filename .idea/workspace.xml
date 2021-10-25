@@ -2,33 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/PythonGames.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calc_it.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Casino.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Heads_and_tails.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hippodrome.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/What_the_number.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/horse01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/horse02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/horse03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/horse04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/money.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/road.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Угадай_Слово.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Угадай_Слово.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1ygwUtCZ9GGAByuElscrILlrfcC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -84,6 +76,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
