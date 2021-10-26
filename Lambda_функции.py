@@ -1,4 +1,4 @@
-"""
+
 import time
 
 def gms():
@@ -35,7 +35,7 @@ root.mainloop()
 
 print("\n")
 # =======================================
-"""
+
 
 def kvadrat(n):
     return n * n
@@ -46,3 +46,36 @@ for i in range(10):
 print(a[5]())               # Вывод на экран функции хранящейся в элементе с индексом 5 (не результат а именно функция!)
 for i in range(10):
     print(a[i])
+
+
+# =======================================
+
+from  datetime import datetime, timedelta
+def getData():
+    return datetime.strftime(datetime.now(), '%d-%m-%Y')
+print(getData())
+
+gData = lambda : datetime.strftime(datetime.now(), '%d-%m-%Y')
+print(gData())
+
+print("\n")
+# =======================================
+
+st = lambda x, y: x ** y
+print(st(2, 5))
+
+print("\n")
+# =======================================
+
+def getSumm(x, y):
+    return x + y
+
+def getMultiple(x, y):
+    return x * y
+
+sumMult = lambda x, y: getSumm(x, y) - getMultiple(x, y)
+print(sumMult(5, 3))
+
+
+
+
