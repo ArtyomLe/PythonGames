@@ -42,7 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Python.Lambda_функции">
+  <component name="RunManager" selected="Python.Угадай_Слово">
     <configuration name="Lambda_функции" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonGames" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -108,8 +108,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Lambda_функции" />
         <item itemvalue="Python.Угадай_Слово" />
+        <item itemvalue="Python.Lambda_функции" />
       </list>
     </recent_temporary>
   </component>

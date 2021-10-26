@@ -9,7 +9,7 @@ def startNewRound():                # Формируем информацию в
     wordStar = "*" * len(wordComp)  # Формируем строку из *
     wordLabel["text"] = wordStar    # Устанавливаем зазвёздленную переменную в метку
 
-    wordLabel.place(x = WIDTH // 2 - wordLabel.winfo_screenwidth() // 2, y = 50) # Центруем метку в зависимости от слова
+    wordLabel.place(x = WIDTH // 2 - wordLabel.winfo_reqwidth() // 2, y = 50)   # Центруем метку в зависимости от слова
 
 # При нажатии мышкой на кнопку
 def pressLetter(n):
