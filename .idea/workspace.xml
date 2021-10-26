@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Добавляем символ &quot;Ё&quot;">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Добавляем lambda функцию">
+      <change afterPath="$PROJECT_DIR$/Lambda_функции.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Угадай_Слово.py" beforeDir="false" afterPath="$PROJECT_DIR$/Угадай_Слово.py" afterDir="false" />
     </list>
@@ -22,6 +23,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Угадай_Слово.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Lambda_функции.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1ygwUtCZ9GGAByuElscrILlrfcC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -33,7 +35,28 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Python.Угадай_Слово">
+  <component name="RunManager" selected="Python.Lambda_функции">
+    <configuration name="Lambda_функции" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonGames" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lambda_функции.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Угадай_Слово" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonGames" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -78,6 +101,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Lambda_функции" />
         <item itemvalue="Python.Угадай_Слово" />
       </list>
     </recent_temporary>
@@ -126,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635193267445</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Добавляем lambda функцию">
+      <created>1635267770156</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1635267770156</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,7 +177,8 @@
     <MESSAGE value="Установка меток" />
     <MESSAGE value="Выводим алфавит" />
     <MESSAGE value="Добавляем символ &quot;Ё&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавляем символ &quot;Ё&quot;" />
+    <MESSAGE value="Добавляем lambda функцию" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавляем lambda функцию" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -55,6 +55,7 @@ for i in range(33):
     btn.append(Button(text=chr(st + i - 47 * (i // 32)), width=2, font="consolas 15")) # Добавляем в список получившийся символ
     btn[i].place(x=215 + (i % 11) * 35, y=150 + i // 11 * 50)                          # Выводим и позицианируем в главном окне
     # - 47 * (i // 32) добавляем чтобы вывести символ "Ё" в конце (он идёт не по порядку, поэтому отнимаем от символа "Я" (-47)
-    btn[i]["command"] = lambda x = i: pressLetter(x)
+    # Вызываем функцию pressLetter через lambda
+    btn[i]["command"] = lambda x = i: pressLetter(x)        # btn[i]["command"] = строка определения команды при нажатии
 
 root.mainloop()
