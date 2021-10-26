@@ -2,6 +2,15 @@ from tkinter import *
 from random import randint
 
 # МЕТОДЫ
+# Начало нового раунда
+def startNewRound():                # Формируем информацию в окне
+    global wordStar, wordComp
+    wordComp = "ИНТЕРНЕТ"           # Загадываем слово
+    wordStar = "*" * len(wordComp)  # Формируем строку из *
+    wordLabel["text"] = wordStar    # Устанавливаем зазвёздленную переменную в метку
+
+    wordLabel.place(x = WIDTH // 2 - wordLabel.winfo_screenwidth() // 2, y = 50) # Центруем метку в зависимости от слова
+
 # При нажатии мышкой на кнопку
 def pressLetter(n):
     print(f"Нажата буква {chr(st + n - 47 * (n // 32))}")
@@ -57,5 +66,11 @@ for i in range(33):
     # - 47 * (i // 32) добавляем чтобы вывести символ "Ё" в конце (он идёт не по порядку, поэтому отнимаем от символа "Я" (-47)
     # Вызываем функцию pressLetter через lambda
     btn[i]["command"] = lambda x = i: pressLetter(x)        # btn[i]["command"] = строка определения команды при нажатии
+
+wordComp = ""        # Определяем глабально загаданное слово
+wordStar = ""        # Определяем глабально слово со звёздочками
+
+startNewRound()      # Стартуем
+
 
 root.mainloop()
