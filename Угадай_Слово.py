@@ -17,6 +17,16 @@ def getWordsFromFile():
         quit(0)
     return ret                                                   # Возвращаем список
 
+# Возвращаем максимальное значение очков из файла
+def getTopScore():
+    try:
+        f = open("topchik.dat", "r", encoding="utf-8")
+        m = int(f.readline())
+        f.close()
+    except:
+        m = 0
+    return m
+
 # Начало нового раунда
 def startNewRound():                # Формируем информацию в окне
     global wordStar, wordComp
@@ -94,9 +104,9 @@ topScoreLabel.place(x=10, y=190)
 userTryLabel.place(x=10, y=215)
 
 # Переменные для хранения значений
-score = 0           # Текущие очки
-topScore = 1000     # Рекорд игры
-userTry = 10        # Кол-во попыток
+score = 0                    # Текущие очки
+topScore = getTopScore()     # Рекорд игры
+userTry = 10                 # Кол-во попыток
 
 # ======================= СПИСКИ - ЭТО МОДЕЛЬ ХРАНЕНИЯ И ОБРАБОТКИ МНОЖЕСТВА ЗНАЧЕНИЙ =================================
 
