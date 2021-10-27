@@ -13,8 +13,16 @@ def startNewRound():                # Формируем информацию в
 
 # При нажатии мышкой на кнопку
 def pressLetter(n):
-    print(f"Нажата буква {chr(st + n - 47 * (n // 32))}")
+    global wordStar                 # Добавляем global чтобы с переменной wordStar можно было работать глобально
+    btn[n]["text"] = "#"
+    btn[n]["state"] = "disable"
 
+    oldWordStar = wordStar                                    # Временная переменная
+    wordStar = getWordStar(chr(st + n - 47 * (n // 32)))      # Получаем строку с открытыми символами
+    count = compareWord(wordStar, oldWordStar)                # Находим различие между старой и новой строкой
+    wordLabel["text"] = wordStar
+
+# ==================================================================================================
 # MAIN
 # Создание окна
 root = Tk()                     # В переменной root хранится ссылка на окно в памяти "root имя окна"
