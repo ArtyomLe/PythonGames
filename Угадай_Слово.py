@@ -1,5 +1,6 @@
 from tkinter import *
 from random import randint
+from tkinter import messagebox
 
 # МЕТОДЫ
 
@@ -26,6 +27,17 @@ def getTopScore():
     except:
         m = 0
     return m
+
+# Сохраняем в файл очки пользователя
+def saveTopScore():
+    global topScore                                              # Обязательно global чтобы можно было изменить topScore
+    topScore = score
+    try:
+        f = open("topchik.dat", "w", encoding="utf-8")
+        f.write(str(topScore))
+        f.close()
+    except:
+        messagebox.showinfo("Возникла проблема с файлом при сохранении очков")
 
 # Начало нового раунда
 def startNewRound():                # Формируем информацию в окне
@@ -120,8 +132,8 @@ for i in range(33):
     # Вызываем функцию pressLetter через lambda
     btn[i]["command"] = lambda x = i: pressLetter(x)        # btn[i]["command"] = строка определения команды при нажатии
 
-wordComp = ""        # Определяем глабально загаданное слово
-wordStar = ""        # Определяем глабально слово со звёздочками
+wordComp = ""        # Определяем глобально загаданное слово
+wordStar = ""        # Определяем глобально слово со звёздочками
 startNewRound()      # Стартуем
 
 root.mainloop()
