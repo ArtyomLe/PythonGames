@@ -2,6 +2,7 @@ from tkinter import *
 from random import randint
 
 # МЕТОДЫ
+
 # Начало нового раунда
 def startNewRound():                # Формируем информацию в окне
     global wordStar, wordComp
@@ -10,6 +11,26 @@ def startNewRound():                # Формируем информацию в
     wordLabel["text"] = wordStar    # Устанавливаем зазвёздленную переменную в метку
 
     wordLabel.place(x = WIDTH // 2 - wordLabel.winfo_reqwidth() // 2, y = 50)   # Центруем метку в зависимости от слова
+
+# Сравниваем строки и считаем сколько символов различаются
+def compareWord(s1, s2):
+    res = 0                                                   # Возвращаемый результат
+    for i in range(len(s1)):                                  # Сравниваем s1 и s2 посимвольно
+        if (s1[i] != s2[i]):                                  # Если символы разные(* поменялась на символ)
+            res += 1                                          # Увеличиваем res
+    print(f"Совпадение найдено: {res}")
+    return res
+
+# Возвращаем слово с открытыми символами (Обнаружение символов методом перебора)
+def getWordStar(ch):
+    ret = ""                        # Переменная для результата
+
+    for i in range(len(wordComp)):  # Перебираем по символам загаданое слово
+        if (wordComp[i] == ch):     # Сравниваем символы
+            ret += ch               # Добавляем символ в переменную ret если он совпадает
+        else:
+            ret += wordStar[i]      # Добавляем * в переменную ret если символ не совпадает
+    return ret
 
 # При нажатии мышкой на кнопку
 def pressLetter(n):
@@ -77,8 +98,6 @@ for i in range(33):
 
 wordComp = ""        # Определяем глабально загаданное слово
 wordStar = ""        # Определяем глабально слово со звёздочками
-
 startNewRound()      # Стартуем
-
 
 root.mainloop()
