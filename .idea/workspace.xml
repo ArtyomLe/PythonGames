@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Начало нового раунда (исправления)">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="def compareWord">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Угадай_Слово.py" beforeDir="false" afterPath="$PROJECT_DIR$/Угадай_Слово.py" afterDir="false" />
     </list>
@@ -199,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635277807104</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="def compareWord">
+      <created>1635358535623</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1635358535623</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,7 +230,8 @@
     <MESSAGE value="lambda пояснения" />
     <MESSAGE value="Начало нового раунда" />
     <MESSAGE value="Начало нового раунда (исправления)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Начало нового раунда (исправления)" />
+    <MESSAGE value="def compareWord" />
+    <option name="LAST_COMMIT_MESSAGE" value="def compareWord" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
