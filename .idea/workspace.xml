@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="def compareWord">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="def getWordsFromFile (Загрузка слов в список из файла)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Угадай_Слово.py" beforeDir="false" afterPath="$PROJECT_DIR$/Угадай_Слово.py" afterDir="false" />
     </list>
@@ -206,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635358535623</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="def getWordsFromFile (Загрузка слов в список из файла)">
+      <created>1635361139551</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1635361139551</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -231,7 +238,8 @@
     <MESSAGE value="Начало нового раунда" />
     <MESSAGE value="Начало нового раунда (исправления)" />
     <MESSAGE value="def compareWord" />
-    <option name="LAST_COMMIT_MESSAGE" value="def compareWord" />
+    <MESSAGE value="def getWordsFromFile (Загрузка слов в список из файла)" />
+    <option name="LAST_COMMIT_MESSAGE" value="def getWordsFromFile (Загрузка слов в список из файла)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

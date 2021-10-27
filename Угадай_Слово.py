@@ -8,7 +8,7 @@ def getWordsFromFile():
     ret = []                                                     # Переменная список для возвращаемого результата
     try:                                                         # Ставим блок проверки ошибок
         f = open("words.dat", "r", encoding="utf-8")             # Получаем дескриптор
-        for l in f.readline():                                   # Читаем построчно
+        for l in f.readlines():                                  # Читаем построчно
             l = l.replace("\n", "")                              # Убираем последний символ переноса строки
             ret.append(l)                                        # Добавляем слово в список
         f.close()                                                # Закрываем файл
@@ -16,6 +16,7 @@ def getWordsFromFile():
         print("Проблема с файлом. Программа прекращает работу.")
         quit(0)
     return ret                                                   # Возвращаем список
+
 # Начало нового раунда
 def startNewRound():                # Формируем информацию в окне
     global wordStar, wordComp
