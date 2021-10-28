@@ -41,13 +41,20 @@ def saveTopScore():
 
 # Начало нового раунда
 def startNewRound():                # Формируем информацию в окне
-    global wordStar, wordComp
+    global wordStar, wordComp, userTry
     wordComp = dictionary[randint(0, len(dictionary) - 1)]           # Загадываем слово
 
     wordStar = "*" * len(wordComp)  # Формируем строку из *
     wordLabel["text"] = wordStar    # Устанавливаем зазвёздленную переменную в метку
 
     wordLabel.place(x = WIDTH // 2 - wordLabel.winfo_reqwidth() // 2, y = 50)   # Центруем метку в зависимости от слова
+
+    for i in range(33):
+        btn[i]["text"] = chr(st + i - 47 * (i // 32))
+        btn[i]["state"] = "normal"
+
+    userTry = 10
+
     updateInfo()                    # Обновляем информацию в окне
 
 # Сравниваем строки и считаем сколько символов различаются
@@ -56,7 +63,6 @@ def compareWord(s1, s2):
     for i in range(len(s1)):                                  # Сравниваем s1 и s2 посимвольно
         if (s1[i] != s2[i]):                                  # Если символы разные(* поменялась на символ)
             res += 1                                          # Увеличиваем res
-    print(f"Совпадение найдено: {res}")
     return res
 
 # Возвращаем слово с открытыми символами (Обнаружение символов методом перебора)
