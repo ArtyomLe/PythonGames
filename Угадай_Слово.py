@@ -47,6 +47,7 @@ def startNewRound():                # Формируем информацию в
     wordLabel["text"] = wordStar    # Устанавливаем зазвёздленную переменную в метку
 
     wordLabel.place(x = WIDTH // 2 - wordLabel.winfo_reqwidth() // 2, y = 50)   # Центруем метку в зависимости от слова
+    updateInfo()                    # Обновляем информацию в окне
 
 # Сравниваем строки и считаем сколько символов различаются
 def compareWord(s1, s2):
@@ -70,7 +71,7 @@ def getWordStar(ch):
 
 # При нажатии мышкой на кнопку
 def pressLetter(n):
-    global wordStar                 # Добавляем global чтобы с переменной wordStar можно было работать глобально
+    global wordStar, score, userTry        # Добавляем global чтобы с переменной wordStar можно было работать глобально
     btn[n]["text"] = "#"
     btn[n]["state"] = "disable"
 
@@ -78,6 +79,22 @@ def pressLetter(n):
     wordStar = getWordStar(chr(st + n - 47 * (n // 32)))      # Получаем строку с открытыми символами
     count = compareWord(wordStar, oldWordStar)                # Находим различие между старой и новой строкой
     wordLabel["text"] = wordStar
+
+    if (count > 0):
+        score += count * 5
+    else:
+        score -= 5
+        if (score < 0):
+            score = 0
+        userTry -= 1
+
+    updateInfo()                                              # Обновляем информацию в окне
+
+# Обновляем информацию об очках
+def updateInfo():
+    scoreLabel["text"] = f"Ваши очки: {score}"
+    topScoreLabel["text"] = f"Лучший результат: {topScore}"
+    userTryLabel["text"] = f"Осталось попыток: {userTry}"
 
 # ==================================================================================================
 # MAIN
