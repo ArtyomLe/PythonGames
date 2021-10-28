@@ -42,7 +42,8 @@ def saveTopScore():
 # Начало нового раунда
 def startNewRound():                # Формируем информацию в окне
     global wordStar, wordComp
-    wordComp = "ИНТЕРНЕТ"           # Загадываем слово
+    wordComp = dictionary[randint(0, len(dictionary) - 1)]           # Загадываем слово
+
     wordStar = "*" * len(wordComp)  # Формируем строку из *
     wordLabel["text"] = wordStar    # Устанавливаем зазвёздленную переменную в метку
 
@@ -86,9 +87,25 @@ def pressLetter(n):
         score -= 5
         if (score < 0):
             score = 0
+
         userTry -= 1
 
-    updateInfo()                                              # Обновляем информацию в окне
+    updateInfo()                            # Обновляем информацию в окне
+
+    if (wordComp == wordStar):              # Если все звёзды раскрыты, то победа
+        score += score // 2                 # Добавляем 50% очков
+        updateInfo()                        # Обновляем информацию в окне
+
+        if (score > topScore):
+            messagebox.showinfo("Поздравляем!", f"Вы - топчик! Угадано слово: {wordComp}! Нажмите OK для продолжения игры.")
+            saveTopScore()                  # Метод который записывает рекорд в файл
+        else:
+            messagebox.showinfo("Отлично", f"Угадано слово: {wordComp}! Нажмите OK для продолжения игры.")
+
+        startNewRound()
+    elif (userTry <= 0):
+        messagebox.showinfo("Усё!", "Отведённое кол-во попыток закончилось... возвращайтесь скорее!")
+        quit(0)
 
 # Обновляем информацию об очках
 def updateInfo():
@@ -149,8 +166,9 @@ for i in range(33):
     # Вызываем функцию pressLetter через lambda
     btn[i]["command"] = lambda x = i: pressLetter(x)        # btn[i]["command"] = строка определения команды при нажатии
 
-wordComp = ""        # Определяем глобально загаданное слово
-wordStar = ""        # Определяем глобально слово со звёздочками
-startNewRound()      # Стартуем
+wordComp = ""                       # Определяем глобально загаданное слово
+wordStar = ""                       # Определяем глобально слово со звёздочками
+dictionary = getWordsFromFile()     # Словарь
+startNewRound()                     # Стартуем
 
 root.mainloop()
