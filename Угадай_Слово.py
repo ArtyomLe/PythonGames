@@ -119,10 +119,14 @@ def updateInfo():
     topScoreLabel["text"] = f"Лучший результат: {topScore}"
     userTryLabel["text"] = f"Осталось попыток: {userTry}"
 
+def pressKey(event):
+    print(f"Клавиша: {event.keycode}, символ {event.char.upper()}")
+
 # ==================================================================================================
 # MAIN
 # Создание окна
 root = Tk()                     # В переменной root хранится ссылка на окно в памяти "root имя окна"
+root.bind("<Key>", pressKey)
 root.resizable(False, False)    # Запрещаем изменение размеров окна
 root.title("Угадай слово")      # Устанавливаем заголовок
 
