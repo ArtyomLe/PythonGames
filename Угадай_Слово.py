@@ -6,6 +6,7 @@ from tkinter import messagebox
 
 # Загружаем слова в список
 def getWordsFromFile():
+
     ret = []                                                     # Переменная список для возвращаемого результата
     try:                                                         # Ставим блок проверки ошибок
         f = open("words.dat", "r", encoding="utf-8")             # Получаем дескриптор
