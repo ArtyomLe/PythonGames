@@ -120,7 +120,8 @@ def updateInfo():
     userTryLabel["text"] = f"Осталось попыток: {userTry}"
 
 def pressKey(event):
-    print(f"Клавиша: {event.keycode}, символ {event.char.upper()}")
+    print(f"Клавиша: {event.keycode}")
+    ch = event.char.upper()     # Получаем код нажатого на клавиатуре символа и преобразовываем его к верхнему регистру
 
 # ==================================================================================================
 # MAIN
