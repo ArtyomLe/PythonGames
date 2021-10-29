@@ -79,6 +79,8 @@ def getWordStar(ch):
 # При нажатии мышкой на кнопку
 def pressLetter(n):
     global wordStar, score, userTry        # Добавляем global чтобы с переменной wordStar можно было работать глобально
+    if (btn[n]["text"] == "#"):            # Проверяем если эта буква уже была выбрана, то прерываем метод.
+        return 0
     btn[n]["text"] = "#"
     btn[n]["state"] = "disable"
 
@@ -120,18 +122,15 @@ def updateInfo():
     userTryLabel["text"] = f"Осталось попыток: {userTry}"
 
 def pressKey(event):
-#    print(f"Клавиша: {event.keycode}")
     if (event.keycode == 187):                              # (+)
         wordLabel["text"] = wordComp                        # Подсматриваем загаданное слово (чит)
 
     ch = event.char.upper()     # Получаем код нажатого на клавиатуре символа и преобразовываем его к верхнему регистру
-    print(ch)
     if (len(ch) == 0):
         return 0
 
     codeBtn = ord(ch) - st      # Определяем порядковый номер нажатого символа в русском алфавите (st - символ А)
-#    print(codeBtn)
-    if (codeBtn >= 0 and codeBtn <= 33 or codeBtn == -15): # Добавляем букву ё (or codeBtn == -15)
+    if (codeBtn >= 0 and codeBtn <= 33 or codeBtn == -15): # Добавляем букву Ё (or codeBtn == -15)
         pressLetter(codeBtn)
 
 # ==================================================================================================
