@@ -120,8 +120,19 @@ def updateInfo():
     userTryLabel["text"] = f"Осталось попыток: {userTry}"
 
 def pressKey(event):
-    print(f"Клавиша: {event.keycode}")
+#    print(f"Клавиша: {event.keycode}")
+    if (event.keycode == 187):                              # (+)
+        wordLabel["text"] = wordComp                        # Подсматриваем загаданное слово (чит)
+
     ch = event.char.upper()     # Получаем код нажатого на клавиатуре символа и преобразовываем его к верхнему регистру
+    print(ch)
+    if (len(ch) == 0):
+        return 0
+
+    codeBtn = ord(ch) - st      # Определяем порядковый номер нажатого символа в русском алфавите (st - символ А)
+#    print(codeBtn)
+    if (codeBtn >= 0 and codeBtn <= 33 or codeBtn == -15): # Добавляем букву ё (or codeBtn == -15)
+        pressLetter(codeBtn)
 
 # ==================================================================================================
 # MAIN
