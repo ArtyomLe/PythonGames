@@ -1,43 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Импорт библиотек">
-      <change afterPath="$PROJECT_DIR$/icon/icon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image01/black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image01/img01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image01/img02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image01/img03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image01/img04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image01/img05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image01/img06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image01/img07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image01/img08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image01/img09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image01/img10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image01/img11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image01/img12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image01/img13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image01/img14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image01/img15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image02/black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image02/img01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image02/img02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image02/img03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image02/img04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image02/img05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image02/img06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image02/img07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image02/img08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image02/img09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image02/img10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image02/img11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image02/img12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image02/img13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image02/img14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image02/img15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image02/img16.png" afterDir="false" />
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Импорт библиотек (пояснения)">
+      <change afterPath="$PROJECT_DIR$/Beep.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Пятнашки.py" beforeDir="false" afterPath="$PROJECT_DIR$/Пятнашки.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +30,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Угадай_Слово.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Beep.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Lambda_функции.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1ygwUtCZ9GGAByuElscrILlrfcC" />
@@ -79,7 +46,28 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Python.Угадай_Слово">
+  <component name="RunManager" selected="Python.Beep">
+    <configuration name="Beep" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonGames" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Beep.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Lambda_функции" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonGames" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -145,6 +133,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Beep" />
         <item itemvalue="Python.Угадай_Слово" />
         <item itemvalue="Python.Lambda_функции" />
       </list>
@@ -355,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635591829097</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Импорт библиотек (пояснения)">
+      <created>1635614273865</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1635614273865</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -393,7 +389,8 @@
     <MESSAGE value="Полная версия 1.0" />
     <MESSAGE value="Полная версия 1.1" />
     <MESSAGE value="Импорт библиотек" />
-    <option name="LAST_COMMIT_MESSAGE" value="Импорт библиотек" />
+    <MESSAGE value="Импорт библиотек (пояснения)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Импорт библиотек (пояснения)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
