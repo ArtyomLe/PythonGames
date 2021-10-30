@@ -1,10 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Полная версия 1.1">
-      <change afterPath="$PROJECT_DIR$/Пятнашки.py" afterDir="false" />
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Импорт библиотек">
+      <change afterPath="$PROJECT_DIR$/icon/icon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image01/black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image01/img01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image01/img02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image01/img03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image01/img04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image01/img05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image01/img06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image01/img07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image01/img08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image01/img09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image01/img10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image01/img11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image01/img12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image01/img13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image01/img14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image01/img15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image02/black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image02/img01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image02/img02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image02/img03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image02/img04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image02/img05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image02/img06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image02/img07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image02/img08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image02/img09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image02/img10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image02/img11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image02/img12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image02/img13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image02/img14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image02/img15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image02/img16.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topchik.dat" beforeDir="false" afterPath="$PROJECT_DIR$/topchik.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Пятнашки.py" beforeDir="false" afterPath="$PROJECT_DIR$/Пятнашки.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635530352800</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Импорт библиотек">
+      <created>1635591829097</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1635591829097</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -352,7 +392,8 @@
     <MESSAGE value="Добавляем букву ё (or codeBtn == -15)" />
     <MESSAGE value="Полная версия 1.0" />
     <MESSAGE value="Полная версия 1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Полная версия 1.1" />
+    <MESSAGE value="Импорт библиотек" />
+    <option name="LAST_COMMIT_MESSAGE" value="Импорт библиотек" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
