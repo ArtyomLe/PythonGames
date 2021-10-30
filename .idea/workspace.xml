@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Импорт библиотек (пояснения)">
-      <change afterPath="$PROJECT_DIR$/Beep.py" afterDir="false" />
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Генерация звуков через winsound">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/icon/icon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Пятнашки.py" beforeDir="false" afterPath="$PROJECT_DIR$/Пятнашки.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +30,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Пятнашки.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Угадай_Слово.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Beep.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Lambda_функции.py" root0="SKIP_INSPECTION" />
@@ -351,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635614273865</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Генерация звуков через winsound">
+      <created>1635615474494</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1635615474494</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -390,7 +399,8 @@
     <MESSAGE value="Полная версия 1.1" />
     <MESSAGE value="Импорт библиотек" />
     <MESSAGE value="Импорт библиотек (пояснения)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Импорт библиотек (пояснения)" />
+    <MESSAGE value="Генерация звуков через winsound" />
+    <option name="LAST_COMMIT_MESSAGE" value="Генерация звуков через winsound" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
