@@ -22,21 +22,25 @@ POS_Y = root.winfo_screenheight() // 2 - HEIGHT // 2
 root.geometry(f"{WIDTH}x{HEIGHT}+{POS_X}+{POS_Y}")
 root["bg"] = back
 
+
 # Кнопка ПОСМОТРЕТЬ СОБРАННОЕ
 seeButton = Button(root, text="Посмотреть, как должно быть", width = 56)
 seeButton.place(x=10, y=620)
 # seeButton.bind("<Button-1>", seeStart)       # При нажатии вызываем метод seeStart
 # seeButton.bind("<ButtonRelease>", seeEnd)    # Когда отпускаем кнопку вызывается метод seeEnd
 
+
 # Кнопка СТАРТ
 startButton = Button(text="СТАРТ", width=56)
 startButton.place(x=10, y=650)
 # startButton["command"] = startNewRound
 
+
 # Кнопка СБРОС
 resetButton = Button(root, text="Сброс", width=56)
 resetButton.place(x=10, y=680)
 # resetButton["command"] = resetPictures
+
 
 # Метка для вывода текста с кол-вом сделанных ходов и рекордом текущего уровня
 textSteps = Label(root, bg=back, fg=fore)
@@ -60,8 +64,8 @@ diffCombobox.current(0)         # Значение по умолчанию 0 = "
 image = BooleanVar()            # Создаём переменную
 image.set(True)                 # Устанавливаем значение
 # Создаём радио-кнопку и привязываем к ней переменную image
-radio01 = Radiobutton(root, text="Пятнашки", variable=image, value=True, activebackground=back, bg=back, fg=fore)
-radio02 = Radiobutton(root, text="Природа", variable=image, value=False, activebackground= back, bg=back, fg=fore)
+radio01 = Radiobutton(root, text="Пятнашки", variable=image, value=True, activebackground=back, bg=back, fg="#20E0F3")
+radio02 = Radiobutton(root, text="Природа", variable=image, value=False, activebackground=back, bg=back, fg="#05C105")
 # radio01["command"] = isCheckImage
 # radio02["command"] = isCheckImage
 radio01.place(x=150, y=548)
