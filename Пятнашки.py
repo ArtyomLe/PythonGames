@@ -72,7 +72,7 @@ radio01.place(x=150, y=550)
 radio02.place(x=150, y=570)
 
 
-# ============== ИЗОБРАЖЕНИЯ
+# ============== ИЗОБРАЖЕНИЯ ==========================================================================================
 
 n = 4                           # Размер поля(кол-во спрайтов)
 m = 4                           # ----------------------------
@@ -81,6 +81,18 @@ pictureHeight = 532             # --------------------------------------
 widthPic = pictureWidth / n     # Ширина и высота одного спрайта(в пикселях)
 heightPic = pictureHeight / m   # ------------------------------------------
 
+fileName = ["img01.png","img02.png","img03.png","img04.png","img05.png","img06.png","img07.png","img08.png","img09.png",
+            "img10.png","img11.png","img12.png","img13.png","img14.png","img15.png","img16.png","black.png"]
+
+imageBackground = []      # Активное изображение
+imageBackground01 = []    # Пятнашки
+imageBackground02 = []    # Природа
+
+for name in fileName:
+    imageBackground01.append(PhotoImage(file="image01/" + name)) # После данной конкатенации получаем image01/img01.png, image01/img02.png ... Пятнашки(спрайты)
+    imageBackground02.append(PhotoImage(file="image02/" + name)) # После данной конкатенации получаем image02/img01.png, image02/img02.png ... Природа(спрайты)
+
+blackImg = 16
 
 
 root.mainloop()
