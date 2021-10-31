@@ -94,5 +94,12 @@ for name in fileName:
 
 blackImg = 16
 
+# Изображение в метку "labelImage[x][y]" берётся как изображение из списка "imageBackground[x]" по индексу "dataImage[x][y]".
+imageBackground = imageBackground01          # Устанавливаем набор спрайтов(Пятнашки) по умолчанию
+labelImage = []                              # Метки Label
+dataImage = []                               # Математическая модель игрового поля
+# Пример: Изображение (спрайт верхний левый угол) labelImage[0][0] = imageBackground[dataImage[0][0]]
+# Пример: Изображение (спрайт нижний левый угол)  labelImage[3][0] = imageBackground[dataImage[3][0]]
+
 
 root.mainloop()
