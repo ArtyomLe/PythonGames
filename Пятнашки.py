@@ -16,7 +16,7 @@ back = "#373737"   # Фон
 fore = "#AFAFAF"   # Шрифт
 
 WIDTH = 422
-HEIGHT = 730
+HEIGHT = 720
 POS_X = root.winfo_screenwidth() // 2 - WIDTH // 2
 POS_Y = root.winfo_screenheight() // 2 - HEIGHT // 2
 root.geometry(f"{WIDTH}x{HEIGHT}+{POS_X}+{POS_Y}")
@@ -24,7 +24,7 @@ root["bg"] = back
 
 
 # Кнопка ПОСМОТРЕТЬ СОБРАННОЕ
-seeButton = Button(root, text="Посмотреть, как должно быть", width = 56)
+seeButton = Button(root, text="Посмотреть, как должно быть", width=56)
 seeButton.place(x=10, y=620)
 # seeButton.bind("<Button-1>", seeStart)       # При нажатии вызываем метод seeStart
 # seeButton.bind("<ButtonRelease>", seeEnd)    # Когда отпускаем кнопку вызывается метод seeEnd
@@ -68,7 +68,7 @@ radio01 = Radiobutton(root, text="Пятнашки", variable=image, value=True,
 radio02 = Radiobutton(root, text="Природа", variable=image, value=False, activebackground=back, bg=back, fg="#05C105")
 # radio01["command"] = isCheckImage
 # radio02["command"] = isCheckImage
-radio01.place(x=150, y=548)
-radio02.place(x=150, y=568)
+radio01.place(x=150, y=550)
+radio02.place(x=150, y=570)
 
 root.mainloop()

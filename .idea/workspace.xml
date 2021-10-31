@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Основное окно (методы закомментированы)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Основное окно цветовые вариации (методы закомментированы)">
       <change beforePath="$PROJECT_DIR$/Пятнашки.py" beforeDir="false" afterPath="$PROJECT_DIR$/Пятнашки.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -409,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635708032015</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Основное окно цветовые вариации (методы закомментированы)">
+      <created>1635708736178</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1635708736178</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -426,7 +432,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Установка меток" />
     <MESSAGE value="Выводим алфавит" />
     <MESSAGE value="Добавляем символ &quot;Ё&quot;" />
     <MESSAGE value="Добавляем lambda функцию" />
@@ -451,7 +456,8 @@
     <MESSAGE value="Настройка геометрии окна" />
     <MESSAGE value="Кнопка посмотреть собранное" />
     <MESSAGE value="Основное окно (методы закомментированы)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Основное окно (методы закомментированы)" />
+    <MESSAGE value="Основное окно цветовые вариации (методы закомментированы)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Основное окно цветовые вариации (методы закомментированы)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
