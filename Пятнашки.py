@@ -71,4 +71,16 @@ radio02 = Radiobutton(root, text="Природа", variable=image, value=False, 
 radio01.place(x=150, y=550)
 radio02.place(x=150, y=570)
 
+
+# ============== ИЗОБРАЖЕНИЯ
+
+n = 4                           # Размер поля(кол-во спрайтов)
+m = 4                           # ----------------------------
+pictureWidth = 400              # Размер полного изображения(в пикселях)
+pictureHeight = 532             # --------------------------------------
+widthPic = pictureWidth / n     # Ширина и высота одного спрайта(в пикселях)
+heightPic = pictureHeight / m   # ------------------------------------------
+
+
+
 root.mainloop()
