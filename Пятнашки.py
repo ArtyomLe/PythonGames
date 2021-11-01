@@ -81,8 +81,8 @@ pictureHeight = 532             # --------------------------------------
 widthPic = pictureWidth / n     # Ширина и высота одного спрайта(в пикселях)
 heightPic = pictureHeight / m   # ------------------------------------------
 
-fileName = ["img01.png","img02.png","img03.png","img04.png","img05.png","img06.png","img07.png","img08.png","img09.png",
-            "img10.png","img11.png","img12.png","img13.png","img14.png","img15.png","img16.png","black.png"]
+fileName = ["img01.png", "img02.png", "img03.png", "img04.png", "img05.png", "img06.png", "img07.png", "img08.png", "img09.png",
+             "img10.png", "img11.png", "img12.png", "img13.png", "img14.png", "img15.png", "img16.png", "black.png"]
 
 imageBackground = []      # Активное изображение
 imageBackground01 = []    # Пятнашки
@@ -94,9 +94,8 @@ for name in fileName:
 
 blackImg = 16
 
-
 # Изображение в метку "labelImage[x][y]" берётся как изображение из списка "imageBackground[x]" по индексу "dataImage[x][y]".
-imageBackground = imageBackground01          # Устанавливаем набор спрайтов(Пятнашки) по умолчанию       (одномерный список imageBackground[x])
+imageBackground = imageBackground02          # Устанавливаем набор спрайтов(Пятнашки) по умолчанию       (одномерный список imageBackground[x])
 labelImage = []                              # Метки Label                                               (двумерный список labelImage[x][y])
 dataImage = []                               # Математическая модель игрового поля                       (двумерный список dataImage[x][y])
 copyData = []                                # Копия модели игрового поля "Просмотреть, как должно быть" (двумерный список copyData[x][y])
@@ -114,14 +113,14 @@ for i in range(n):
                                          # [3][12], [3][13], [3][14], [3][15]
 
         labelImage[i].append(Label(root, bg=back))                        # Создаём по 4 виджета(ячейки label) на каждую строку (0,1,2,3)
-        labelImage[i][j]["bd"] = 1                                        # bd?
+        labelImage[i][j]["bd"] = 1                                        # Ширина границ (bd = border)
         labelImage[i][j].place(x=10 + j * widthPic, y=10 + i * heightPic) # Размещаем виджеты в окне (используем алгоритм автоматического сдвига)
                                                                           # x (сдвиг вправо) => 10 110 210 310
                                                                           # y (сдвиг вниз)      10 143 276 409
-        labelImage[i][j].bind()
-        labelImage[i][j]["image"] = imageBackground[dataImage[i][j]]
-
-
-
+        labelImage[i][j].bind("<Button-1>", lambda e, x=i, y=j: go(x, y)) # Что произойдёт при нажатии на виджет (label)
+        labelImage[i][j]["image"] = imageBackground[dataImage[i][j]]      # Устанавливаем изображение (через свойство "image") обьект PhotoImage
+        # (lambda e, x=i, y=j: go(x, y))                                  => В метод go(x, y) мы будем передавать только x и y
+        # Записав "lambda e" перехватываем обьект Event и помещаем его в переменную "e" но эту переменную никуда не отправляем
+        # Иными словами, избавляемся от объекта Event так как он нам не требуется
 
 root.mainloop()
