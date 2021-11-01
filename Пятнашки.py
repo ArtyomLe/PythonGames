@@ -94,12 +94,31 @@ for name in fileName:
 
 blackImg = 16
 
+
 # Изображение в метку "labelImage[x][y]" берётся как изображение из списка "imageBackground[x]" по индексу "dataImage[x][y]".
-imageBackground = imageBackground01          # Устанавливаем набор спрайтов(Пятнашки) по умолчанию
-labelImage = []                              # Метки Label
-dataImage = []                               # Математическая модель игрового поля
+imageBackground = imageBackground01          # Устанавливаем набор спрайтов(Пятнашки) по умолчанию       (одномерный список imageBackground[x])
+labelImage = []                              # Метки Label                                               (двумерный список labelImage[x][y])
+dataImage = []                               # Математическая модель игрового поля                       (двумерный список dataImage[x][y])
+copyData = []                                # Копия модели игрового поля "Просмотреть, как должно быть" (двумерный список copyData[x][y])
 # Пример: Изображение (спрайт верхний левый угол) labelImage[0][0] = imageBackground[dataImage[0][0]]
 # Пример: Изображение (спрайт нижний левый угол)  labelImage[3][0] = imageBackground[dataImage[3][0]]
+# Формируем списки
+for i in range(n):
+    labelImage.append([])
+    dataImage.append([])
+    copyData.append([])
+
+    for j in range(m):
+        dataImage[i].append()
+        copyData[i].append()
+
+        labelImage[i].append()
+        labelImage[i][j]["bd"] = 1
+        labelImage[i][j].place()
+        labelImage[i][j].bind()
+        labelImage[i][j]["image"] = imageBackground[dataImage[i][j]]
+
+
 
 
 root.mainloop()
