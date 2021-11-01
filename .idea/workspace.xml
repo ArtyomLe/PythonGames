@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Изображения в. 1.2">
-      <change afterPath="$PROJECT_DIR$/other.py" afterDir="false" />
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Формируем списки">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oth.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/other.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Пятнашки.py" beforeDir="false" afterPath="$PROJECT_DIR$/Пятнашки.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +33,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Пятнашки.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Угадай_Слово.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/other.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Beep.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Lambda_функции.py" root0="SKIP_INSPECTION" />
   </component>
@@ -468,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635713541704</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Формируем списки">
+      <created>1635791082804</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1635791082804</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -485,7 +492,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Начало нового раунда" />
     <MESSAGE value="Начало нового раунда (исправления)" />
     <MESSAGE value="def compareWord" />
     <MESSAGE value="def getWordsFromFile (Загрузка слов в список из файла)" />
@@ -510,7 +516,8 @@
     <MESSAGE value="Изображения в. 1.0" />
     <MESSAGE value="Изображения в. 1.1" />
     <MESSAGE value="Изображения в. 1.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изображения в. 1.2" />
+    <MESSAGE value="Формируем списки" />
+    <option name="LAST_COMMIT_MESSAGE" value="Формируем списки" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

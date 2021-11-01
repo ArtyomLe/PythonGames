@@ -108,13 +108,16 @@ for i in range(n):
     dataImage.append([])
     copyData.append([])
 
-    for j in range(m):
-        dataImage[i].append()
-        copyData[i].append()
+    for j in range(m):                   # [0][0], [0][1], [0][2], [0][3],     Генерируем ряд чисел
+        dataImage[i].append(i * n + j)   # [1][4], [1][5], [1][6], [1][7],     номера "собранной" версии
+        copyData[i].append(i * n + j)    # [2][8], [2][9], [2][10], [2][11],
+                                         # [3][12], [3][13], [3][14], [3][15]
 
-        labelImage[i].append()
-        labelImage[i][j]["bd"] = 1
-        labelImage[i][j].place()
+        labelImage[i].append(Label(root, bg=back))                        # Создаём по 4 виджета(ячейки label) на каждую строку (0,1,2,3)
+        labelImage[i][j]["bd"] = 1                                        # bd?
+        labelImage[i][j].place(x=10 + j * widthPic, y=10 + i * heightPic) # Размещаем виджеты в окне (используем алгоритм автоматического сдвига)
+                                                                          # x (сдвиг вправо) => 10 110 210 310
+                                                                          # y (сдвиг вниз)      10 143 276 409
         labelImage[i][j].bind()
         labelImage[i][j]["image"] = imageBackground[dataImage[i][j]]
 
