@@ -4,6 +4,34 @@ from tkinter import messagebox      # Для использования окон
 from random import randint          # Случайные числа
 from winsound import Beep           # Простейший генератор звука
 
+# Перемешиваем
+def shufflePictures(x, y):
+    if (diffCombobox.current() < 5):
+        count = (2 + diffCombobox.current()) ** 4           # 0 => 16 (действий)   4 => 1296 (действий)
+
+    else:
+        exchangeImage(n - 1, m - 3, n - 1, m - 2)           # Метод перестановки местами 14 15 (неразрешимая ситуация)
+
+# Стартуем
+def startNewRound():
+    diffCombobox["state"] = DISABLED
+    startButton["state"] = DISABLED
+    radio01["state"] = DISABLED
+    radio02["state"] = DISABLED
+
+    Beep[750, 50]
+
+    x = 0
+    y = 0
+    for i in range(n):
+        for j in range(m):
+            if(dataImage[i][j] == blackImg):
+                x = i
+                y = j
+    shufflePictures(x, y)
+
+def go(x, y):
+    print(x, y)
 # ============================= НАЧАЛО ПРОГРАММЫ ==========================================
 
 root = Tk()
@@ -33,7 +61,7 @@ seeButton.place(x=10, y=620)
 # Кнопка СТАРТ
 startButton = Button(text="СТАРТ", width=56)
 startButton.place(x=10, y=650)
-# startButton["command"] = startNewRound
+startButton["command"] = startNewRound
 
 
 # Кнопка СБРОС
@@ -95,7 +123,7 @@ for name in fileName:
 blackImg = 16
 
 # Изображение в метку "labelImage[x][y]" берётся как изображение из списка "imageBackground[x]" по индексу "dataImage[x][y]".
-imageBackground = imageBackground02          # Устанавливаем набор спрайтов(Пятнашки) по умолчанию       (одномерный список imageBackground[x])
+imageBackground = imageBackground01          # Устанавливаем набор спрайтов(Пятнашки) по умолчанию       (одномерный список imageBackground[x])
 labelImage = []                              # Метки Label                                               (двумерный список labelImage[x][y])
 dataImage = []                               # Математическая модель игрового поля                       (двумерный список dataImage[x][y])
 copyData = []                                # Копия модели игрового поля "Просмотреть, как должно быть" (двумерный список copyData[x][y])
