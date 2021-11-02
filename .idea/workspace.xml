@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="def shufflePictures 1.3">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="def exchangeImage 1.0">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Пятнашки.py" beforeDir="false" afterPath="$PROJECT_DIR$/Пятнашки.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -521,7 +522,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635883174686</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="def exchangeImage 1.0">
+      <created>1635885105644</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1635885105644</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -538,7 +546,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="def pressLetter (update score)" />
     <MESSAGE value="Обновление клавиш после очередного раунда" />
     <MESSAGE value="Обьект event" />
     <MESSAGE value="pressKey" />
@@ -563,7 +570,8 @@
     <MESSAGE value="def shufflePictures 1.1" />
     <MESSAGE value="def shufflePictures 1.2" />
     <MESSAGE value="def shufflePictures 1.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="def shufflePictures 1.3" />
+    <MESSAGE value="def exchangeImage 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="def exchangeImage 1.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

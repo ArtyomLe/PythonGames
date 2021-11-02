@@ -12,7 +12,7 @@ def exchangeImage(x1, y1, x2, y2):
     labelImage[x1][y1]["image"] = imageBackground[dataImage[x1][y1]]
     labelImage[x2][y2]["image"] = imageBackground[dataImage[x2][y2]]
     root.update() # Обновить изображения в главном окне
-    sleep(0.1)    # С задержкой
+    sleep(0.02)    # С задержкой
 
 # Перемешиваем
 def shufflePictures(x, y):
@@ -57,7 +57,7 @@ def startNewRound():
     radio01["state"] = DISABLED
     radio02["state"] = DISABLED
 
-    Beep[750, 50]
+    Beep(750, 50)
 
     x = 0
     y = 0
@@ -161,7 +161,7 @@ for name in fileName:
 blackImg = 16
 
 # Изображение в метку "labelImage[x][y]" берётся как изображение из списка "imageBackground[x]" по индексу "dataImage[x][y]".
-imageBackground = imageBackground01          # Устанавливаем набор спрайтов(Пятнашки) по умолчанию       (одномерный список imageBackground[x])
+imageBackground = imageBackground02          # Устанавливаем набор спрайтов(Пятнашки) по умолчанию       (одномерный список imageBackground[x])
 labelImage = []                              # Метки Label                                               (двумерный список labelImage[x][y])
 dataImage = []                               # Математическая модель игрового поля                       (двумерный список dataImage[x][y])
 copyData = []                                # Копия модели игрового поля "Просмотреть, как должно быть" (двумерный список copyData[x][y])
