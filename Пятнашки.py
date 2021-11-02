@@ -3,6 +3,16 @@ from tkinter import ttk             # Для использования RadioBut
 from tkinter import messagebox      # Для использования окон сообщений
 from random import randint          # Случайные числа
 from winsound import Beep           # Простейший генератор звука
+from time import sleep              # Задержка выполнения
+
+# Обмен изображений
+def exchangeImage(x1, y1, x2, y2):
+    global dataImage, labelImage
+    dataImage[x1][y1], dataImage[x2][y2] = dataImage[x2][y2], dataImage[x1][y1]
+    labelImage[x1][y1]["image"] = imageBackground[dataImage[x1][y1]]
+    labelImage[x2][y2]["image"] = imageBackground[dataImage[x2][y2]]
+    root.update() # Обновить изображения в главном окне
+    sleep(0.1)    # С задержкой
 
 # Перемешиваем
 def shufflePictures(x, y):
@@ -16,8 +26,8 @@ def shufflePictures(x, y):
                 direction = randint(0, 3)     #  1  |  0 (пока не появится другая цифра кроме ноля, while будет замыкаться)
                                               # Т.е не допустима ситуация при которой сходили наверх и вернулись вниз
             # Вниз
-            if (direction == 0 and x + 1 < n):
-                exchangeImage(x, y, x + 1, y)
+            if (direction == 0 and x + 1 < n):  # Проверяем что не выходим за границы при(and) заданном направлении
+                exchangeImage(x, y, x + 1, y)   # Вызываем метод exchangeImage для перемещения пустого спрайта
                 x += 1
                 noDirection = 1
             # Вверх
