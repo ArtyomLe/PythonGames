@@ -10,11 +10,11 @@ def shufflePictures(x, y):
         count = (2 + diffCombobox.current()) ** 4       # 0 => 16 (действий)   4 => 1296 (действий)
         noDirection = 0
 
-        for i in range(count):                          # Кол-во циклов зависит от выбранного уровня сложности
-            direction = noDirection
-            while (direction == noDirection):# 0 0
-                direction = randint(0, 3)    #  1
-
+        for i in range(count):                # Кол-во циклов зависит от выбранного уровня сложности
+            direction = noDirection           # АЛГОРИТМ ИЗБАВЛЕНИЯ ОТ ПОВТОРЕНИЙ (вверх<=>вниз | вправо<=>влево)
+            while (direction == noDirection): # 0 0 | 0 0
+                direction = randint(0, 3)     #  1  |  0 (пока не появится другая цифра кроме ноля, while будет замыкаться)
+                                              # Т.е не допустима ситуация при которой сходили наверх и вернулись вниз
             # Вниз
             if (direction == 0 and x + 1 < n):
                 exchangeImage(x, y, x + 1, y)

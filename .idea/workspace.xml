@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="def shufflePictures 1.1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="def shufflePictures 1.2">
       <change beforePath="$PROJECT_DIR$/Пятнашки.py" beforeDir="false" afterPath="$PROJECT_DIR$/Пятнашки.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -508,7 +507,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635876889471</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="def shufflePictures 1.2">
+      <created>1635882412342</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1635882412342</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -525,7 +531,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="def saveTopScore()" />
     <MESSAGE value="def updateInfo" />
     <MESSAGE value="def pressLetter (update score)" />
     <MESSAGE value="Обновление клавиш после очередного раунда" />
@@ -550,7 +555,8 @@
     <MESSAGE value="Вывод окна с виджетами вер. 1.0" />
     <MESSAGE value="def shufflePictures" />
     <MESSAGE value="def shufflePictures 1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="def shufflePictures 1.1" />
+    <MESSAGE value="def shufflePictures 1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="def shufflePictures 1.2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
