@@ -7,16 +7,38 @@ from winsound import Beep           # Простейший генератор з
 # Перемешиваем
 def shufflePictures(x, y):
     if (diffCombobox.current() < 5):
-        count = (2 + diffCombobox.current()) ** 4           # 0 => 16 (действий)   4 => 1296 (действий)
+        count = (2 + diffCombobox.current()) ** 4       # 0 => 16 (действий)   4 => 1296 (действий)
         noDirection = 0
 
-        for i in range(count):
+        for i in range(count):                          # Кол-во циклов зависит от выбранного уровня сложности
             direction = noDirection
-            while (direction == noDirection):
-                direction = randint(0, 3)
+            while (direction == noDirection):# 0 0
+                direction = randint(0, 3)    #  1
+
+            # Вниз
+            if (direction == 0 and x + 1 < n):
+                exchangeImage(x, y, x + 1, y)
+                x += 1
+                noDirection = 1
+            # Вверх
+            elif (direction == 1 and x - 1 >= 0):
+                exchangeImage(x, y, x - 1, y)
+                x -= 1
+                noDirection = 0
+            # Вправо
+            elif (direction == 2 and y + 1 < m):
+                exchangeImage(x, y, x, y + 1)
+                y += 1
+                noDirection = 3
+            # Влево
+            elif (direction == 3 and y - 1 >= 0):
+                exchangeImage(x, y, x, y - 1)
+                y -= 1
+                noDirection = 2
 
     else:
         exchangeImage(n - 1, m - 3, n - 1, m - 2)           # Метод перестановки местами 14 15 (неразрешимая ситуация)
+    Beep(1750, 50)
 
 # Стартуем
 def startNewRound():
