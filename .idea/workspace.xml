@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Вывод окна с виджетами вер. 1.0">
-      <change afterPath="$PROJECT_DIR$/image01/img16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="def shufflePictures">
       <change beforePath="$PROJECT_DIR$/Пятнашки.py" beforeDir="false" afterPath="$PROJECT_DIR$/Пятнашки.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -488,7 +486,21 @@
       <option name="project" value="LOCAL" />
       <updated>1635796756520</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="def shufflePictures">
+      <created>1635876210658</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1635876210658</updated>
+    </task>
+    <task id="LOCAL-00044" summary="def shufflePictures">
+      <created>1635876220204</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1635876220204</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -505,7 +517,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="def getWordsFromFile (Загрузка слов в список из файла)" />
     <MESSAGE value="getTopScore()" />
     <MESSAGE value="def saveTopScore()" />
     <MESSAGE value="def updateInfo" />
@@ -530,7 +541,8 @@
     <MESSAGE value="Формируем списки" />
     <MESSAGE value="Формируем списки (labelImage)" />
     <MESSAGE value="Вывод окна с виджетами вер. 1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Вывод окна с виджетами вер. 1.0" />
+    <MESSAGE value="def shufflePictures" />
+    <option name="LAST_COMMIT_MESSAGE" value="def shufflePictures" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

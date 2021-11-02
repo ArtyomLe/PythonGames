@@ -8,6 +8,12 @@ from winsound import Beep           # Простейший генератор з
 def shufflePictures(x, y):
     if (diffCombobox.current() < 5):
         count = (2 + diffCombobox.current()) ** 4           # 0 => 16 (действий)   4 => 1296 (действий)
+        noDirection = 0
+
+        for i in range(count):
+            direction = noDirection
+            while (direction == noDirection):
+                direction = randint(0, 3)
 
     else:
         exchangeImage(n - 1, m - 3, n - 1, m - 2)           # Метод перестановки местами 14 15 (неразрешимая ситуация)
