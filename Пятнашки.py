@@ -98,12 +98,25 @@ def startNewRound():
     shufflePictures(x, y)
 
 def go(x, y):
-    print(x, y)
+    if (x + 1 < n and dataImage[x + 1][y] == blackImg):    # (x+1<n) проверяет что мы не выходим за границы поля
+                                                        # (dataImage[x+1][y]==blackImg) проверяет наличие чёрного виджета по указаному адресу
+        exchangeImage(x, y, x + 1, y)                      # Меняет виджеты местами если условие if верно
+    elif (x - 1 >= 0 and dataImage[x - 1][y] == blackImg):
+        exchangeImage(x, y, x - 1, y)
+    elif (y - 1 >= 0 and dataImage[x][y - 1] == blackImg):
+        exchangeImage(x, y, x, y - 1)
+    elif (y + 1 < m and dataImage[x][y + 1] == blackImg):
+        exchangeImage(x, y, x, y + 1)
+    else:
+        Beep(500, 100)
+        return 0
+    Beep(1400, 5)
+
 # ============================= НАЧАЛО ПРОГРАММЫ ==========================================
 
 root = Tk()
 root.resizable(False, False)
-root.title("Головоломка для отчаянных и прокажённых")
+root.title("Головоломка 15 puzzle")
 root.iconbitmap("icon/iconi.ico")
 
 # ЦВЕТА
