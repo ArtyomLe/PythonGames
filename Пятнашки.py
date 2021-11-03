@@ -5,6 +5,27 @@ from random import randint          # Случайные числа
 from winsound import Beep           # Простейший генератор звука
 from time import sleep              # Задержка выполнения
 
+# Кнопка просмотра собранного отпущена
+def seeEnd(event):
+    global dataImage
+    Beep(1082, 25)
+    for i in range(n):
+        for j in range(m):
+            dataImage[i][j] = copyData[i][j] # Восстанавливаем из copyData значения в dataImage
+
+    updatePictures()
+
+# Кнопка просмотра собранного нажата
+def seeStart(event):
+    global copyData, dataImage
+    Beep(1632, 25)
+    for i in range(n):
+        for j in range(m):
+            copyData[i][j] = dataImage[i][j] # Копируем значения из списка в список
+            dataImage[i][j] = i * n + j      # Формируем собраное поле (1-15)
+
+    updatePictures()
+
 # Выбор изображения
 def isCheckImage():
     global imageBackground
@@ -146,8 +167,8 @@ root["bg"] = back
 # Кнопка ПОСМОТРЕТЬ СОБРАННОЕ
 seeButton = Button(root, text="Посмотреть, как должно быть", width=56)
 seeButton.place(x=10, y=620)
-# seeButton.bind("<Button-1>", seeStart)       # При нажатии вызываем метод seeStart
-# seeButton.bind("<ButtonRelease>", seeEnd)    # Когда отпускаем кнопку вызывается метод seeEnd
+seeButton.bind("<Button-1>", seeStart)       # При нажатии вызываем метод seeStart
+seeButton.bind("<ButtonRelease>", seeEnd)    # Когда отпускаем кнопку вызывается метод seeEnd
 
 
 # Кнопка СТАРТ
