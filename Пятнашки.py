@@ -47,7 +47,9 @@ def updatePictures():
 
 # Сброс игрового поля
 def resetPictures():
-    global dataImage
+    global dataImage, steps, playGame
+    steps[diffCombobox.current()] = 0
+    playGame = False
 
     startButton["state"] = NORMAL
     resetButton["state"] = DISABLED
@@ -114,6 +116,10 @@ def shufflePictures(x, y):
 
 # Стартуем
 def startNewRound():
+    global steps, playGame
+    playGame = True                     # Игра началась
+    steps[diffCombobox.current()] = 0   # Обнуляем кол-во шагов для текущего уровня
+
     diffCombobox["state"] = DISABLED
     startButton["state"] = DISABLED
     radio01["state"] = DISABLED
@@ -131,8 +137,11 @@ def startNewRound():
     shufflePictures(x, y)
 
 def go(x, y):
+    global steps
+
+
     if (x + 1 < n and dataImage[x + 1][y] == blackImg):    # (x+1<n) проверяет что мы не выходим за границы поля
-                                                        # (dataImage[x+1][y]==blackImg) проверяет наличие чёрного виджета по указаному адресу
+                                                           # (dataImage[x+1][y]==blackImg) проверяет наличие чёрного виджета по указаному адресу
         exchangeImage(x, y, x + 1, y)                      # Меняет виджеты местами если условие if верно
     elif (x - 1 >= 0 and dataImage[x - 1][y] == blackImg):
         exchangeImage(x, y, x - 1, y)
@@ -144,6 +153,8 @@ def go(x, y):
         Beep(500, 100)
         return 0
     Beep(1400, 5)
+    if (playGame):                                          # Если метод продолжает выполняться
+        steps[diffCombobox.current()] += 1                  # Добавляем +1 ход к выбранному уровню сложности
 
 # ============================= НАЧАЛО ПРОГРАММЫ ==========================================
 
@@ -264,7 +275,12 @@ for i in range(n):
         # Записав "lambda e" перехватываем обьект Event и помещаем его в переменную "e" но эту переменную никуда не отправляем
         # Иными словами, избавляемся от объекта Event так как он нам не требуется
 
+# ====== ХОДЫ
+steps = [0, 0, 0, 0, 0, 0]
+
+# Началась ли игра?
+playGame = False
+
 # Обновляем изображения
 resetPictures()
-
 root.mainloop()

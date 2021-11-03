@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="def isCheckImage():">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="seeStart &amp; seeEnd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Пятнашки.py" beforeDir="false" afterPath="$PROJECT_DIR$/Пятнашки.py" afterDir="false" />
     </list>
@@ -192,13 +192,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Выводим алфавит">
-      <created>1635192129161</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1635192129161</updated>
     </task>
     <task id="LOCAL-00005" summary="Добавляем символ &quot;Ё&quot;">
       <created>1635193267445</created>
@@ -536,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635968644249</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="seeStart &amp; seeEnd">
+      <created>1635970051063</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1635970051063</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -553,7 +553,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Полная версия 1.0" />
     <MESSAGE value="Полная версия 1.1" />
     <MESSAGE value="Импорт библиотек" />
     <MESSAGE value="Импорт библиотек (пояснения)" />
@@ -578,7 +577,8 @@
     <MESSAGE value="Reset &amp; Update Pictures" />
     <MESSAGE value="def go" />
     <MESSAGE value="def isCheckImage():" />
-    <option name="LAST_COMMIT_MESSAGE" value="def isCheckImage():" />
+    <MESSAGE value="seeStart &amp; seeEnd" />
+    <option name="LAST_COMMIT_MESSAGE" value="seeStart &amp; seeEnd" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
