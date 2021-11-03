@@ -5,6 +5,18 @@ from random import randint          # Случайные числа
 from winsound import Beep           # Простейший генератор звука
 from time import sleep              # Задержка выполнения
 
+# Выбор изображения
+def isCheckImage():
+    global imageBackground
+    if (image.get()):               # Если в переменной image содержится значение True
+        imageBackground = imageBackground01
+        Beep(1000, 25)
+    else:
+        imageBackground = imageBackground02
+        Beep(1300, 25)
+
+    updatePictures()                # Обновляем изображения
+
 # Обновление всех изображений
 def updatePictures():
     for i in range(n):
@@ -174,8 +186,8 @@ image.set(True)                 # Устанавливаем значение
 # Создаём радио-кнопку и привязываем к ней переменную image
 radio01 = Radiobutton(root, text="Пятнашки", variable=image, value=True, activebackground=back, bg=back, fg="#20E0F3")
 radio02 = Radiobutton(root, text="Природа", variable=image, value=False, activebackground=back, bg=back, fg="#05C105")
-# radio01["command"] = isCheckImage
-# radio02["command"] = isCheckImage
+radio01["command"] = isCheckImage
+radio02["command"] = isCheckImage
 radio01.place(x=150, y=550)
 radio02.place(x=150, y=570)
 
@@ -203,7 +215,7 @@ for name in fileName:
 blackImg = 16
 
 # Изображение в метку "labelImage[x][y]" берётся как изображение из списка "imageBackground[x]" по индексу "dataImage[x][y]".
-imageBackground = imageBackground02          # Устанавливаем набор спрайтов(Пятнашки) по умолчанию       (одномерный список imageBackground[x])
+imageBackground = imageBackground01          # Устанавливаем набор спрайтов(Пятнашки) по умолчанию       (одномерный список imageBackground[x])
 labelImage = []                              # Метки Label                                               (двумерный список labelImage[x][y])
 dataImage = []                               # Математическая модель игрового поля                       (двумерный список dataImage[x][y])
 copyData = []                                # Копия модели игрового поля "Просмотреть, как должно быть" (двумерный список copyData[x][y])

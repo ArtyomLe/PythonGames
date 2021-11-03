@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Reset &amp; Update Pictures">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="def go">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Пятнашки.py" beforeDir="false" afterPath="$PROJECT_DIR$/Пятнашки.py" afterDir="false" />
     </list>
@@ -192,13 +192,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Установка меток">
-      <created>1635187520271</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1635187520271</updated>
     </task>
     <task id="LOCAL-00003" summary="Выводим алфавит">
       <created>1635190725286</created>
@@ -536,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635962957779</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="def go">
+      <created>1635967648046</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1635967648046</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -553,7 +553,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="pressKey" />
     <MESSAGE value="Добавляем букву ё (or codeBtn == -15)" />
     <MESSAGE value="Полная версия 1.0" />
     <MESSAGE value="Полная версия 1.1" />
@@ -578,7 +577,8 @@
     <MESSAGE value="def exchangeImage 1.0" />
     <MESSAGE value="def exchangeImage 1.1" />
     <MESSAGE value="Reset &amp; Update Pictures" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reset &amp; Update Pictures" />
+    <MESSAGE value="def go" />
+    <option name="LAST_COMMIT_MESSAGE" value="def go" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
