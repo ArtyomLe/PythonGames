@@ -5,6 +5,33 @@ from random import randint          # Случайные числа
 from winsound import Beep           # Простейший генератор звука
 from time import sleep              # Задержка выполнения
 
+# Обновление всех изображений
+def updatePictures():
+    for i in range(n):
+        for j in range(m):
+            labelImage[i][j]["image"] = imageBackground[dataImage[i][j]]
+    root.update()
+
+# Сброс игрового поля
+def resetPictures():
+    global dataImage
+
+    startButton["state"] = NORMAL
+    resetButton["state"] = DISABLED
+    diffCombobox["state"] = "readonly"
+    radio01["state"] = NORMAL
+    radio02["state"] = NORMAL
+
+    for i in range(n):
+        for j in range(m):
+            dataImage[i][j] = i * n + j
+
+    dataImage[n- 1][m - 1] = blackImg
+    Beep(800, 50)
+    Beep(810, 35)
+
+    updatePictures()
+
 # Обмен изображений
 def exchangeImage(x1, y1, x2, y2):
     global dataImage, labelImage
@@ -49,6 +76,8 @@ def shufflePictures(x, y):
     else:
         exchangeImage(n - 1, m - 3, n - 1, m - 2)           # Метод перестановки местами 14 15 (неразрешимая ситуация)
     Beep(1750, 50)
+
+    resetButton["state"] = NORMAL
 
 # Стартуем
 def startNewRound():
@@ -105,7 +134,7 @@ startButton["command"] = startNewRound
 # Кнопка СБРОС
 resetButton = Button(root, text="Сброс", width=56)
 resetButton.place(x=10, y=680)
-# resetButton["command"] = resetPictures
+resetButton["command"] = resetPictures
 
 
 # Метка для вывода текста с кол-вом сделанных ходов и рекордом текущего уровня
@@ -188,5 +217,8 @@ for i in range(n):
         # (lambda e, x=i, y=j: go(x, y))                                  => В метод go(x, y) мы будем передавать только x и y
         # Записав "lambda e" перехватываем обьект Event и помещаем его в переменную "e" но эту переменную никуда не отправляем
         # Иными словами, избавляемся от объекта Event так как он нам не требуется
+
+# Обновляем изображения
+resetPictures()
 
 root.mainloop()
