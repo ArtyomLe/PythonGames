@@ -5,6 +5,24 @@ from random import randint          # Случайные числа
 from winsound import Beep           # Простейший генератор звука
 from time import sleep              # Задержка выполнения
 
+# Обновляем надписи
+def refreshText():
+    textSteps["text"] =
+
+# Сохраняет в файл рекорды пользователя
+def saveRecords():
+    global record
+
+    try:
+        f = open("steps.dat", "w", encoding="unt-8")
+        for i in range(len(steps)):
+            if (steps[i] > 0 and steps[i] < record[i]):
+                record[i] = steps[i]
+            f.write(str(record[i]) + "\n")
+        f.close()
+    except:
+        messagebox.showinfo("Ошибка", "Возникла проблема с файлом при сохранении очков")
+
 # Возвращает рекорды ходов
 def getRecordSteps():
     try:
