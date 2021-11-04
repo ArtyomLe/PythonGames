@@ -173,9 +173,9 @@ def startNewRound():
     shufflePictures(x, y)
     refreshText()
 
+# Нажимаем на спрайт
 def go(x, y):
-    global steps
-
+    global steps, playGame
 
     if (x + 1 < n and dataImage[x + 1][y] == blackImg):    # (x+1<n) проверяет что мы не выходим за границы поля
                                                            # (dataImage[x+1][y]==blackImg) проверяет наличие чёрного виджета по указаному адресу
@@ -190,10 +190,18 @@ def go(x, y):
         Beep(500, 100)
         return 0
     Beep(1400, 5)
+
     if (playGame):                                          # Если метод продолжает выполняться
         steps[diffCombobox.current()] += 1                  # Добавляем +1 ход к выбранному уровню сложности
+        refreshText()                                       # Обновляем кол-во сделаных ходов
 
-        refreshText()
+        win = True
+        for i in range(n):
+            for j in range(m):
+                if (i == n - 1 and j == m - 1):
+                    win = win and dataImage[i][j] == blackImg
+                else:
+                    win = win and dataImage[i][j] == i * n + j
 
 # ============================= НАЧАЛО ПРОГРАММЫ ==========================================
 

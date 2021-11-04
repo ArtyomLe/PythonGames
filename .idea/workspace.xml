@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Сохраняет в файл рекорды пользователя">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Обновляем надписи">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Пятнашки.py" beforeDir="false" afterPath="$PROJECT_DIR$/Пятнашки.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,13 +192,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00008" summary="lambda пояснения">
-      <created>1635272378181</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1635272378181</updated>
     </task>
     <task id="LOCAL-00009" summary="lambda пояснения">
       <created>1635274066778</created>
@@ -535,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636053784173</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Обновляем надписи">
+      <created>1636054395198</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1636054395199</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -552,7 +553,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Генерация звуков через winsound" />
     <MESSAGE value="Настройка геометрии окна" />
     <MESSAGE value="Кнопка посмотреть собранное" />
     <MESSAGE value="Основное окно (методы закомментированы)" />
@@ -577,7 +577,8 @@
     <MESSAGE value="Переменная playGame" />
     <MESSAGE value="Возвращает рекорды ходов" />
     <MESSAGE value="Сохраняет в файл рекорды пользователя" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сохраняет в файл рекорды пользователя" />
+    <MESSAGE value="Обновляем надписи" />
+    <option name="LAST_COMMIT_MESSAGE" value="Обновляем надписи" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
