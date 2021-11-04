@@ -7,7 +7,8 @@ from time import sleep              # Задержка выполнения
 
 # Обновляем надписи
 def refreshText():
-    textSteps["text"] =
+    textSteps["text"] = f"Сделано ходов: {steps[diffCombobox.current()]}"
+    textRecord["text"] = f"Рекорд ходов: {record[diffCombobox.current()]}"
 
 # Сохраняет в файл рекорды пользователя
 def saveRecords():
@@ -100,6 +101,7 @@ def resetPictures():
     Beep(810, 35)
 
     updatePictures()
+    refreshText()
 
 # Обмен изображений
 def exchangeImage(x1, y1, x2, y2):
@@ -169,6 +171,7 @@ def startNewRound():
                 x = i
                 y = j
     shufflePictures(x, y)
+    refreshText()
 
 def go(x, y):
     global steps
@@ -189,6 +192,8 @@ def go(x, y):
     Beep(1400, 5)
     if (playGame):                                          # Если метод продолжает выполняться
         steps[diffCombobox.current()] += 1                  # Добавляем +1 ход к выбранному уровню сложности
+
+        refreshText()
 
 # ============================= НАЧАЛО ПРОГРАММЫ ==========================================
 
@@ -243,7 +248,7 @@ itemDiff = ["Только начал","Немного почитал","Знаю 
 # Выпадающий список
 diffCombobox = ttk.Combobox(root, width=20, values=itemDiff, state="readonly")
 diffCombobox.place(x=270, y=570)
-# diffCombobox.bind("<<ComboboxSelected>>", lambda e: refreshText())
+diffCombobox.bind("<<ComboboxSelected>>", lambda e: refreshText())
 diffCombobox.current(0)         # Значение по умолчанию 0 = "Только начал"
 
 # Радиопереключатели
@@ -317,6 +322,9 @@ playGame = False
 
 # Наименьшее кол-во шагов для сбора пазла
 record = getRecordSteps()
+
+#Обновляем текст
+refreshText()
 
 # Обновляем изображения
 resetPictures()
