@@ -5,6 +5,22 @@ from random import randint          # Случайные числа
 from winsound import Beep           # Простейший генератор звука
 from time import sleep              # Задержка выполнения
 
+# Возвращает рекорды ходов
+def getRecordSteps():
+    try:
+        m = []
+        f = open("steps.dat", "r", encoding="utf-8")
+        for line in f.readlines():
+            m.append(int(line))
+        f.close()
+    except:
+        m = []
+
+    if (len(m) != 6):
+        for i in range(6):
+            m.append(1000 + 1000 * i)
+    return m
+
 # Кнопка просмотра собранного отпущена
 def seeEnd(event):
     global dataImage
@@ -280,6 +296,9 @@ steps = [0, 0, 0, 0, 0, 0]
 
 # Началась ли игра?
 playGame = False
+
+# Наименьшее кол-во шагов для сбора пазла
+record = getRecordSteps()
 
 # Обновляем изображения
 resetPictures()
