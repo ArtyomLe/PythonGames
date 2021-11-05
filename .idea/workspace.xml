@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Нажимаем на спрайт">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Пятнашки ver1.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Пятнашки.py" beforeDir="false" afterPath="$PROJECT_DIR$/Пятнашки.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/steps.dat" beforeDir="false" afterPath="$PROJECT_DIR$/steps.dat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,20 +193,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Начало нового раунда">
-      <created>1635277571751</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1635277571751</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Начало нового раунда (исправления)">
-      <created>1635277807104</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1635277807104</updated>
     </task>
     <task id="LOCAL-00012" summary="def compareWord">
       <created>1635358535623</created>
@@ -538,7 +523,21 @@
       <option name="project" value="LOCAL" />
       <updated>1636056164791</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Пятнашки ver1.0">
+      <created>1636133108944</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1636133108944</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Пятнашки ver1.0">
+      <created>1636133121511</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1636133121511</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -555,7 +554,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Кнопка посмотреть собранное" />
     <MESSAGE value="Основное окно (методы закомментированы)" />
     <MESSAGE value="Основное окно цветовые вариации (методы закомментированы)" />
     <MESSAGE value="Основное окно цветовые вариации v1.1 (методы закомментированы)" />
@@ -580,6 +578,7 @@
     <MESSAGE value="Сохраняет в файл рекорды пользователя" />
     <MESSAGE value="Обновляем надписи" />
     <MESSAGE value="Нажимаем на спрайт" />
-    <option name="LAST_COMMIT_MESSAGE" value="Нажимаем на спрайт" />
+    <MESSAGE value="Пятнашки ver1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Пятнашки ver1.0" />
   </component>
 </project>
