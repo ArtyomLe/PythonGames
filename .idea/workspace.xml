@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Пятнашки ver1.0">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/steps.dat" beforeDir="false" afterPath="$PROJECT_DIR$/steps.dat" afterDir="false" />
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Пятнашки ver1.1">
+      <change beforePath="$PROJECT_DIR$/Пятнашки.py" beforeDir="false" afterPath="$PROJECT_DIR$/Пятнашки.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,13 +192,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00012" summary="def compareWord">
-      <created>1635358535623</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1635358535623</updated>
     </task>
     <task id="LOCAL-00013" summary="def getWordsFromFile (Загрузка слов в список из файла)">
       <created>1635361139551</created>
@@ -537,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636133121511</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Пятнашки ver1.1">
+      <created>1636141023225</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1636141023225</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -554,7 +553,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Основное окно (методы закомментированы)" />
     <MESSAGE value="Основное окно цветовые вариации (методы закомментированы)" />
     <MESSAGE value="Основное окно цветовые вариации v1.1 (методы закомментированы)" />
     <MESSAGE value="Изображения в. 1.0" />
@@ -579,6 +577,7 @@
     <MESSAGE value="Обновляем надписи" />
     <MESSAGE value="Нажимаем на спрайт" />
     <MESSAGE value="Пятнашки ver1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Пятнашки ver1.0" />
+    <MESSAGE value="Пятнашки ver1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Пятнашки ver1.1" />
   </component>
 </project>

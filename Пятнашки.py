@@ -42,7 +42,6 @@ def refreshText():
 # Сохраняет в файл рекорды пользователя
 def saveRecords():
     global record
-
     try:
         f = open("steps.dat", "w", encoding="utf-8")
         for i in range(len(steps)):
