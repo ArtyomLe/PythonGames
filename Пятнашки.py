@@ -5,6 +5,35 @@ from random import randint          # Случайные числа
 from winsound import Beep           # Простейший генератор звука
 from time import sleep              # Задержка выполнения
 
+def music():
+    Beep(130, 100)
+    Beep(262, 100)
+    Beep(330, 100)
+    Beep(392, 100)
+    Beep(523, 100)
+    Beep(660, 100)
+    Beep(784, 300)
+    Beep(660, 300)
+    Beep(146, 100)
+    Beep(262, 100)
+    Beep(311, 100)
+    Beep(415, 100)
+    Beep(523, 100)
+    Beep(622, 100)
+    Beep(831, 300)
+    Beep(622, 300)
+    Beep(155, 100)
+    Beep(294, 100)
+    Beep(349, 100)
+    Beep(466, 100)
+    Beep(588, 100)
+    Beep(699, 100)
+    Beep(933, 300)
+    Beep(933, 100)
+    Beep(933, 100)
+    Beep(933, 100)
+    Beep(1047, 400)
+
 # Обновляем надписи
 def refreshText():
     textSteps["text"] = f"Сделано ходов: {steps[diffCombobox.current()]}"
@@ -15,7 +44,7 @@ def saveRecords():
     global record
 
     try:
-        f = open("steps.dat", "w", encoding="unt-8")
+        f = open("steps.dat", "w", encoding="utf-8")
         for i in range(len(steps)):
             if (steps[i] > 0 and steps[i] < record[i]):
                 record[i] = steps[i]
@@ -198,10 +227,19 @@ def go(x, y):
         win = True
         for i in range(n):
             for j in range(m):
-                if (i == n - 1 and j == m - 1):
-                    win = win and dataImage[i][j] == blackImg
-                else:
-                    win = win and dataImage[i][j] == i * n + j
+                if (i == n - 1 and j == m - 1):                 # Если дошёл до конца?
+                    win = win and dataImage[i][j] == blackImg   # Ячейка 3х3 равна blackImg (пустой 16)
+                else:                                           # Иначе
+                    win = win and dataImage[i][j] == i * n + j  # Элемент равен числу из ряда?
+
+        if (win):                                  # Если win = True?  (Процедура победы)
+            dataImage[n - 1][m - 1] = blackImg - 1 # В случае выигрыша на место пустого спрайта вставляем 16 изображение
+            updatePictures()                       # Обновляем содержимое Label
+            messagebox.showinfo("Браво!", "Вы одолели эту не посильную игру!")
+            music()
+            saveRecords()
+            playGame = False
+            refreshText()
 
 # ============================= НАЧАЛО ПРОГРАММЫ ==========================================
 

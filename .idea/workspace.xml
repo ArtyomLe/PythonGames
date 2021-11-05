@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Обновляем надписи">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Нажимаем на спрайт">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Пятнашки.py" beforeDir="false" afterPath="$PROJECT_DIR$/Пятнашки.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +47,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
   </component>
   <component name="RunManager" selected="Python.Пятнашки">
     <configuration name="Пятнашки" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -192,13 +194,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00009" summary="lambda пояснения">
-      <created>1635274066778</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1635274066778</updated>
     </task>
     <task id="LOCAL-00010" summary="Начало нового раунда">
       <created>1635277571751</created>
@@ -536,7 +531,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636054395199</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Нажимаем на спрайт">
+      <created>1636056164791</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1636056164791</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -553,7 +555,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Настройка геометрии окна" />
     <MESSAGE value="Кнопка посмотреть собранное" />
     <MESSAGE value="Основное окно (методы закомментированы)" />
     <MESSAGE value="Основное окно цветовые вариации (методы закомментированы)" />
@@ -578,17 +579,7 @@
     <MESSAGE value="Возвращает рекорды ходов" />
     <MESSAGE value="Сохраняет в файл рекорды пользователя" />
     <MESSAGE value="Обновляем надписи" />
-    <option name="LAST_COMMIT_MESSAGE" value="Обновляем надписи" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Нажимаем на спрайт" />
+    <option name="LAST_COMMIT_MESSAGE" value="Нажимаем на спрайт" />
   </component>
 </project>
