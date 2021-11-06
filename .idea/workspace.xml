@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Метод MOVE">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Метод MOVE 2">
       <change beforePath="$PROJECT_DIR$/Canvas/Canvas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Canvas/Canvas.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -197,13 +197,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00023" summary="pressKey">
-      <created>1635513918251</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1635513918251</updated>
     </task>
     <task id="LOCAL-00024" summary="Добавляем букву ё (or codeBtn == -15)">
       <created>1635523751638</created>
@@ -541,7 +534,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636220382661</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Метод MOVE 2">
+      <created>1636220867741</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1636220867741</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -558,7 +558,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Формируем списки (labelImage)" />
     <MESSAGE value="Вывод окна с виджетами вер. 1.0" />
     <MESSAGE value="def shufflePictures" />
     <MESSAGE value="def shufflePictures 1.1" />
@@ -583,6 +582,7 @@
     <MESSAGE value="Базовые настройки виджета Canvas 2" />
     <MESSAGE value="Library" />
     <MESSAGE value="Метод MOVE" />
-    <option name="LAST_COMMIT_MESSAGE" value="Метод MOVE" />
+    <MESSAGE value="Метод MOVE 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Метод MOVE 2" />
   </component>
 </project>
