@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Update">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Базовые настройки виджета Canvas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sokoban/Сокобан.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sokoban/Сокобан.py" afterDir="false" />
     </list>
@@ -192,13 +192,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00018" summary="def updateInfo">
-      <created>1635444101333</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1635444101333</updated>
     </task>
     <task id="LOCAL-00019" summary="def pressLetter (update score)">
       <created>1635447460295</created>
@@ -536,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636194111224</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Базовые настройки виджета Canvas">
+      <created>1636196928648</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1636196928649</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -553,7 +553,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Изображения в. 1.0" />
     <MESSAGE value="Изображения в. 1.1" />
     <MESSAGE value="Изображения в. 1.2" />
     <MESSAGE value="Формируем списки" />
@@ -578,6 +577,7 @@
     <MESSAGE value="Пятнашки ver1.1" />
     <MESSAGE value="Library import" />
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="Базовые настройки виджета Canvas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Базовые настройки виджета Canvas" />
   </component>
 </project>
