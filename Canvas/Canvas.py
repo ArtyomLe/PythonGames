@@ -1,5 +1,16 @@
 from tkinter import *
 
+def go(vector):
+    if (vector == UPKEY):
+        cnv.move(player, 0, -2)
+    elif (vector == DOWNKEY):
+        cnv.move(player, 0, 2)
+    elif (vector == LEFTKEY):
+        cnv.move(player, -2, 0)
+    elif (vector == RIGHTKEY):
+        cnv.move(player, 2, 0)
+
+
 WIDTH = 640
 HEIGHT = 480
 

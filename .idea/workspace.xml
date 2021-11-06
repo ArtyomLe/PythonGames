@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Library">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Метод MOVE">
       <change beforePath="$PROJECT_DIR$/Canvas/Canvas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Canvas/Canvas.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -198,13 +197,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Обьект event">
-      <created>1635448770355</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1635448770355</updated>
     </task>
     <task id="LOCAL-00023" summary="pressKey">
       <created>1635513918251</created>
@@ -542,7 +534,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636219365925</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Метод MOVE">
+      <created>1636220382661</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1636220382661</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -559,7 +558,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Формируем списки" />
     <MESSAGE value="Формируем списки (labelImage)" />
     <MESSAGE value="Вывод окна с виджетами вер. 1.0" />
     <MESSAGE value="def shufflePictures" />
@@ -584,6 +582,7 @@
     <MESSAGE value="Базовые настройки виджета Canvas" />
     <MESSAGE value="Базовые настройки виджета Canvas 2" />
     <MESSAGE value="Library" />
-    <option name="LAST_COMMIT_MESSAGE" value="Library" />
+    <MESSAGE value="Метод MOVE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Метод MOVE" />
   </component>
 </project>
