@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Базовые настройки виджета Canvas 2">
-      <change afterPath="$PROJECT_DIR$/Sokoban/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sokoban/circle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sokoban/square.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sokoban/Сокобан.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sokoban/Сокобан.py" afterDir="false" />
-    </list>
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Базовые настройки виджета Canvas 2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -194,13 +189,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00020" summary="def pressLetter (update score)">
-      <created>1635447484209</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1635447484209</updated>
     </task>
     <task id="LOCAL-00021" summary="Обновление клавиш после очередного раунда">
       <created>1635448090706</created>
@@ -538,7 +526,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636199776199</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Базовые настройки виджета Canvas 2">
+      <created>1636199900016</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1636199900016</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
