@@ -20,4 +20,15 @@ evil = cnv.create_image(32, 32, image=evilCircle)      # Задаём коорд
 playerSquare = PhotoImage(file="square.png")                            # Загружаем зелёный квадрат
 player = cnv.create_image(WIDTH // 2, HEIGHT // 2, image=playerSquare)  # Создаём переменную player
 
+UPKEY = 0
+DOWNKEY = 1
+LEFTKEY = 2
+RIGHTKEY = 3
+
+cnv.bind("<Up>", lambda e, x = UPKEY: go(x))       # При нажатии на кнопку ВВЕРХ будет вызываться go(0)
+cnv.bind("<Down>", lambda e, x = DOWNKEY: go(x))   # При нажатии на кнопку ВНИЗ будет вызываться go(1)
+cnv.bind("<Left>", lambda e, x = LEFTKEY: go(x))   # При нажатии на кнопку ВЛЕВО будет вызываться go(2)
+cnv.bind("<Right>", lambda e, x = RIGHTKEY: go(x)) # При нажатии на кнопку ВПРАВО будет вызываться go(3)
+
+cnv.focus_set()
 root.mainloop()
