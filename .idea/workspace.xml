@@ -2,7 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Library import">
-      <change beforePath="$PROJECT_DIR$/Sokoban.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casino.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hippodrome.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/What_the_number.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/horse01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/horse02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/horse03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/horse04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icon/iconi.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image01/black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image01/img01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image01/img02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image01/img03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image01/img04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image01/img05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image01/img06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image01/img07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image01/img08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image01/img09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image01/img10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image01/img11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image01/img12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image01/img13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image01/img14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image01/img15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image01/img16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image02/black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image02/img01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image02/img02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image02/img03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image02/img04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image02/img05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image02/img06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image02/img07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image02/img08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image02/img09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image02/img10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image02/img11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image02/img12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image02/img13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image02/img14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image02/img15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image02/img16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/money.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/road.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/steps.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topchik.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/words.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Пятнашки.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Угадай_Слово.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +77,8 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Пятнашки.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Угадай_Слово.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Beep.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Sokoban/Сокобан.py" root0="SKIP_INSPECTION" />
     <setting file="file://$USER_HOME$/Desktop/è«ß«íá¡/Sokoban.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Lambda_функции.py" root0="SKIP_INSPECTION" />
   </component>
@@ -48,7 +96,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
   </component>
-  <component name="RunManager" selected="Python.Пятнашки">
+  <component name="RunManager" selected="Python.Calc_it">
     <configuration name="Пятнашки" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonGames" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -70,7 +118,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Beep" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Calc_it" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonGames" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -82,7 +130,49 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Beep.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Calc_it.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Heads_and_tails" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonGames" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Heads_and_tails.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="What_the_number" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonGames" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/What_the_number.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -133,55 +223,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="oth" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PythonGames" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/oth.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="other" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PythonGames" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/other.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Пятнашки" />
-        <item itemvalue="Python.other" />
-        <item itemvalue="Python.oth" />
-        <item itemvalue="Python.Beep" />
+        <item itemvalue="Python.Calc_it" />
+        <item itemvalue="Python.Heads_and_tails" />
+        <item itemvalue="Python.What_the_number" />
         <item itemvalue="Python.Угадай_Слово" />
+        <item itemvalue="Python.Пятнашки" />
       </list>
     </recent_temporary>
   </component>
@@ -193,20 +241,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00015" summary="def getWordsFromFile (Загрузка слов в список из файла)">
-      <created>1635362280076</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1635362280076</updated>
-    </task>
-    <task id="LOCAL-00016" summary="getTopScore()">
-      <created>1635364645174</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1635364645174</updated>
     </task>
     <task id="LOCAL-00017" summary="def saveTopScore()">
       <created>1635365704420</created>
@@ -537,7 +571,21 @@
       <option name="project" value="LOCAL" />
       <updated>1636193063887</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Library import">
+      <created>1636193269351</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1636193269351</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Library import">
+      <created>1636193290844</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1636193290844</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
