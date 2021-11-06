@@ -1,57 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Library import">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casino.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hippodrome.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/What_the_number.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/horse01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/horse02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/horse03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/horse04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icon/iconi.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image01/black.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image01/img01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image01/img02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image01/img03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image01/img04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image01/img05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image01/img06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image01/img07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image01/img08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image01/img09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image01/img10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image01/img11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image01/img12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image01/img13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image01/img14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image01/img15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image01/img16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image02/black.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image02/img01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image02/img02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image02/img03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image02/img04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image02/img05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image02/img06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image02/img07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image02/img08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image02/img09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image02/img10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image02/img11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image02/img12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image02/img13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image02/img14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image02/img15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image02/img16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/money.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/road.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/steps.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topchik.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/words.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Пятнашки.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Угадай_Слово.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sokoban/Сокобан.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sokoban/Сокобан.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,10 +29,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Beep.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Sliding_puzzle/Пятнашки.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Sokoban/Сокобан.py" root0="SKIP_INSPECTION" />
     <setting file="file://$USER_HOME$/Desktop/è«ß«íá¡/Sokoban.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Lambda_функции.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1ygwUtCZ9GGAByuElscrILlrfcC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -96,8 +47,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
   </component>
-  <component name="RunManager" selected="Python.Calc_it">
-    <configuration name="Пятнашки" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Сокобан">
+    <configuration name="Сокобан" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonGames" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -105,11 +56,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sokoban" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Пятнашки.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sokoban/Сокобан.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -225,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Сокобан" />
         <item itemvalue="Python.Calc_it" />
         <item itemvalue="Python.Heads_and_tails" />
         <item itemvalue="Python.What_the_number" />
         <item itemvalue="Python.Угадай_Слово" />
-        <item itemvalue="Python.Пятнашки" />
       </list>
     </recent_temporary>
   </component>
@@ -241,13 +192,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00017" summary="def saveTopScore()">
-      <created>1635365704420</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1635365704420</updated>
     </task>
     <task id="LOCAL-00018" summary="def updateInfo">
       <created>1635444101333</created>
@@ -585,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636193290844</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Update">
+      <created>1636194111223</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1636194111224</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -602,7 +553,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Основное окно цветовые вариации v1.1 (методы закомментированы)" />
     <MESSAGE value="Изображения в. 1.0" />
     <MESSAGE value="Изображения в. 1.1" />
     <MESSAGE value="Изображения в. 1.2" />
@@ -627,6 +577,7 @@
     <MESSAGE value="Пятнашки ver1.0" />
     <MESSAGE value="Пятнашки ver1.1" />
     <MESSAGE value="Library import" />
-    <option name="LAST_COMMIT_MESSAGE" value="Library import" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
 </project>
