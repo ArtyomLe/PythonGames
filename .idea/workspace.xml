@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Базовые настройки виджета Canvas">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Базовые настройки виджета Canvas 2">
+      <change afterPath="$PROJECT_DIR$/Sokoban/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sokoban/circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sokoban/square.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sokoban/Сокобан.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sokoban/Сокобан.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -192,13 +194,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00019" summary="def pressLetter (update score)">
-      <created>1635447460295</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1635447460295</updated>
     </task>
     <task id="LOCAL-00020" summary="def pressLetter (update score)">
       <created>1635447484209</created>
@@ -536,7 +531,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636196928649</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Базовые настройки виджета Canvas 2">
+      <created>1636199776199</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1636199776199</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -553,7 +555,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Изображения в. 1.1" />
     <MESSAGE value="Изображения в. 1.2" />
     <MESSAGE value="Формируем списки" />
     <MESSAGE value="Формируем списки (labelImage)" />
@@ -578,6 +579,7 @@
     <MESSAGE value="Library import" />
     <MESSAGE value="Update" />
     <MESSAGE value="Базовые настройки виджета Canvas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Базовые настройки виджета Canvas" />
+    <MESSAGE value="Базовые настройки виджета Canvas 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Базовые настройки виджета Canvas 2" />
   </component>
 </project>

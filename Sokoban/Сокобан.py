@@ -17,7 +17,7 @@ cnv.create_image(WIDTH // 2, HEIGHT // 2, image=back)  # Привязываем 
 evilCircle = PhotoImage(file="circle.png")             # Загружаем красный круг
 evil = cnv.create_image(32, 32, image=evilCircle)      # Задаём координаты для размещения и помещаем в переменную(evil)
 
-playerSquare = PhotoImage(file="square.png")           # Загружаем зелёный квадрат
-player = cnv.create_image(WIDTH // 2, HEIGHT // 2, image=playerSquare)  # Создаём переменную player в начале координат
+playerSquare = PhotoImage(file="square.png")                            # Загружаем зелёный квадрат
+player = cnv.create_image(WIDTH // 2, HEIGHT // 2, image=playerSquare)  # Создаём переменную player
 
 root.mainloop()
