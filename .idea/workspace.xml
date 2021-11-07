@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Метод MOVE 3">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Угадай_слово/topchik.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Угадай_слово/topchik.dat" afterDir="false" />
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Метод смещения .move">
+      <change beforePath="$PROJECT_DIR$/Canvas/Canvas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Canvas/Canvas.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +52,7 @@
       <recent name="C:\Users\ArtyomLe\PycharmProjects\PythonGames\Canvas" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Пятнашки">
+  <component name="RunManager" selected="Python.Canvas">
     <configuration name="Сокобан" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonGames" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -182,9 +181,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Canvas" />
         <item itemvalue="Python.Пятнашки" />
         <item itemvalue="Python.Угадай_Слово" />
-        <item itemvalue="Python.Canvas" />
         <item itemvalue="Python.Сокобан" />
         <item itemvalue="Python.Calc_it" />
       </list>
@@ -198,13 +197,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Добавляем букву ё (or codeBtn == -15)">
-      <created>1635523751638</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1635523751638</updated>
     </task>
     <task id="LOCAL-00025" summary="Полная версия 1.0">
       <created>1635526313103</created>
@@ -542,7 +534,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636220867741</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="Метод смещения .move">
+      <created>1636265732826</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1636265732826</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -559,7 +558,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Вывод окна с виджетами вер. 1.0" />
     <MESSAGE value="def shufflePictures" />
     <MESSAGE value="def shufflePictures 1.1" />
     <MESSAGE value="def shufflePictures 1.2" />
@@ -584,6 +582,7 @@
     <MESSAGE value="Library" />
     <MESSAGE value="Метод MOVE" />
     <MESSAGE value="Метод MOVE 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Метод MOVE 2" />
+    <MESSAGE value="Метод смещения .move" />
+    <option name="LAST_COMMIT_MESSAGE" value="Метод смещения .move" />
   </component>
 </project>
