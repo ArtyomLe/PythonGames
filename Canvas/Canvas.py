@@ -1,22 +1,17 @@
 from tkinter import *
-from time import sleep
 
-def pressSpace(event):
-    for i in range(200):
-        sleep(0.25)
-        cnv.move(evil, 2, 0)
+def plusSecond():
+    global second
+    second += 1
+    label["text"] = f"Прошло секунд: {second}"
+    root.after(1000, plusSecond)                # Вызываем через 1 секунду
 
 root = Tk()
-root.geometry(f"{640}x{480}")
+root.geometry(f"{320}x{240}")
+label = Label(root)
+label.place(x=10, y=10)
 
-cnv = Canvas(root, width=640, height=480)
-cnv.config(highlightthickness=0)
-cnv.place(x=0, y=0)
-cnv.focus_set()
+second = 0                                      # Секунды
 
-evilCircle = PhotoImage(file="circle.png")            # Загружаем изображение
-evil = cnv.create_image(120, 240, image=evilCircle)
-
-cnv.bind("<space>", pressSpace)                       # Назначаем на пробел метод pressSpace
-
+plusSecond()
 root.mainloop()
