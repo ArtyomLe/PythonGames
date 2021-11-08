@@ -1,36 +1,28 @@
 from tkinter import *
-def plusSecond():
-    global second, timerLink
-    second += 1
-    label["text"] = f"Прошло секунд: {second}"
-    timerLink = root.after(1000, plusSecond)   # Присваиваем переменной timerLink метод after
+from time import sleep
 
-def startTimer():
-    global timerLink
-    timerLink = root.after(1000, plusSecond)
-
-def stopTimer():
-    global timerLink
-    if (timerLink != None):
-        root.after_cancel(timerLink)           # after_cancel прекращает вызов
-        timerLink = None
+def pressSpace(event):
+    global countAnimation
+    countAnimation += 1
+    if (countAnimation < 200):
+        cnv.move(evil, 2, 0)
+        root.after(50, lambda e=event: pressSpace(e))
+    else:
+        countAnimation = 0
 
 root = Tk()
-root.geometry(f"{320}x{240}")
+root.geometry(f"{640}x{480}")
 
-label = Label(root)
-label.place(x=10, y=10)
+cnv = Canvas(root, width=640, height=480)
+cnv.config(highlightthickness=0)
+cnv.place(x=0, y=0)
+cnv.focus_set()
 
-startBtn = Button(root, text="Старт")
-startBtn.place(x=10, y=50)
-startBtn["command"] = startTimer
+evilCircle = PhotoImage(file="circle.png")
+evil = cnv.create_image(120, 240, image=evilCircle)
 
-stopBtn = Button(root, text="Стоп")
-stopBtn.place(x=70, y=50)
-stopBtn["command"] = stopTimer
+cnv.bind("<space>", pressSpace)
 
-second = 0
-timerLink = None
-plusSecond()
+countAnimation = 0                                  # Кол-во рекурсий
 
 root.mainloop()
