@@ -1,5 +1,4 @@
 from tkinter import *
-
 def plusSecond():
     global second, timerLink
     second += 1
