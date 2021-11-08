@@ -3,12 +3,14 @@ from time import sleep
 
 def pressSpace(event):
     global countAnimation
+    cnv.unbind("<space>")
     countAnimation += 1
-    if (countAnimation < 200):
+    if (countAnimation < 20):
         cnv.move(evil, 2, 0)
         root.after(50, lambda e=event: pressSpace(e))
     else:
         countAnimation = 0
+        cnv.bind("space", pressSpace)
 
 root = Tk()
 root.geometry(f"{640}x{480}")
