@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Анимация объекта с помощью .after">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Код простейшего таймера">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Canvas/Canvas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Canvas/Canvas.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -9,11 +10,28 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Sliding_puzzle/Пятнашки.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Canvas/Canvas.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Sokoban/Сокобан.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Угадай_слово/Угадай_Слово.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1ygwUtCZ9GGAByuElscrILlrfcC" />
@@ -28,9 +46,15 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ArtyomLe\PycharmProjects\PythonGames\Canvas" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.Canvas">
-    <configuration name="Пятнашки" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Сокобан" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonGames" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -38,11 +62,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sliding_puzzle" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sokoban" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sliding_puzzle/Пятнашки.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sokoban/Сокобан.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Calc_it" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonGames" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Calc_it.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -64,6 +109,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Canvas/Canvas.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Пятнашки" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonGames" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sliding_puzzle" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sliding_puzzle/Пятнашки.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -118,7 +184,8 @@
       <list>
         <item itemvalue="Python.Canvas" />
         <item itemvalue="Python.Угадай_Слово" />
-        <item itemvalue="Python.Пятнашки" />
+        <item itemvalue="Python.Сокобан" />
+        <item itemvalue="Python.Calc_it" />
       </list>
     </recent_temporary>
   </component>
@@ -131,42 +198,350 @@
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
     </task>
-    <task id="LOCAL-00001" summary="Commit">
-      <created>1636265147561</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
+    <task id="LOCAL-00027" summary="Полная версия 1.1">
+      <created>1635530352800</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
       <option name="project" value="LOCAL" />
-      <updated>1636265147561</updated>
+      <updated>1635530352800</updated>
     </task>
-    <task id="LOCAL-00002" summary="Commit">
-      <created>1636265174148</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
+    <task id="LOCAL-00028" summary="Импорт библиотек">
+      <created>1635591829097</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
       <option name="project" value="LOCAL" />
-      <updated>1636265174148</updated>
+      <updated>1635591829097</updated>
     </task>
-    <task id="LOCAL-00003" summary="Таймер с функцией остановки">
-      <created>1636391284566</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
+    <task id="LOCAL-00029" summary="Импорт библиотек (пояснения)">
+      <created>1635614273865</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
       <option name="project" value="LOCAL" />
-      <updated>1636391284566</updated>
+      <updated>1635614273865</updated>
     </task>
-    <task id="LOCAL-00004" summary="Таймер с функцией остановки">
-      <created>1636391385092</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
+    <task id="LOCAL-00030" summary="Генерация звуков через winsound">
+      <created>1635615474494</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
       <option name="project" value="LOCAL" />
-      <updated>1636391385092</updated>
+      <updated>1635615474494</updated>
     </task>
-    <task id="LOCAL-00005" summary="Анимация объекта с помощью .after">
-      <created>1636392750228</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
+    <task id="LOCAL-00031" summary="Настройка геометрии окна">
+      <created>1635618018696</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
       <option name="project" value="LOCAL" />
-      <updated>1636392750228</updated>
+      <updated>1635618018696</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00032" summary="Настройка геометрии окна">
+      <created>1635618036586</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1635618036586</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Кнопка посмотреть собранное">
+      <created>1635619121549</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1635619121549</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Основное окно (методы закомментированы)">
+      <created>1635708032015</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1635708032015</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Основное окно цветовые вариации (методы закомментированы)">
+      <created>1635708736178</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1635708736178</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Основное окно цветовые вариации v1.1 (методы закомментированы)">
+      <created>1635709154757</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1635709154757</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Изображения в. 1.0">
+      <created>1635710640282</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1635710640282</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Изображения в. 1.1">
+      <created>1635711882219</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1635711882219</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Изображения в. 1.2">
+      <created>1635713541704</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1635713541704</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Формируем списки">
+      <created>1635791082804</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1635791082804</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Формируем списки (labelImage)">
+      <created>1635794026495</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1635794026495</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Вывод окна с виджетами вер. 1.0">
+      <created>1635796756520</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1635796756520</updated>
+    </task>
+    <task id="LOCAL-00043" summary="def shufflePictures">
+      <created>1635876210658</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1635876210658</updated>
+    </task>
+    <task id="LOCAL-00044" summary="def shufflePictures">
+      <created>1635876220204</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1635876220204</updated>
+    </task>
+    <task id="LOCAL-00045" summary="def shufflePictures 1.1">
+      <created>1635876889471</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1635876889471</updated>
+    </task>
+    <task id="LOCAL-00046" summary="def shufflePictures 1.2">
+      <created>1635882412342</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1635882412342</updated>
+    </task>
+    <task id="LOCAL-00047" summary="def shufflePictures 1.3">
+      <created>1635883174686</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1635883174686</updated>
+    </task>
+    <task id="LOCAL-00048" summary="def exchangeImage 1.0">
+      <created>1635885105644</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1635885105644</updated>
+    </task>
+    <task id="LOCAL-00049" summary="def exchangeImage 1.1">
+      <created>1635886683845</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1635886683845</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Reset &amp; Update Pictures">
+      <created>1635962957778</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1635962957779</updated>
+    </task>
+    <task id="LOCAL-00051" summary="def go">
+      <created>1635967648046</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1635967648046</updated>
+    </task>
+    <task id="LOCAL-00052" summary="def isCheckImage():">
+      <created>1635968644249</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1635968644249</updated>
+    </task>
+    <task id="LOCAL-00053" summary="seeStart &amp; seeEnd">
+      <created>1635970051063</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1635970051063</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Переменная playGame">
+      <created>1635972472544</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1635972472544</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Возвращает рекорды ходов">
+      <created>1636053023953</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1636053023953</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Сохраняет в файл рекорды пользователя">
+      <created>1636053784173</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1636053784173</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Обновляем надписи">
+      <created>1636054395198</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1636054395199</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Нажимаем на спрайт">
+      <created>1636056164791</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1636056164791</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Пятнашки ver1.0">
+      <created>1636133108944</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1636133108944</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Пятнашки ver1.0">
+      <created>1636133121511</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1636133121511</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Пятнашки ver1.1">
+      <created>1636141023225</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1636141023225</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Пятнашки ver1.1">
+      <created>1636141549707</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1636141549707</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Library import">
+      <created>1636193063887</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1636193063887</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Library import">
+      <created>1636193269351</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1636193269351</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Library import">
+      <created>1636193290844</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1636193290844</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Update">
+      <created>1636194111223</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1636194111224</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Базовые настройки виджета Canvas">
+      <created>1636196928648</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1636196928649</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Базовые настройки виджета Canvas 2">
+      <created>1636199776199</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1636199776199</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Базовые настройки виджета Canvas 2">
+      <created>1636199900016</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1636199900016</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Library">
+      <created>1636219365925</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1636219365925</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Метод MOVE">
+      <created>1636220382661</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1636220382661</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Метод MOVE 2">
+      <created>1636220867741</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1636220867741</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Метод смещения .move">
+      <created>1636265732826</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1636265732826</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Вызов с интервалом">
+      <created>1636266335658</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1636266335658</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Вызов с интервалом (sleep 0.25)">
+      <created>1636267557457</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1636267557457</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -183,14 +558,15 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
-        <entry key="1a26ec08-7d2c-421f-bfd1-69d259ead6b5">
-          <value>
-            <State />
-          </value>
-        </entry>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -199,9 +575,31 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Commit" />
-    <MESSAGE value="Таймер с функцией остановки" />
-    <MESSAGE value="Анимация объекта с помощью .after" />
-    <option name="LAST_COMMIT_MESSAGE" value="Анимация объекта с помощью .after" />
+    <MESSAGE value="def shufflePictures 1.2" />
+    <MESSAGE value="def shufflePictures 1.3" />
+    <MESSAGE value="def exchangeImage 1.0" />
+    <MESSAGE value="def exchangeImage 1.1" />
+    <MESSAGE value="Reset &amp; Update Pictures" />
+    <MESSAGE value="def go" />
+    <MESSAGE value="def isCheckImage():" />
+    <MESSAGE value="seeStart &amp; seeEnd" />
+    <MESSAGE value="Переменная playGame" />
+    <MESSAGE value="Возвращает рекорды ходов" />
+    <MESSAGE value="Сохраняет в файл рекорды пользователя" />
+    <MESSAGE value="Обновляем надписи" />
+    <MESSAGE value="Нажимаем на спрайт" />
+    <MESSAGE value="Пятнашки ver1.0" />
+    <MESSAGE value="Пятнашки ver1.1" />
+    <MESSAGE value="Library import" />
+    <MESSAGE value="Update" />
+    <MESSAGE value="Базовые настройки виджета Canvas" />
+    <MESSAGE value="Базовые настройки виджета Canvas 2" />
+    <MESSAGE value="Library" />
+    <MESSAGE value="Метод MOVE" />
+    <MESSAGE value="Метод MOVE 2" />
+    <MESSAGE value="Метод смещения .move" />
+    <MESSAGE value="Вызов с интервалом" />
+    <MESSAGE value="Вызов с интервалом (sleep 0.25)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Вызов с интервалом (sleep 0.25)" />
   </component>
 </project>

@@ -3,14 +3,14 @@ from time import sleep
 
 def pressSpace(event):
     global countAnimation
-    cnv.unbind("<space>")
+    cnv.unbind("<space>")                          # Не обрабатываем пробел
     countAnimation += 1
     if (countAnimation < 20):
         cnv.move(evil, 2, 0)
         root.after(50, lambda e=event: pressSpace(e))
     else:
         countAnimation = 0
-        cnv.bind("space", pressSpace)
+        cnv.bind("<space>", pressSpace)              # Вновь задаём реакцию на нажатие клавиши
 
 root = Tk()
 root.geometry(f"{640}x{480}")
