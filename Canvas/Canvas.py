@@ -1,7 +1,7 @@
 from tkinter import *
 
 def move(vector):                               # Перемещение квадрата игрока
-    if (vector == UPKEY):
+    if (vector == UPKEY):                       # Vektor - направление движения
         cnv.move(player, 0, -playerSpeed)
     elif (vector == DOWNKEY):
         cnv.move(player, 0, playerSpeed)
@@ -37,21 +37,26 @@ HEIGHT = 480
 root = Tk()
 root.geometry(f"{WIDTH}x{HEIGHT}")
 
+# Создаём виджет
 cnv = Canvas(root, width=WIDTH, height=HEIGHT)
 cnv.config(highlightthickness=0)
 cnv.place(x=0, y=0)
-cnv.focus_set()
+cnv.focus_set()                   # Перехват с клавиш
 
+# Загружаем изображения
 back = PhotoImage(file="background.png")
 evilCircle = PhotoImage(file="circle.png")
 playerSquare = PhotoImage(file="square.png")
 
+# Устанавливаем нижним слоем фоновое изображение (В canvas начало координат изображения в центре)
 cnv.create_image(WIDTH // 2, HEIGHT // 2, image=back)
 
+# Смещение красного круга
 vectorX = 5
 vectorY = 5
 
-playerSpeed = 10
+# Скорость движения квадрата
+playerSpeed = 10                  # На сколько пикселей за ход перемещается квадрат пользователя (меньше = медленее)
 
 evil = cnv.create_image(32, 32, image=evilCircle)
 player = cnv.create_image(WIDTH // 2, HEIGHT // 2, image=playerSquare)
