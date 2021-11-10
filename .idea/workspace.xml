@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Убеги от круга (комментарии)">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Убеги от круга (комментарии 2)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Canvas/Canvas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Canvas/Canvas.py" afterDir="false" />
     </list>
@@ -197,13 +197,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Генерация звуков через winsound">
-      <created>1635615474494</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1635615474494</updated>
     </task>
     <task id="LOCAL-00031" summary="Настройка геометрии окна">
       <created>1635618018696</created>
@@ -541,7 +534,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636490223629</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="Убеги от круга (комментарии 2)">
+      <created>1636568699736</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1636568699737</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -575,7 +575,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="def exchangeImage 1.1" />
     <MESSAGE value="Reset &amp; Update Pictures" />
     <MESSAGE value="def go" />
     <MESSAGE value="def isCheckImage():" />
@@ -600,6 +599,7 @@
     <MESSAGE value="Не обрабатываем пробел" />
     <MESSAGE value="Убеги от круга" />
     <MESSAGE value="Убеги от круга (комментарии)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Убеги от круга (комментарии)" />
+    <MESSAGE value="Убеги от круга (комментарии 2)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Убеги от круга (комментарии 2)" />
   </component>
 </project>

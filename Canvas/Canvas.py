@@ -16,9 +16,12 @@ def evilMove():
     global evilAfter, vectorX, vectorY
     cnv.move(evil, vectorX, vectorY)
 
-    # Получаем координаты в отдельные переменные
+    # Получаем координаты в отдельные переменные [5, 5], [10, 10], [15, 15], [20, 20], [25, 25]...
     x = cnv.coords(evil)[0]
     y = cnv.coords(evil)[1]
+    print(cnv.coords(evil))
+
+
 
     # Проверяем если круг ударился о границы окна
     if (x > WIDTH - 32 or x < 32):
@@ -29,9 +32,10 @@ def evilMove():
     # Получаем координаты игрока
     xP = cnv.coords(player)[0]
     yP = cnv.coords(player)[1]
+    print(cnv.coords(player))
 
     # Если расстояние между координатами меньше диаметра круга, то засчитываем соприкосновение (через Пифагора)
-    distance = (abs(x - xP) ** 2 + abs(y - yP) ** 2) ** 0.5
+    distance = (abs(x - xP) ** 2 + abs(y - yP) ** 2) ** 0.5        # abs - модуль числа (число == -число)
 
     if(distance < 64):
         root.after_cancel(evilAfter)
