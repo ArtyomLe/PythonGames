@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Убеги от круга">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Убеги от круга (комментарии)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Canvas/Canvas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Canvas/Canvas.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -196,13 +197,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Импорт библиотек (пояснения)">
-      <created>1635614273865</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1635614273865</updated>
     </task>
     <task id="LOCAL-00030" summary="Генерация звуков через winsound">
       <created>1635615474494</created>
@@ -540,7 +534,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636489581242</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Убеги от круга (комментарии)">
+      <created>1636490223629</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1636490223629</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -574,7 +575,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="def exchangeImage 1.0" />
     <MESSAGE value="def exchangeImage 1.1" />
     <MESSAGE value="Reset &amp; Update Pictures" />
     <MESSAGE value="def go" />
@@ -599,6 +599,7 @@
     <MESSAGE value="Вызов с интервалом (sleep 0.25)" />
     <MESSAGE value="Не обрабатываем пробел" />
     <MESSAGE value="Убеги от круга" />
-    <option name="LAST_COMMIT_MESSAGE" value="Убеги от круга" />
+    <MESSAGE value="Убеги от круга (комментарии)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Убеги от круга (комментарии)" />
   </component>
 </project>
