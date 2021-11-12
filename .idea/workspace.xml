@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Убеги от круга (3 шара)&#10;Отсебятина">
-      <change afterPath="$PROJECT_DIR$/Canvas/Предисловие_к_ игре.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="foreword">
+      <change beforePath="$PROJECT_DIR$/Canvas/Предисловие_к_ игре.py" beforeDir="false" afterPath="$PROJECT_DIR$/Canvas/Предисловие_к_ игре.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,13 +219,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Кнопка посмотреть собранное">
-      <created>1635619121549</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1635619121549</updated>
     </task>
     <task id="LOCAL-00034" summary="Основное окно (методы закомментированы)">
       <created>1635708032015</created>
@@ -564,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636578116110</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="foreword">
+      <created>1636744938678</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1636744938678</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -623,7 +622,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="def isCheckImage():" />
     <MESSAGE value="seeStart &amp; seeEnd" />
     <MESSAGE value="Переменная playGame" />
     <MESSAGE value="Возвращает рекорды ходов" />
@@ -648,6 +646,7 @@
     <MESSAGE value="Убеги от круга (комментарии 2)" />
     <MESSAGE value="Убеги от круга (abs - модуль числа)" />
     <MESSAGE value="Убеги от круга (3 шара)&#10;Отсебятина" />
-    <option name="LAST_COMMIT_MESSAGE" value="Убеги от круга (3 шара)&#10;Отсебятина" />
+    <MESSAGE value="foreword" />
+    <option name="LAST_COMMIT_MESSAGE" value="foreword" />
   </component>
 </project>
