@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Убеги от круга (abs - модуль числа)">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Убеги от круга (3 шара)&#10;Отсебятина">
+      <change afterPath="$PROJECT_DIR$/Canvas/Предисловие_к_ игре.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Canvas/Canvas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Canvas/Canvas.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +29,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Canvas/Предисловие_к_ игре.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Sliding_puzzle/Пятнашки.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Canvas/Canvas.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Sokoban/Сокобан.py" root0="SKIP_INSPECTION" />
@@ -53,7 +54,7 @@
       <recent name="C:\Users\ArtyomLe\PycharmProjects\PythonGames\Canvas" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Canvas">
+  <component name="RunManager" selected="Python.Предисловие_к_ игре">
     <configuration name="Сокобан" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonGames" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -159,6 +160,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Предисловие_к_ игре" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonGames" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Canvas" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\ArtyomLe\PycharmProjects\PythonGames\Canvas\Предисловие_к_ игре.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="PythonGames" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -182,6 +204,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Предисловие_к_ игре" />
         <item itemvalue="Python.Canvas" />
         <item itemvalue="Python.Угадай_Слово" />
         <item itemvalue="Python.Сокобан" />
@@ -197,13 +220,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Настройка геометрии окна">
-      <created>1635618036586</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1635618036586</updated>
     </task>
     <task id="LOCAL-00033" summary="Кнопка посмотреть собранное">
       <created>1635619121549</created>
@@ -541,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636576344469</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="Убеги от круга (3 шара)&#10;Отсебятина">
+      <created>1636578116110</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1636578116110</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -569,13 +592,37 @@
             </State>
           </value>
         </entry>
+        <entry key="b8473aa2-fc1a-4213-9b69-f968269a4e73">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="def go" />
     <MESSAGE value="def isCheckImage():" />
     <MESSAGE value="seeStart &amp; seeEnd" />
     <MESSAGE value="Переменная playGame" />
@@ -600,6 +647,7 @@
     <MESSAGE value="Убеги от круга (комментарии)" />
     <MESSAGE value="Убеги от круга (комментарии 2)" />
     <MESSAGE value="Убеги от круга (abs - модуль числа)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Убеги от круга (abs - модуль числа)" />
+    <MESSAGE value="Убеги от круга (3 шара)&#10;Отсебятина" />
+    <option name="LAST_COMMIT_MESSAGE" value="Убеги от круга (3 шара)&#10;Отсебятина" />
   </component>
 </project>
