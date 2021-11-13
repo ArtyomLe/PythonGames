@@ -2,6 +2,17 @@ from tkinter import *
 from time import sleep
 from winsound import Beep
 
+def reset():
+    global moving, second, timeRun
+    print("Метод reset()")
+    moving = False
+    second = -1
+    stopTimer()
+    getLevel(level)
+    clear_setGrass()
+    createLevel()
+    updateText()
+
 # ================== НАЧАЛО ПРОГРАММЫ  =============================
 # Настраиваем основное окно(размеры, заголовок, расположение)
 root = Tk()
