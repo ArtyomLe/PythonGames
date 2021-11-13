@@ -26,4 +26,9 @@ cnv.config(highlightthickness=0)
 cnv.place(x=0, y=0)
 cnv.focus_set()
 
+cnv.bind("<Up>", lambda e, x=UPKEY: move(x))
+cnv.bind("<Down>", lambda e, x=DOWNKEY: move(x))
+cnv.bind("<Left>", lambda e, x=LEFTKEY: move(x))
+cnv.bind("<Right>", lambda e, x=RIGHTKEY: move(x))
+
 root.mainloop()
