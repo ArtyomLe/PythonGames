@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Создание списков + комментарии">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Обьекты PhotoImage с загруженными из файлов изображениями">
       <change beforePath="$PROJECT_DIR$/Sokoban/Сокобан.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sokoban/Сокобан.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,13 +219,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Формируем списки">
-      <created>1635791082804</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1635791082804</updated>
     </task>
     <task id="LOCAL-00041" summary="Формируем списки (labelImage)">
       <created>1635794026495</created>
@@ -563,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636830374757</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="Обьекты PhotoImage с загруженными из файлов изображениями">
+      <created>1636831325825</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1636831325826</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -622,7 +622,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Пятнашки ver1.0" />
     <MESSAGE value="Пятнашки ver1.1" />
     <MESSAGE value="Library import" />
     <MESSAGE value="Update" />
@@ -647,6 +646,7 @@
     <MESSAGE value="cnv.bind" />
     <MESSAGE value="Создание списков" />
     <MESSAGE value="Создание списков + комментарии" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создание списков + комментарии" />
+    <MESSAGE value="Обьекты PhotoImage с загруженными из файлов изображениями" />
+    <option name="LAST_COMMIT_MESSAGE" value="Обьекты PhotoImage с загруженными из файлов изображениями" />
   </component>
 </project>

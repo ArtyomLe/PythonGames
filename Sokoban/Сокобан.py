@@ -49,6 +49,7 @@ img[3].append(PhotoImage(file="image/kosoban_down.png"))    # img[3][1] - изо
 img[3].append(PhotoImage(file="image/kosoban_left.png"))    # img[3][2] - изображение погрузчика, направленного влево
 img[3].append(PhotoImage(file="image/kosoban_right.png"))   # img[3][3] - изображение погрузчика, направленного вправо
 
+# Смотрим какие переменные используются в глобальной области (а None намекает, что задаваться значения будут потом)
 player = None
 boxes = None
 finish = None
