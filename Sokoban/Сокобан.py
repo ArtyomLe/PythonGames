@@ -53,7 +53,8 @@ img[3].append(PhotoImage(file="image/kosoban_right.png"))   # img[3][3] - изо
 player = None
 boxes = None
 finish = None
-win = None
+
+win = False
 
 btnReset = Button(text="Сбросить поле".upper(), font=("Consolas", "15"), width=20)
 btnReset.place(x=10, y=550)
@@ -67,8 +68,8 @@ textTime = None
 second = None
 level = 1
 
-dataLevel = []
-timeRun = None
-#reset()
+dataLevel = []  # Указываем что имеется двумерный глобальный список (Вместо [] можно указать None)
+timeRun = None  # Обьект для хранения вызова с помощью .after():
+#reset()  # Сбрасывает все переменные и подготавливает игровое поле
 
-root.mainloop()
+root.mainloop()  # Запуск
