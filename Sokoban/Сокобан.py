@@ -14,7 +14,7 @@ SQUARE_SIZE = 64
 
 POS_X = root.winfo_screenwidth() // 2 - (WIDTH * SQUARE_SIZE) // 2
 POS_Y = root.winfo_screenheight() // 2 - (HEIGHT * SQUARE_SIZE) // 2
-root.geometry(f"{WIDHT * SQUARE_SIZE + 0}X{HEIGHT * SQUARE_SIZE + 0} + {[POS_X]} + {POS_Y}")
+root.geometry(f"{WIDTH * SQUARE_SIZE + 0}x{HEIGHT * SQUARE_SIZE + 0}+{POS_X}+{POS_Y}")
 
 UPKEY = 0
 DOWNKEY = 1
