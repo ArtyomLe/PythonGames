@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="cnv.bind">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Создание списков">
       <change beforePath="$PROJECT_DIR$/Sokoban/Сокобан.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sokoban/Сокобан.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,13 +219,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Изображения в. 1.1">
-      <created>1635711882219</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1635711882219</updated>
     </task>
     <task id="LOCAL-00039" summary="Изображения в. 1.2">
       <created>1635713541704</created>
@@ -563,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636828513179</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Создание списков">
+      <created>1636829727964</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1636829727964</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -622,7 +622,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Обновляем надписи" />
     <MESSAGE value="Нажимаем на спрайт" />
     <MESSAGE value="Пятнашки ver1.0" />
     <MESSAGE value="Пятнашки ver1.1" />
@@ -647,6 +646,7 @@
     <MESSAGE value="SokoBan" />
     <MESSAGE value="Foreword" />
     <MESSAGE value="cnv.bind" />
-    <option name="LAST_COMMIT_MESSAGE" value="cnv.bind" />
+    <MESSAGE value="Создание списков" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создание списков" />
   </component>
 </project>

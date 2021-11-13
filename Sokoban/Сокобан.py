@@ -3,21 +3,21 @@ from time import sleep
 from winsound import Beep
 
 # ================== НАЧАЛО ПРОГРАММЫ  =============================
+# Настраиваем основное окно(размеры, заголовок, расположение)
 root = Tk()
 root.resizable(False, False)
-root.title("Soko_ban v. 1.0001 alpha beta supreme")
+root.title("Soko_ban v. 1.0001 alpha supreme")
 root.iconbitmap("icon/iconi.ico")
 
-# Игровое поле (20x10) каждая клетка(квадрат поля) равна(ен) 64x64 пикселя
 WIDTH = 20
 HEIGHT = 10
 SQUARE_SIZE = 64
 
-# Позиция основного окна на экране
 POS_X = root.winfo_screenwidth() // 2 - (WIDTH * SQUARE_SIZE) // 2
 POS_Y = root.winfo_screenheight() // 2 - (HEIGHT * SQUARE_SIZE) // 2
 root.geometry(f"{WIDTH * SQUARE_SIZE + 0}x{HEIGHT * SQUARE_SIZE + 0}+{POS_X}+{POS_Y}")
-
+print(POS_Y)
+print(POS_X)
 # Устанавливаем клавиши управления
 UPKEY = 0
 DOWNKEY = 1
@@ -56,11 +56,11 @@ win = None
 
 btnReset = Button(text="Сбросить поле".upper(), font=("Consolas", "15"), width=20)
 btnReset.place(x=10, y=550)
-btnReset["command"] = reset
+#btnReset["command"] = reset
 
 btnCheat = Button(text="Установить ящики".upper(), font=("Consolas", "15"), width=20)
 btnCheat.place(x=10, y=590)
-btnCheat["command"] = goCheat
+#btnCheat["command"] = goCheat
 
 textTime = None
 second = None
@@ -68,6 +68,6 @@ level = 1
 
 dataLevel = []
 timeRun = None
-reset()
+#reset()
 
 root.mainloop()
