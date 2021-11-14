@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Комментарии">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="def reset">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sokoban/Сокобан.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sokoban/Сокобан.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,13 +220,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00043" summary="def shufflePictures">
-      <created>1635876210658</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1635876210658</updated>
     </task>
     <task id="LOCAL-00044" summary="def shufflePictures">
       <created>1635876220204</created>
@@ -563,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636833355212</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="def reset">
+      <created>1636834191124</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1636834191124</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -622,7 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update" />
     <MESSAGE value="Базовые настройки виджета Canvas" />
     <MESSAGE value="Базовые настройки виджета Canvas 2" />
     <MESSAGE value="Library" />
@@ -647,6 +647,7 @@
     <MESSAGE value="Обьекты PhotoImage с загруженными из файлов изображениями" />
     <MESSAGE value="Смотрим какие переменные используются в глобальной области" />
     <MESSAGE value="Комментарии" />
-    <option name="LAST_COMMIT_MESSAGE" value="Комментарии" />
+    <MESSAGE value="def reset" />
+    <option name="LAST_COMMIT_MESSAGE" value="def reset" />
   </component>
 </project>

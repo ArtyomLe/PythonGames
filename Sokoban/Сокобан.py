@@ -2,6 +2,7 @@ from tkinter import *
 from time import sleep
 from winsound import Beep
 
+# Центральный код смены уровнней
 def reset():
     global moving, second, timeRun
     print("Метод reset()")
@@ -12,6 +13,41 @@ def reset():
     clear_setGrass()
     createLevel()
     updateText()
+
+# Загрузка данных уровня
+def getLevel(lvl):
+    global dataLevel
+    print("Метод getLevel()")
+    dataLevel = []
+    tmp = []
+
+    idx = str(lvl)
+    if (lvl < 10):
+        idx = f"0{lvl}"
+
+    try:
+        f = open(f"levels/level{idx}.dat", "r", encoding="utf-8")
+        for i in f.readlines():
+            tmp.append(i.replace("\n", ""))
+        f.close()
+        for i in range(len(tmp)):
+            dataLevel.append([])
+            for j in tmp[i]:
+                dataLevel[i].append(int(j))
+    except:
+        print("Не найден файл с данными.")
+        quit(0)
+
+
+# Останавливаем таймер
+def stopTimer():
+    global timeRun
+    if (timeRun != None):
+        root.after_cancel(timeRun)
+        timeRun = None
+
+#
+
 
 # ================== НАЧАЛО ПРОГРАММЫ  =============================
 # Настраиваем основное окно(размеры, заголовок, расположение)
