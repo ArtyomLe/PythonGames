@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="def getLevel">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="def clear_setGrass">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sokoban/Сокобан.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sokoban/Сокобан.py" afterDir="false" />
     </list>
@@ -220,13 +220,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00045" summary="def shufflePictures 1.1">
-      <created>1635876889471</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1635876889471</updated>
     </task>
     <task id="LOCAL-00046" summary="def shufflePictures 1.2">
       <created>1635882412342</created>
@@ -564,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636916714559</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="def clear_setGrass">
+      <created>1636917745808</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1636917745808</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -623,7 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Базовые настройки виджета Canvas 2" />
     <MESSAGE value="Library" />
     <MESSAGE value="Метод MOVE" />
     <MESSAGE value="Метод MOVE 2" />
@@ -648,6 +647,7 @@
     <MESSAGE value="Комментарии" />
     <MESSAGE value="def reset" />
     <MESSAGE value="def getLevel" />
-    <option name="LAST_COMMIT_MESSAGE" value="def getLevel" />
+    <MESSAGE value="def clear_setGrass" />
+    <option name="LAST_COMMIT_MESSAGE" value="def clear_setGrass" />
   </component>
 </project>

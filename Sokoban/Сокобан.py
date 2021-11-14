@@ -55,6 +55,30 @@ def clear_setGrass():
             cnv.create_image(SQUARE_SIZE // 2 + i * SQUARE_SIZE, SQUARE_SIZE // 2 + j * SQUARE_SIZE, image=backGround)
          # (32, 32, img),(32, 96, img),(32, 160, img)...(1248, 672, img)  С помощью цикла выводим изображение на экран
 
+# Создание объектов в Canvas
+def createLevel():
+    print("Метод createLevel()")
+    global player, boxes, finish
+    player = []
+    boxes = []
+    finish = []
+
+    for i in range(len(dataLevel)):
+        for j in range(len(dataLevel[i])):
+            if (dataLevel[i][j] == 1):  # Чему равно число в данной координате (0,1,2,3,4) если 1 то прорисовываем стену (img[0])
+                cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[0])
+            elif (dataLevel[i][j] == 3):
+                dataLevel[i][j] = 0
+                finish.append([i, j, cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[2]), False])
+
+    for i in range(len(dataLevel)):
+        for j in range(len(dataLevel[i])):
+            if (dataLevel[i][j] == 2):
+                dataLevel[i][j] = 0
+                boxes.append([i, j, cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[1])])
+            elif (dataLevel[i][j] == 4):
+                dataLevel[i][j] = 0                                            # image=img[3][1] - это изображение погрузчика направленного вниз
+                player.append([i, j, cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[3][1])])
 
 
 # ================== НАЧАЛО ПРОГРАММЫ  =============================
