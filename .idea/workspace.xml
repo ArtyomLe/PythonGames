@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="def reset">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="def getLevel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sokoban/Сокобан.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sokoban/Сокобан.py" afterDir="false" />
     </list>
@@ -220,13 +220,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00044" summary="def shufflePictures">
-      <created>1635876220204</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1635876220204</updated>
     </task>
     <task id="LOCAL-00045" summary="def shufflePictures 1.1">
       <created>1635876889471</created>
@@ -564,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636834191124</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="def getLevel">
+      <created>1636916714557</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1636916714559</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -623,7 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Базовые настройки виджета Canvas" />
     <MESSAGE value="Базовые настройки виджета Canvas 2" />
     <MESSAGE value="Library" />
     <MESSAGE value="Метод MOVE" />
@@ -648,6 +647,7 @@
     <MESSAGE value="Смотрим какие переменные используются в глобальной области" />
     <MESSAGE value="Комментарии" />
     <MESSAGE value="def reset" />
-    <option name="LAST_COMMIT_MESSAGE" value="def reset" />
+    <MESSAGE value="def getLevel" />
+    <option name="LAST_COMMIT_MESSAGE" value="def getLevel" />
   </component>
 </project>

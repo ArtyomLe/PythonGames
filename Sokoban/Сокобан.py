@@ -46,7 +46,15 @@ def stopTimer():
         root.after_cancel(timeRun)
         timeRun = None
 
-#
+# Замостить изображением grass.png всю область окна
+def clear_setGrass():
+    print("Метод clear_setGrass():")
+    cnv.delete(ALL)                         # Полностью отчищаем полотно
+    for i in range(WIDTH):                  # 20
+        for j in range(HEIGHT):             # 10
+            cnv.create_image(SQUARE_SIZE // 2 + i * SQUARE_SIZE, SQUARE_SIZE // 2 + j * SQUARE_SIZE, image=backGround)
+         # (32, 32, img),(32, 96, img),(32, 160, img)...(1248, 672, img)  С помощью цикла выводим изображение на экран
+
 
 
 # ================== НАЧАЛО ПРОГРАММЫ  =============================
