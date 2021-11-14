@@ -12,7 +12,7 @@ def reset():
     getLevel(level)
     clear_setGrass()
     createLevel()
-    updateText()
+#    updateText()
 
 # Загрузка данных уровня
 def getLevel(lvl):
@@ -65,10 +65,10 @@ def createLevel():
 
     for i in range(len(dataLevel)):
         for j in range(len(dataLevel[i])):
-            if (dataLevel[i][j] == 1):  # Чему равно число в данной координате (0,1,2,3,4) если 1 то прорисовываем стену (img[0])
+            if (dataLevel[i][j] == 1):  # Если значение в данной координате равно 1 из (0,1,2,3,4) то расчитываем координаты для вывода текстуры стены (img[0])
                 cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[0])
-            elif (dataLevel[i][j] == 3):
-                dataLevel[i][j] = 0
+            elif (dataLevel[i][j] == 3):# (Счётчик j отвечает за координату x) (Счётчик i отвечает за координату y)
+                dataLevel[i][j] = 0     # Так как строка и столбец в двумерном списке это не (x,y) то координаты из списка надо приводить к координатам окна
                 finish.append([i, j, cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[2]), False])
 
     for i in range(len(dataLevel)):
@@ -149,6 +149,6 @@ level = 1
 
 dataLevel = []  # Указываем что имеется двумерный глобальный список (Вместо [] можно указать None)
 timeRun = None  # Обьект для хранения вызова с помощью .after():
-#reset()  # Сбрасывает все переменные и подготавливает игровое поле
+reset()  # Сбрасывает все переменные и подготавливает игровое поле
 
 root.mainloop()  # Запуск
