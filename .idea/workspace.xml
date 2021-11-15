@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="def createLevel cont.">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Проверка значений списка print(finish)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sokoban/Сокобан.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sokoban/Сокобан.py" afterDir="false" />
     </list>
@@ -220,13 +220,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00048" summary="def exchangeImage 1.0">
-      <created>1635885105644</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1635885105644</updated>
     </task>
     <task id="LOCAL-00049" summary="def exchangeImage 1.1">
       <created>1635886683845</created>
@@ -564,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636924781562</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="Проверка значений списка print(finish)">
+      <created>1637000943929</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1637000943929</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -623,7 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Метод MOVE 2" />
     <MESSAGE value="Метод смещения .move" />
     <MESSAGE value="Вызов с интервалом" />
     <MESSAGE value="Вызов с интервалом (sleep 0.25)" />
@@ -648,6 +647,7 @@
     <MESSAGE value="def clear_setGrass" />
     <MESSAGE value="def createLevel" />
     <MESSAGE value="def createLevel cont." />
-    <option name="LAST_COMMIT_MESSAGE" value="def createLevel cont." />
+    <MESSAGE value="Проверка значений списка print(finish)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Проверка значений списка print(finish)" />
   </component>
 </project>

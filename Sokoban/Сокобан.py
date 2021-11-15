@@ -70,16 +70,20 @@ def createLevel():
             elif (dataLevel[i][j] == 3):# (Счётчик j отвечает за координату x) (Счётчик i отвечает за координату y)
                 dataLevel[i][j] = 0     # Так как строка и столбец в двумерном списке это не (x,y) то координаты из списка надо приводить к координатам окна
                 finish.append([i, j, cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[2]), False])
-
+    # Проверяем файл уровня.dat на наличие значений 2(Ящик), 4(Погрузчик)
+    # Второй цикл нужен для того, чтобы погрузчик и ящики гарантированно прорисовывались поверх точек сбора
     for i in range(len(dataLevel)):
         for j in range(len(dataLevel[i])):
             if (dataLevel[i][j] == 2):
                 dataLevel[i][j] = 0
                 boxes.append([i, j, cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[1])])
             elif (dataLevel[i][j] == 4):
-                dataLevel[i][j] = 0                                            # image=img[3][1] - это изображение погрузчика направленного вниз
+                dataLevel[i][j] = 0
+                # Информационный объект - список player                         image=img[3][1] - это изображение погрузчика направленного вниз
                 player.append([i, j, cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[3][1])])
     print(finish)
+    print(player)
+    print(boxes)
 
 # ================== НАЧАЛО ПРОГРАММЫ  =============================
 # Настраиваем основное окно(размеры, заголовок, расположение)
