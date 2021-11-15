@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Проверка значений списков&#10;    print(finish)&#10;    print(player)&#10;    print(boxes)&#10;дополнения">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="# Прошедшее время с начала уровня&#10;# Обновляем полоску с текстом вверху">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sokoban/Сокобан.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sokoban/Сокобан.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,20 +220,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00051" summary="def go">
-      <created>1635967648046</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1635967648046</updated>
-    </task>
-    <task id="LOCAL-00052" summary="def isCheckImage():">
-      <created>1635968644249</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1635968644249</updated>
     </task>
     <task id="LOCAL-00053" summary="seeStart &amp; seeEnd">
       <created>1635970051063</created>
@@ -563,7 +550,21 @@
       <option name="project" value="LOCAL" />
       <updated>1637002388363</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="def getMinSec(s):">
+      <created>1637004235735</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1637004235735</updated>
+    </task>
+    <task id="LOCAL-00101" summary="# Прошедшее время с начала уровня&#10;# Обновляем полоску с текстом вверху">
+      <created>1637004303420</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1637004303420</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -622,8 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Вызов с интервалом (sleep 0.25)" />
-    <MESSAGE value="Не обрабатываем пробел" />
     <MESSAGE value="Убеги от круга" />
     <MESSAGE value="Убеги от круга (комментарии)" />
     <MESSAGE value="Убеги от круга (комментарии 2)" />
@@ -647,6 +646,8 @@
     <MESSAGE value="Проверка значений списка print(finish)" />
     <MESSAGE value="Проверка значений списков&#10;    print(finish)&#10;    print(player)&#10;    print(boxes)" />
     <MESSAGE value="Проверка значений списков&#10;    print(finish)&#10;    print(player)&#10;    print(boxes)&#10;дополнения" />
-    <option name="LAST_COMMIT_MESSAGE" value="Проверка значений списков&#10;    print(finish)&#10;    print(player)&#10;    print(boxes)&#10;дополнения" />
+    <MESSAGE value="def getMinSec(s):" />
+    <MESSAGE value="# Прошедшее время с начала уровня&#10;# Обновляем полоску с текстом вверху" />
+    <option name="LAST_COMMIT_MESSAGE" value="# Прошедшее время с начала уровня&#10;# Обновляем полоску с текстом вверху" />
   </component>
 </project>

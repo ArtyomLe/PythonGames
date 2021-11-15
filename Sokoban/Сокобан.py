@@ -12,7 +12,7 @@ def reset():
     getLevel(level)
     clear_setGrass()
     createLevel()
-#    updateText()
+    updateText()
 
 # Загрузка данных уровня
 def getLevel(lvl):
@@ -90,7 +90,7 @@ def createLevel():
     print(player)
     print(boxes)
 
-# Прошедшее время с начала уровня
+# Прошедшее время с начала уровня (Данная функция преобразовывает секунды => в "минуты и секунды")
 def getMinSec(s):
     intMin = s // 60
     intSec = s % 60
@@ -111,9 +111,11 @@ def getMinSec(s):
 def updateText():
     global textTime, second, timeRun
     second += 1
+    # После каждого прохода удаляем предыдущую строку с целью избежать информационного мессива состоящего из цифр
     cnv.delete(textTime)
-    txt = f"Уровень: {level}  Прошло времени: {getMinSec(second)}"
-    textTime = cnv.create_text(10, 10, fill="#FFCAAB", anchor="nw", text=txt, font="Verdana, 15")
+    # После удаления формируем новую строку для вывода и вызываем метод getMinSec с текущим кол-вом секунд аргументом
+    txt = f"Уровень: {level}     Прошло времени: {getMinSec(second)}"
+    textTime = cnv.create_text(10, 10, fill="#F7F668", anchor="nw", text=txt, font="Verdana, 15") # Основная строка с текстом
     timeRun = root.after(1000, updateText)
 
 
