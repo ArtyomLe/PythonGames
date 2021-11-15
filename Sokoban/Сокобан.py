@@ -79,7 +79,7 @@ def createLevel():
             elif (dataLevel[i][j] == 4):
                 dataLevel[i][j] = 0                                            # image=img[3][1] - это изображение погрузчика направленного вниз
                 player.append([i, j, cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[3][1])])
-
+    print(finish)
 
 # ================== НАЧАЛО ПРОГРАММЫ  =============================
 # Настраиваем основное окно(размеры, заголовок, расположение)
@@ -145,7 +145,7 @@ btnCheat.place(x=10, y=590)
 
 textTime = None
 second = None
-level = 1
+level = 5
 
 dataLevel = []  # Указываем что имеется двумерный глобальный список (Вместо [] можно указать None)
 timeRun = None  # Обьект для хранения вызова с помощью .after():
