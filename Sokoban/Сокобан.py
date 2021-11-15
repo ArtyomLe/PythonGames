@@ -30,6 +30,7 @@ def getLevel(lvl):
         for i in f.readlines():
             tmp.append(i.replace("\n", ""))
         f.close()
+        # Программа загружает все данные в двумерный список из файла .dat как есть с цифрами (0,1,2,3,4) и уже потом форматируется через createLevel()
         for i in range(len(tmp)):
             dataLevel.append([])
             for j in tmp[i]:

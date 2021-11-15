@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="def getMinSec&#10;Данная функция преобразовывает секунды =&gt; в &quot;минуты и секунды&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="def getMinSec&#10;Данная функция преобразовывает секунды =&gt; в &quot;минуты и секунды&quot; cont.">
       <change beforePath="$PROJECT_DIR$/Sokoban/Сокобан.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sokoban/Сокобан.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,13 +219,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Переменная playGame">
-      <created>1635972472544</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1635972472544</updated>
     </task>
     <task id="LOCAL-00055" summary="Возвращает рекорды ходов">
       <created>1636053023953</created>
@@ -564,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637006484048</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="def getMinSec&#10;Данная функция преобразовывает секунды =&gt; в &quot;минуты и секунды&quot; cont.">
+      <created>1637009241979</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1637009241979</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -623,7 +622,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Убеги от круга (комментарии)" />
     <MESSAGE value="Убеги от круга (комментарии 2)" />
     <MESSAGE value="Убеги от круга (abs - модуль числа)" />
     <MESSAGE value="Убеги от круга (3 шара)&#10;Отсебятина" />
@@ -648,6 +646,7 @@
     <MESSAGE value="def getMinSec(s):" />
     <MESSAGE value="# Прошедшее время с начала уровня&#10;# Обновляем полоску с текстом вверху" />
     <MESSAGE value="def getMinSec&#10;Данная функция преобразовывает секунды =&gt; в &quot;минуты и секунды&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="def getMinSec&#10;Данная функция преобразовывает секунды =&gt; в &quot;минуты и секунды&quot;" />
+    <MESSAGE value="def getMinSec&#10;Данная функция преобразовывает секунды =&gt; в &quot;минуты и секунды&quot; cont." />
+    <option name="LAST_COMMIT_MESSAGE" value="def getMinSec&#10;Данная функция преобразовывает секунды =&gt; в &quot;минуты и секунды&quot; cont." />
   </component>
 </project>
