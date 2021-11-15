@@ -65,12 +65,14 @@ def createLevel():
 
     for i in range(len(dataLevel)):
         for j in range(len(dataLevel[i])):
-            if (dataLevel[i][j] == 1):  # Если значение в данной координате равно 1 из (0,1,2,3,4) то расчитываем координаты для вывода текстуры стены (img[0])
+            # Если значение в данной координате равно 1 из (0,1,2,3,4) то расчитываем координаты для вывода текстуры стены (img[0])
+            if (dataLevel[i][j] == 1):       # (Счётчик j отвечает за координату x) (Счётчик i отвечает за координату y)
                 cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[0])
-            elif (dataLevel[i][j] == 3):# (Счётчик j отвечает за координату x) (Счётчик i отвечает за координату y)
-                dataLevel[i][j] = 0     # Так как строка и столбец в двумерном списке это не (x,y) то координаты из списка надо приводить к координатам окна
+            elif (dataLevel[i][j] == 3):
+                dataLevel[i][j] = 0
                 # Информационный объект - список finish (Точки сбора ящиков)
                 finish.append([i, j, cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[2]), False])
+
     # Проверяем файл уровня.dat на наличие значений 2(Ящик), 4(Погрузчик)
     # Второй цикл нужен для того, чтобы погрузчик и ящики гарантированно прорисовывались поверх точек сбора
     for i in range(len(dataLevel)):
@@ -82,10 +84,37 @@ def createLevel():
             elif (dataLevel[i][j] == 4):
                 dataLevel[i][j] = 0
                 # Информационный объект - список player (Погрузчик)             image=img[3][1] - это изображение погрузчика направленного вниз
+                # i - x, j - y => т.е координаты | cnv.create_image => ID объекта(player) на Canvas
                 player.append([i, j, cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[3][1])])
     print(finish)
     print(player)
     print(boxes)
+
+# Прошедшее время с начала уровня
+def getMinSec(s):
+    intMin = s // 60
+    intSec = s % 60
+    textSecond = str(intSec)
+    if (intMin > 59):
+        intMin %= 60
+    if (intSec < 10):
+        textSecond = "0" + textSecond
+    if (intMin == 0):
+        return f"{textSecond} сек."
+    else:
+        textMin = str(intMin)
+        if (intMin < 10):
+            textMin = "0" + textMin
+        return f"{textMin} мин. {textSecond} сек."
+
+# Обновляем полоску с текстом вверху
+def updateText():
+    global textTime, second, timeRun
+    second += 1
+    cnv.delete(textTime)
+    txt = f"Уровень: {level}  Прошло времени: {getMinSec(second)}"
+    textTime = cnv.create_text(10, 10, fill="#FFCAAB", anchor="nw", text=txt, font="Verdana, 15")
+    timeRun = root.after(1000, updateText)
 
 # ================== НАЧАЛО ПРОГРАММЫ  =============================
 # Настраиваем основное окно(размеры, заголовок, расположение)
