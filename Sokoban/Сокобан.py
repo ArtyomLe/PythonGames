@@ -90,22 +90,22 @@ def createLevel():
     print(player)
     print(boxes)
 
-# Прошедшее время с начала уровня (Данная функция преобразовывает секунды => в "минуты и секунды")
+# Прошедшее время с начала уровня (Данная функция преобразовывает секунды => в "минуты и секунды") 190секунд = 03минуты и 10секунд
 def getMinSec(s):
-    intMin = s // 60
-    intSec = s % 60
+    intMin = s // 60                  # Инициализируем минуты (1 // 60 = 0, 2 // 60 = 0 ...)
+    intSec = s % 60                   # Инициализируем секунды (1 % 60 = 1, 2 % 60 = 2 ...)
     textSecond = str(intSec)
-    if (intMin > 59):
-        intMin %= 60
-    if (intSec < 10):
-        textSecond = "0" + textSecond
-    if (intMin == 0):
+    if (intMin > 59):                 # Если например прошло 79 минут
+        intMin %= 60                  # 79 % 60 = 19 минут "второго часа"
+    if (intSec < 10):                 # Если прошло меньше 10 секунд
+        textSecond = "0" + textSecond # Добавляем 0 перед цифрой
+    if (intMin == 0):                 # Если прошло 0 минут то просто возвращаем надпись сек.
         return f"{textSecond} сек."
     else:
-        textMin = str(intMin)
-        if (intMin < 10):
+        textMin = str(intMin)                      # Иначе выводим так же и минуты
+        if (intMin < 10):                          # Если меньше 10 минут то выводим 0 перед цифрой по принципу секунд
             textMin = "0" + textMin
-        return f"{textMin} мин. {textSecond} сек."
+        return f"{textMin} мин. {textSecond} сек." # В конце функция возвращает минуты и секунды
 
 # Обновляем полоску с текстом вверху
 def updateText():
@@ -115,7 +115,8 @@ def updateText():
     cnv.delete(textTime)
     # После удаления формируем новую строку для вывода и вызываем метод getMinSec с текущим кол-вом секунд аргументом
     txt = f"Уровень: {level}     Прошло времени: {getMinSec(second)}"
-    textTime = cnv.create_text(10, 10, fill="#F7F668", anchor="nw", text=txt, font="Verdana, 15") # Основная строка с текстом
+    # Основная строка с текстом(anchor="nw" значит текст выравнивается по левому краю)
+    textTime = cnv.create_text(10, 10, fill="#F7F668", anchor="nw", text=txt, font="Verdana, 13")
     timeRun = root.after(1000, updateText)
 
 
