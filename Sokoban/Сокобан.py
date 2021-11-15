@@ -116,6 +116,7 @@ def updateText():
     textTime = cnv.create_text(10, 10, fill="#FFCAAB", anchor="nw", text=txt, font="Verdana, 15")
     timeRun = root.after(1000, updateText)
 
+
 # ================== НАЧАЛО ПРОГРАММЫ  =============================
 # Настраиваем основное окно(размеры, заголовок, расположение)
 root = Tk()
