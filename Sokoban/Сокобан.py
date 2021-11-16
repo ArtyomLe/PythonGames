@@ -184,6 +184,14 @@ def move(v):
                 player[1] += 1
                 boxes[numberBox][1] += 1
 
+# Определяем что находится в клетке
+def getNumber(x, y):
+    print("Метод getNumber()")
+    for box in boxes:
+        if (box[0] == x and box[1] == y):
+            return 2
+        if (dataLevel[x][y] <= 1):
+            return dataLevel[x][y]
 
 # ================== НАЧАЛО ПРОГРАММЫ  =============================
 # Настраиваем основное окно(размеры, заголовок, расположение)

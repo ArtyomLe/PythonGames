@@ -220,13 +220,6 @@
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
     </task>
-    <task id="LOCAL-00058" summary="Нажимаем на спрайт">
-      <created>1636056164791</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1636056164791</updated>
-    </task>
     <task id="LOCAL-00059" summary="Пятнашки ver1.0">
       <created>1636133108944</created>
       <option name="number" value="00059" />
@@ -563,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637088923132</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="Проверить клетку на доступность перемещения (пояснения)">
+      <created>1637091015393</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1637091015393</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
