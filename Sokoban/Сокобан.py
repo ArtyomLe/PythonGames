@@ -212,7 +212,23 @@ def movePlayerTo(x, y, count):
         root.after(20, lambda x=x, y=y, c=count: movePlayerTo(x, y, c))
     else:
         print("Метод movePlayerTo() выполнился")
+        moving = False                     # Если не поставить moving = False погрузчиком невозможно будет управлять
+
+# Синхронно перемещаем погрузчик и ящик на требуемое расстояние (64 пикселя)
+def movePlayerBoxTo(x, y, count, numberBox):
+    global moving
+    count -= 1
+    cnv.move(player[2], x, y)               # Изображение погрузчика и его координаты
+    cnv.move(boxes[numberBox][2], x, y)     # boxes[номер ящика который двигаем][изображение ящика] и его координаты X, Y
+
+    if (count > 0):
+        moving = True
+        root.after(20, lambda x=x, y=y, c=count, n=numberBox: movePlayerBoxTo(x, y, c, n))
+    else:
+        print("Метод movePlayerBoxTo() выполнился")
         moving = False
+        checkBoxInFinish()                  # Проверяем все ли ящики заняли места в точках сбора
+
 
 # ================== НАЧАЛО ПРОГРАММЫ  =============================
 # Настраиваем основное окно(размеры, заголовок, расположение)
