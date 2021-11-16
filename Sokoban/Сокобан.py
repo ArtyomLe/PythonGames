@@ -120,16 +120,20 @@ def updateText():
     textTime = cnv.create_text(10, 10, fill="#F7F668", anchor="nw", text=txt, font="Verdana, 13")
     timeRun = root.after(1000, updateText)
 
+
 # Проверить клетку на доступность перемещения
 def move(v):
     print("Метод move()")
+    # Проверяем истинность переменной moving (если истинно значит работает анимация) тогда остнавливаем её через return 0
     if (moving):
         return 0
+    # Удаляем предыдущее изображение погрузчика (у нас их всего 4)
     cnv.delete(player[2])
+    # Выводим новое изображение с учётом переменной v (которая принимает значения (0,1,2,3) т.е в какую сторону смотрит погрузчик)
     player[2] = cnv.create_image(SQUARE_SIZE // 2 + player[1] * SQUARE_SIZE, SQUARE_SIZE // 2 + player[0] * SQUARE_SIZE, image=img[3][v])
-    x = player[0]
-    y = player[1]
-    Beep(625, 10)
+    x = player[0] # Первому значению списка присваисаем переменую x (чтобы потом не писать player[0] )
+    y = player[1] # Второму значению списка присваисаем переменую y (чтобы потом не писать player[1] )
+    Beep(625, 10) # Издаём истошный звук при нажатиии на клавишу
 
     if (v == UPKEY):
         check = getNumber(x - 1, y)

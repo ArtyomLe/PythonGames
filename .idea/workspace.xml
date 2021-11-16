@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="def getMinSec&#10;Данная функция преобразовывает секунды =&gt; в &quot;минуты и секунды&quot; cont.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Проверить клетку на доступность перемещения">
       <change beforePath="$PROJECT_DIR$/Sokoban/Сокобан.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sokoban/Сокобан.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,13 +219,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Сохраняет в файл рекорды пользователя">
-      <created>1636053784173</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1636053784173</updated>
     </task>
     <task id="LOCAL-00057" summary="Обновляем надписи">
       <created>1636054395198</created>
@@ -564,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637010060813</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="Проверить клетку на доступность перемещения">
+      <created>1637088189164</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1637088189165</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -623,7 +622,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Убеги от круга (комментарии 2)" />
     <MESSAGE value="Убеги от круга (abs - модуль числа)" />
     <MESSAGE value="Убеги от круга (3 шара)&#10;Отсебятина" />
     <MESSAGE value="foreword" />
@@ -648,6 +646,7 @@
     <MESSAGE value="# Прошедшее время с начала уровня&#10;# Обновляем полоску с текстом вверху" />
     <MESSAGE value="def getMinSec&#10;Данная функция преобразовывает секунды =&gt; в &quot;минуты и секунды&quot;" />
     <MESSAGE value="def getMinSec&#10;Данная функция преобразовывает секунды =&gt; в &quot;минуты и секунды&quot; cont." />
-    <option name="LAST_COMMIT_MESSAGE" value="def getMinSec&#10;Данная функция преобразовывает секунды =&gt; в &quot;минуты и секунды&quot; cont." />
+    <MESSAGE value="Проверить клетку на доступность перемещения" />
+    <option name="LAST_COMMIT_MESSAGE" value="Проверить клетку на доступность перемещения" />
   </component>
 </project>
