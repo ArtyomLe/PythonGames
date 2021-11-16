@@ -127,7 +127,7 @@ def move(v):
     # Проверяем истинность переменной moving (если истинно значит работает анимация) тогда остнавливаем её через return 0
     if (moving):
         return 0
-    # Удаляем предыдущее изображение погрузчика (у нас их всего 4)
+    # Удаляем предыдущее изображение погрузчика cnv.create_image (у нас их всего 4)
     cnv.delete(player[2])
     # Выводим новое изображение с учётом переменной v (которая принимает значения (0,1,2,3) т.е в какую сторону смотрит погрузчик)
     player[2] = cnv.create_image(SQUARE_SIZE // 2 + player[1] * SQUARE_SIZE, SQUARE_SIZE // 2 + player[0] * SQUARE_SIZE, image=img[3][v])
@@ -136,18 +136,18 @@ def move(v):
     Beep(625, 10) # Издаём истошный звук при нажатиии на клавишу
 
     if (v == UPKEY):
-        check = getNumber(x - 1, y)
-        if (check == 0):
-            movePlayerTo(0, -8, 8)
-            player[0] -= 1
-        elif (check == 2):
-            nextCheck = getNumber(x - 2, y)
-            if (nextCheck == 0):
-                numberBox = getBox(x - 1, y)
-                movePlayerBoxTo(0, -8, 8, numberBox)
-                player[0] -= 1
-                boxes[numberBox][0] -= 1
-    elif (v == DOWNKEY):
+        check = getNumber(x - 1, y)                   # Получаем код вышестоящей клетки
+        if (check == 0):                              # Если он равен 0 т.е пустое место
+            movePlayerTo(0, -8, 8)                    # Запускаем анимацию перемещения вверх (по 8 пикселей за ход для анимации)
+            player[0] -= 1                            # Изменяем координату погрузчика
+        elif (check == 2):                            # Иначе если там находится ящик код=2
+            nextCheck = getNumber(x - 2, y)           # Получаем код на 2 клетки выше "через ящик"
+            if (nextCheck == 0):                      # Если он равен 0 т.е пустое место
+                numberBox = getBox(x - 1, y)          # Номер строки ящика расположенного выше погрузчика
+                movePlayerBoxTo(0, -8, 8, numberBox)  # Запускаем анимацию движения погрузчика на место ящика (вверх) по 8 пикселей за ход
+                player[0] -= 1                        # Заменяем координату X погрузчика сделав её равной клетке выше
+                boxes[numberBox][0] -= 1              # Изменяем координату X ящика на клетку выше
+    elif (v == DOWNKEY):                              # Иначе если нажата клавиша вниз...дальше идут однотипные блоки с изменением координат X, Y
         check = getNumber(x + 1, y)
         if (check == 0):
             movePlayerTo(0, 8, 8)

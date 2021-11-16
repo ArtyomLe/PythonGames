@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Проверить клетку на доступность перемещения">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Проверить клетку на доступность перемещения (пояснения)">
       <change beforePath="$PROJECT_DIR$/Sokoban/Сокобан.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sokoban/Сокобан.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,13 +219,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00057" summary="Обновляем надписи">
-      <created>1636054395198</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1636054395199</updated>
     </task>
     <task id="LOCAL-00058" summary="Нажимаем на спрайт">
       <created>1636056164791</created>
@@ -563,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637088189165</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="Проверить клетку на доступность перемещения (пояснения)">
+      <created>1637088923132</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1637088923132</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -622,7 +622,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Убеги от круга (abs - модуль числа)" />
     <MESSAGE value="Убеги от круга (3 шара)&#10;Отсебятина" />
     <MESSAGE value="foreword" />
     <MESSAGE value="foreword cont." />
@@ -647,6 +646,7 @@
     <MESSAGE value="def getMinSec&#10;Данная функция преобразовывает секунды =&gt; в &quot;минуты и секунды&quot;" />
     <MESSAGE value="def getMinSec&#10;Данная функция преобразовывает секунды =&gt; в &quot;минуты и секунды&quot; cont." />
     <MESSAGE value="Проверить клетку на доступность перемещения" />
-    <option name="LAST_COMMIT_MESSAGE" value="Проверить клетку на доступность перемещения" />
+    <MESSAGE value="Проверить клетку на доступность перемещения (пояснения)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Проверить клетку на доступность перемещения (пояснения)" />
   </component>
 </project>
