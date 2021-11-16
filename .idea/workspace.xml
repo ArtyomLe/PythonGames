@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Определяем что находится в клетке">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Функция возвращает номер ящика">
       <change beforePath="$PROJECT_DIR$/Sokoban/Сокобан.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sokoban/Сокобан.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,13 +219,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00060" summary="Пятнашки ver1.0">
-      <created>1636133121511</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1636133121511</updated>
     </task>
     <task id="LOCAL-00061" summary="Пятнашки ver1.1">
       <created>1636141023225</created>
@@ -563,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637091710228</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="Функция возвращает номер ящика">
+      <created>1637092404378</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1637092404378</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -622,7 +622,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="foreword" />
     <MESSAGE value="foreword cont." />
     <MESSAGE value="SokoBan" />
     <MESSAGE value="Foreword" />
@@ -647,6 +646,7 @@
     <MESSAGE value="Проверить клетку на доступность перемещения" />
     <MESSAGE value="Проверить клетку на доступность перемещения (пояснения)" />
     <MESSAGE value="Определяем что находится в клетке" />
-    <option name="LAST_COMMIT_MESSAGE" value="Определяем что находится в клетке" />
+    <MESSAGE value="Функция возвращает номер ящика" />
+    <option name="LAST_COMMIT_MESSAGE" value="Функция возвращает номер ящика" />
   </component>
 </project>

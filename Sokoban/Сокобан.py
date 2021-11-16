@@ -143,7 +143,7 @@ def move(v):
         elif (check == 2):                            # Иначе если там находится ящик код=2
             nextCheck = getNumber(x - 2, y)           # Получаем код на 2 клетки выше "через ящик"
             if (nextCheck == 0):                      # Если он равен 0 т.е пустое место
-                numberBox = getBox(x - 1, y)          # Номер ящика (в списке boxes) расположенного выше погрузчика
+                numberBox = getBox(x - 1, y)          # Номер ящика (в списке boxes) расположенного выше погрузчика (по направлению движения)
                 movePlayerBoxTo(0, -8, 8, numberBox)  # Запускаем анимацию движения погрузчика на место ящика (вверх) по 8 пикселей за ход
                 player[0] -= 1                        # Заменяем координату X погрузчика сделав её равной клетке выше
                 boxes[numberBox][0] -= 1              # Изменяем координату X ящика на клетку выше
@@ -200,6 +200,19 @@ def getBox(x, y):
         if (boxes[i][0] == x and boxes[i][1] == y):
             return i
     return None
+
+# Перемещаем погрузчик на требуемое расстояние
+def movePlayerTo(x, y, count):
+    global moving
+    count -= 1                            # 8 пикселей за ход
+    cnv.move(player[2], x, y)
+
+    if (count > 0):
+        moving = True
+        root.after(20, lambda x=x, y=y, c=count: movePlayerTo(x, y, c))
+    else:
+        print("Метод movePlayerTo() выполнился")
+        moving = False
 
 # ================== НАЧАЛО ПРОГРАММЫ  =============================
 # Настраиваем основное окно(размеры, заголовок, расположение)
