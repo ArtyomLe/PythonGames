@@ -147,8 +147,8 @@ def getNumber(x, y):
     for box in boxes:
         if (box[0] == x and box[1] == y):
             return 2
-        if (dataLevel[x][y] <= 1):
-            return dataLevel[x][y]
+    if (dataLevel[x][y] <= 1):
+        return dataLevel[x][y]
 
 # Проверить клетку на доступность перемещения
 def move(v):
