@@ -2,7 +2,7 @@ from tkinter import *
 from time import sleep
 from winsound import Beep
 
-# Центральный код смены уровнней
+# Центральный код смены уровней
 def reset():
     global moving, second, timeRun
     print("Метод reset()")
@@ -39,6 +39,20 @@ def getLevel(lvl):
         print("Не найден файл с данными.")
         quit(0)
 
+# Ставим ящики на точки сбора
+def goCheat():
+    global moving
+    print("Метод goCheat()")
+    moving = True
+    for i in range(len(boxes)):
+        boxes[i][0] = finish[i][0] # Координата ящика равна координате точки сбора по X
+        boxes[i][1] = finish[i][1] # Координата ящика равна координате точки сбора по Y
+
+        # Изменяем координаты спрайтов
+        cnv.coords(boxes[i][2], SQUARE_SIZE // 2 + boxes[i][1] * SQUARE_SIZE, SQUARE_SIZE // 2 + boxes[i][0] * SQUARE_SIZE)
+        cnv.update()
+        sleep(2)
+        checkBoxInFinish()         # Проверка собранности головоломки
 
 # Останавливаем таймер
 def stopTimer():
@@ -335,11 +349,11 @@ win = False
 
 btnReset = Button(text="Сбросить поле".upper(), font=("Consolas", "15"), width=20)
 btnReset.place(x=10, y=550)
-#btnReset["command"] = reset
+btnReset["command"] = reset
 
 btnCheat = Button(text="Установить ящики".upper(), font=("Consolas", "15"), width=20)
 btnCheat.place(x=10, y=590)
-#btnCheat["command"] = goCheat
+btnCheat["command"] = goCheat
 
 textTime = None
 second = None
