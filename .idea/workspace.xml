@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="goCheat">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Updates ver.2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sokoban/Сокобан.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sokoban/Сокобан.py" afterDir="false" />
     </list>
@@ -220,13 +220,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00069" summary="Базовые настройки виджета Canvas 2">
-      <created>1636199900016</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1636199900016</updated>
     </task>
     <task id="LOCAL-00070" summary="Library">
       <created>1636219365925</created>
@@ -564,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637174492122</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="Updates ver.2">
+      <created>1637178150483</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1637178150483</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -623,7 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Комментарии" />
     <MESSAGE value="def reset" />
     <MESSAGE value="def getLevel" />
     <MESSAGE value="def clear_setGrass" />
@@ -648,6 +647,7 @@
     <MESSAGE value="Смена уровня&#10;def nextLevel():" />
     <MESSAGE value="Организация переключения уровня" />
     <MESSAGE value="goCheat" />
-    <option name="LAST_COMMIT_MESSAGE" value="goCheat" />
+    <MESSAGE value="Updates ver.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates ver.2" />
   </component>
 </project>

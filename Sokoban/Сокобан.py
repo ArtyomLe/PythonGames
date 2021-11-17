@@ -19,8 +19,8 @@ def nextLevel():
     cnv.delete(ALL)
     stopTimer()
 
-    btnCheat.place(x=-100, y=100)   # Выводим кнопки за границы окна
-    btnReset.place(x=-100, y=-100)  # Выводим кнопки за границы окна
+    btnCheat.place(x=-200, y=-200)   # Выводим кнопки за границы окна
+    btnReset.place(x=-200, y=-200)  # Выводим кнопки за границы окна
     btnNext = Button(text="Продолжить", font="Verdana, 19", width=45) # Создаём новую кнопку
     btnNext.place(x=300, y=550)
     btnNext.focus_set()             # Концентрируем на ней внимание (не обязательно нажимать мышью) можно с клавивтуры
@@ -138,7 +138,8 @@ def getBox(x, y):
     for i in range(len(boxes)):
         if (boxes[i][0] == x and boxes[i][1] == y):
             return i
-    return None
+    else:
+        return None
 
 # Определяем что находится в клетке
 def getNumber(x, y):
@@ -354,7 +355,7 @@ btnCheat["command"] = goCheat
 
 textTime = None
 second = None
-level = 1
+level = 2
 
 dataLevel = []  # Указываем что имеется двумерный глобальный список (Вместо [] можно указать None)
 timeRun = None  # Обьект для хранения вызова с помощью .after():
