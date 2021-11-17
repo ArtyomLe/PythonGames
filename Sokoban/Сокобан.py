@@ -2,57 +2,31 @@ from tkinter import *
 from time import sleep
 from winsound import Beep
 
-# Центральный код смены уровней
-def reset():
-    global moving, second, timeRun
-    print("Метод reset()")
-    moving = False
-    second = -1
+# Организация переключения уровня
+def nextLevelSet(btnNext: Button):
+    global level
+    level += 1                   # Если такого уровня не существует, то программа прекращает работу в момент чтения данных
+    cnv.focus_set()              # Перехватываем нажатие клавиш
+    btnNext.destroy()            # Очищаем кнопку "Продолжить"
+    btnCheat.place(x=10, y=590)  # Возвращаем кнопки на прежние места
+    btnReset.place(x=10, y=550)   # Возвращаем кнопки на прежние места
+    cnv.delete(ALL)              # Очищаем Canvas
+    reset()                      # Вызываем основной метод сброса
+
+# Смена уровня
+def nextLevel():
+    print("Метод nextLevel()")
+    cnv.delete(ALL)
     stopTimer()
-    getLevel(level)
-    clear_setGrass()
-    createLevel()
-    updateText()
 
-# Загрузка данных уровня
-def getLevel(lvl):
-    global dataLevel
-    print("Метод getLevel()")
-    dataLevel = []
-    tmp = []
-
-    idx = str(lvl)
-    if (lvl < 10):
-        idx = f"0{lvl}"
-
-    try:
-        f = open(f"levels/level{idx}.dat", "r", encoding="utf-8")
-        for i in f.readlines():
-            tmp.append(i.replace("\n", ""))
-        f.close()
-        # Программа загружает все данные в двумерный список из файла .dat как есть с цифрами (0,1,2,3,4) и уже потом форматируется через createLevel()
-        for i in range(len(tmp)):
-            dataLevel.append([])
-            for j in tmp[i]:
-                dataLevel[i].append(int(j))
-    except:
-        print("Не найден файл с данными.")
-        quit(0)
-
-# Ставим ящики на точки сбора
-def goCheat():
-    global moving
-    print("Метод goCheat()")
-    moving = True
-    for i in range(len(boxes)):
-        boxes[i][0] = finish[i][0] # Координата ящика равна координате точки сбора по X
-        boxes[i][1] = finish[i][1] # Координата ящика равна координате точки сбора по Y
-
-        # Изменяем координаты спрайтов
-        cnv.coords(boxes[i][2], SQUARE_SIZE // 2 + boxes[i][1] * SQUARE_SIZE, SQUARE_SIZE // 2 + boxes[i][0] * SQUARE_SIZE)
-        cnv.update()
-        sleep(2)
-        checkBoxInFinish()         # Проверка собранности головоломки
+    btnCheat.place(x=-100, y=100)   # Выводим кнопки за границы окна
+    btnReset.place(x=-100, y=-100)  # Выводим кнопки за границы окна
+    btnNext = Button(text="Продолжить", font="Verdana, 19", width=45) # Создаём новую кнопку
+    btnNext.place(x=300, y=550)
+    btnNext.focus_set()             # Концентрируем на ней внимание (не обязательно нажимать мышью) можно с клавивтуры
+    btnNext["command"] = lambda b=btnNext: nextLevelSet(b) # Передаём в метод nextLevelSet ссылку на виджет (кнопку продолжить)
+                                                           # При нажатии на кнопку продолжить переходим на другой уровень
+    cnv.create_text(WIDTH * SQUARE_SIZE // 2, 200, fill="#AAFFCC", text=f"Победа! Вы собрали головоломку за {getMinSec(second)}! Поздравляем!", font="Verdana, 25")
 
 # Останавливаем таймер
 def stopTimer():
@@ -60,50 +34,6 @@ def stopTimer():
     if (timeRun != None):
         root.after_cancel(timeRun)
         timeRun = None
-
-# Замостить изображением grass.png всю область окна
-def clear_setGrass():
-    print("Метод clear_setGrass():")
-    cnv.delete(ALL)                         # Полностью отчищаем полотно
-    for i in range(WIDTH):                  # 20
-        for j in range(HEIGHT):             # 10
-            cnv.create_image(SQUARE_SIZE // 2 + i * SQUARE_SIZE, SQUARE_SIZE // 2 + j * SQUARE_SIZE, image=backGround)
-         # (32, 32, img),(32, 96, img),(32, 160, img)...(1248, 672, img)  С помощью цикла выводим изображение на экран
-
-# Создание объектов в Canvas
-def createLevel():
-    print("Метод createLevel()")
-    global player, boxes, finish
-    player = []
-    boxes = []
-    finish = []
-
-    for i in range(len(dataLevel)):
-        for j in range(len(dataLevel[i])):
-            # Если значение в данной координате равно 1 из (0,1,2,3,4) то расчитываем координаты для вывода текстуры стены (img[0])
-            if (dataLevel[i][j] == 1):       # (Счётчик j отвечает за координату x) (Счётчик i отвечает за координату y)
-                cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[0])
-            elif (dataLevel[i][j] == 3):
-                dataLevel[i][j] = 0
-                # Информационный объект - список finish (Точки сбора ящиков)
-                finish.append([i, j, cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[2]), False])
-
-    # Проверяем файл уровня.dat на наличие значений 2(Ящик), 4(Погрузчик)
-    # Второй цикл нужен для того, чтобы погрузчик и ящики гарантированно прорисовывались поверх точек сбора
-    for i in range(len(dataLevel)):
-        for j in range(len(dataLevel[i])):
-            if (dataLevel[i][j] == 2):
-                dataLevel[i][j] = 0
-                # Информационный объект - список boxes (Ящики)
-                boxes.append([i, j, cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[1])])
-            elif (dataLevel[i][j] == 4):
-                dataLevel[i][j] = 0
-                # Информационный объект - список player (Погрузчик)             image=img[3][1] - это изображение погрузчика направленного вниз
-                # i - x, j - y => т.е координаты | cnv.create_image => ID объекта(player) на Canvas
-                player.append([i, j, cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[3][1])])
-    print(finish)
-    print(player)
-    print(boxes)
 
 # Прошедшее время с начала уровня (Данная функция преобразовывает секунды => в "минуты и секунды") 190секунд = 03минуты и 10секунд
 def getMinSec(s):
@@ -133,6 +63,91 @@ def updateText():
     # Основная строка с текстом(anchor="nw" значит текст выравнивается по левому краю)
     textTime = cnv.create_text(10, 10, fill="#F7F668", anchor="nw", text=txt, font="Verdana, 13")
     timeRun = root.after(1000, updateText)
+
+# Ставим ящики на точки сбора
+def goCheat():
+    global moving
+    print("Метод goCheat()")
+    moving = True
+    for i in range(len(boxes)):
+        boxes[i][0] = finish[i][0] # Координата ящика равна координате точки сбора по X
+        boxes[i][1] = finish[i][1] # Координата ящика равна координате точки сбора по Y
+
+        # Изменяем координаты спрайтов
+        cnv.coords(boxes[i][2], SQUARE_SIZE // 2 + boxes[i][1] * SQUARE_SIZE, SQUARE_SIZE // 2 + boxes[i][0] * SQUARE_SIZE)
+        cnv.update()
+        sleep(2)
+        checkBoxInFinish()         # Проверка собранности головоломки
+
+# Проверяем все ли ящики заняли места в точках сбора
+# Суть двойного цикла while в том чтобы как только хоть в одной точке сбора отсутствует ящик, циклы прекратили работу
+def checkBoxInFinish():
+    global finish, win
+    print("Метод checkBoxInFinish()")
+
+    for fin in finish:
+        fin[3] = False  # Каждый третий элемент (наличие ящика в точке сбора) в списке точек наличия устанавливаем ЛОЖЬ
+                        # Чтобы в дальнейшем снова проверить каждую точку и общим логическим произведением получить результат ПРАВДА
+    win = True          # Изначально предпологаем что пользователь выиграл
+    fin = 0
+    while (fin < len(finish) and win): # Для утверждения не победы достаточно чтобы хотя бы одна точка сбора пустовала
+        box = 0
+        while (box < len(boxes)):
+            if (finish[fin][0:2] == boxes[box][0:2]): # Если координаты точки сбора и ящика совподают
+                finish[fin][3] = True                 # При совпадении сразу преходим на проверку следующей точки сбора
+                box = len(boxes)
+            box += 1
+        win = win and finish[fin][3] # Если совпадения не обнаружится то прекращаем работу обоих циклов (win становится False)
+        fin += 1
+    if (win):                        # Если win True переходим на следующий уровень
+        Beep(750, 10)
+        Beep(1750, 10)
+        nextLevel()
+
+# Синхронно перемещаем погрузчик и ящик на требуемое расстояние (64 пикселя)
+def movePlayerBoxTo(x, y, count, numberBox):
+    global moving
+    count -= 1
+    cnv.move(player[2], x, y)               # Изображение погрузчика и его координаты
+    cnv.move(boxes[numberBox][2], x, y)     # boxes[номер ящика который двигаем][изображение ящика] и его координаты X, Y
+
+    if (count > 0):
+        moving = True
+        root.after(20, lambda x=x, y=y, c=count, n=numberBox: movePlayerBoxTo(x, y, c, n))
+    else:
+        print("Метод movePlayerBoxTo() выполнился")
+        moving = False
+        checkBoxInFinish()                  # Проверяем все ли ящики заняли места в точках сбора
+
+# Перемещаем погрузчик на требуемое расстояние
+def movePlayerTo(x, y, count):
+    global moving
+    count -= 1                            # 8 пикселей за ход
+    cnv.move(player[2], x, y)
+
+    if (count > 0):
+        moving = True
+        root.after(20, lambda x=x, y=y, c=count: movePlayerTo(x, y, c))
+    else:
+        print("Метод movePlayerTo() выполнился")
+        moving = False                     # Если не поставить moving = False погрузчиком невозможно будет управлять
+
+# Функция возвращает номер ящика под которым он записан в списке boxes[x][y] важно знать какой именно ящик нужно толкать, их может быть несколько
+def getBox(x, y):
+    print("Метод getBox()")
+    for i in range(len(boxes)):
+        if (boxes[i][0] == x and boxes[i][1] == y):
+            return i
+    return None
+
+# Определяем что находится в клетке
+def getNumber(x, y):
+    print("Метод getNumber()")
+    for box in boxes:
+        if (box[0] == x and box[1] == y):
+            return 2
+        if (dataLevel[x][y] <= 1):
+            return dataLevel[x][y]
 
 # Проверить клетку на доступность перемещения
 def move(v):
@@ -197,101 +212,83 @@ def move(v):
                 player[1] += 1
                 boxes[numberBox][1] += 1
 
-# Определяем что находится в клетке
-def getNumber(x, y):
-    print("Метод getNumber()")
-    for box in boxes:
-        if (box[0] == x and box[1] == y):
-            return 2
-        if (dataLevel[x][y] <= 1):
-            return dataLevel[x][y]
+# Создание объектов в Canvas
+def createLevel():
+    print("Метод createLevel()")
+    global player, boxes, finish
+    player = []
+    boxes = []
+    finish = []
 
-# Функция возвращает номер ящика под которым он записан в списке boxes[x][y] важно знать какой именно ящик нужно толкать, их может быть несколько
-def getBox(x, y):
-    print("Метод getBox()")
-    for i in range(len(boxes)):
-        if (boxes[i][0] == x and boxes[i][1] == y):
-            return i
-    return None
+    for i in range(len(dataLevel)):
+        for j in range(len(dataLevel[i])):
+            # Если значение в данной координате равно 1 из (0,1,2,3,4) то расчитываем координаты для вывода текстуры стены (img[0])
+            if (dataLevel[i][j] == 1):       # (Счётчик j отвечает за координату x) (Счётчик i отвечает за координату y)
+                cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[0])
+            elif (dataLevel[i][j] == 3):
+                dataLevel[i][j] = 0
+                # Информационный объект - список finish (Точки сбора ящиков)
+                finish.append([i, j, cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[2]), False])
 
-# Перемещаем погрузчик на требуемое расстояние
-def movePlayerTo(x, y, count):
-    global moving
-    count -= 1                            # 8 пикселей за ход
-    cnv.move(player[2], x, y)
+    # Проверяем файл уровня.dat на наличие значений 2(Ящик), 4(Погрузчик)
+    # Второй цикл нужен для того, чтобы погрузчик и ящики гарантированно прорисовывались поверх точек сбора
+    for i in range(len(dataLevel)):
+        for j in range(len(dataLevel[i])):
+            if (dataLevel[i][j] == 2):
+                dataLevel[i][j] = 0
+                # Информационный объект - список boxes (Ящики)
+                boxes.append([i, j, cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[1])])
+            elif (dataLevel[i][j] == 4):
+                dataLevel[i][j] = 0
+                # Информационный объект - список player (Погрузчик)             image=img[3][1] - это изображение погрузчика направленного вниз
+                # i - x, j - y => т.е координаты | cnv.create_image => ID объекта(player) на Canvas
+                player = [i, j, cnv.create_image(SQUARE_SIZE // 2 + j * SQUARE_SIZE, SQUARE_SIZE // 2 + i * SQUARE_SIZE, image=img[3][1])]
 
-    if (count > 0):
-        moving = True
-        root.after(20, lambda x=x, y=y, c=count: movePlayerTo(x, y, c))
-    else:
-        print("Метод movePlayerTo() выполнился")
-        moving = False                     # Если не поставить moving = False погрузчиком невозможно будет управлять
+# Загрузка данных уровня
+def getLevel(lvl):
+    global dataLevel
+    print("Метод getLevel()")
+    dataLevel = []
+    tmp = []
 
-# Синхронно перемещаем погрузчик и ящик на требуемое расстояние (64 пикселя)
-def movePlayerBoxTo(x, y, count, numberBox):
-    global moving
-    count -= 1
-    cnv.move(player[2], x, y)               # Изображение погрузчика и его координаты
-    cnv.move(boxes[numberBox][2], x, y)     # boxes[номер ящика который двигаем][изображение ящика] и его координаты X, Y
+    idx = str(lvl)
+    if (lvl < 10):
+        idx = f"0{lvl}"
 
-    if (count > 0):
-        moving = True
-        root.after(20, lambda x=x, y=y, c=count, n=numberBox: movePlayerBoxTo(x, y, c, n))
-    else:
-        print("Метод movePlayerBoxTo() выполнился")
-        moving = False
-        checkBoxInFinish()                  # Проверяем все ли ящики заняли места в точках сбора
+    try:
+        f = open(f"levels/level{idx}.dat", "r", encoding="utf-8")
+        for i in f.readlines():
+            tmp.append(i.replace("\n", ""))
+        f.close()
+        # Программа загружает все данные в двумерный список из файла .dat как есть с цифрами (0,1,2,3,4) и уже потом форматируется через createLevel()
+        for i in range(len(tmp)):
+            dataLevel.append([])
+            for j in tmp[i]:
+                dataLevel[i].append(int(j))
+    except:
+        print("Не найден файл с данными.")
+        quit(0)
 
-# Проверяем все ли ящики заняли места в точках сбора
-# Суть двойного цикла while в том чтобы как только хоть в одной точке сбора отсутствует ящик, циклы прекратили работу
-def checkBoxInFinish():
-    global finish, win
-    print("Метод checkBoxInFinish()")
+# Замостить изображением grass.png всю область окна
+def clear_setGrass():
+    print("Метод clear_setGrass():")
+    cnv.delete(ALL)                         # Полностью отчищаем полотно
+    for i in range(WIDTH):                  # 20
+        for j in range(HEIGHT):             # 10
+            cnv.create_image(SQUARE_SIZE // 2 + i * SQUARE_SIZE, SQUARE_SIZE // 2 + j * SQUARE_SIZE, image=backGround)
+         # (32, 32, img),(32, 96, img),(32, 160, img)...(1248, 672, img)  С помощью цикла выводим изображение на экран
 
-    for fin in finish:
-        fin[3] = False  # Каждый третий элемент (наличие ящика в точке сбора) в списке точек наличия устанавливаем ЛОЖЬ
-                        # Чтобы в дальнейшем снова проверить каждую точку и общим логическим произведением получить результат ПРАВДА
-    win = True          # Изначально предпологаем что пользователь выиграл
-    fin = 0
-    while (fin < len(finish) and win): # Для утверждения не победы достаточно чтобы хотя бы одна точка сбора пустовала
-        box = 0
-        while (box < len(boxes)):
-            if (finish[fin][0:2] == boxes[box][0:2]): # Если координаты точки сбора и ящика совподают
-                finish[fin][3] = True                 # При совпадении сразу преходим на проверку следующей точки сбора
-                box = len(boxes)
-            box += 1
-        win = win and finish[fin][3] # Если совпадения не обнаружится то прекращаем работу обоих циклов (win становится False)
-        fin += 1
-    if (win):                        # Если win True переходим на следующий уровень
-        Beep(750, 10)
-        Beep(1750, 10)
-        nextLevel()
-
-# Смена уровня
-def nextLevel():
-    print("Метод nextLevel()")
-    cnv.delete(ALL)
+# Центральный код смены уровней
+def reset():
+    global moving, second, timeRun
+    print("Метод reset()")
+    moving = False
+    second = -1
     stopTimer()
-
-    btnCheat.place(x=-100, y=100)   # Выводим кнопки за границы окна
-    btnReset.place(x=-100, y=-100)  # Выводим кнопки за границы окна
-    btnNext = Button(text="Продолжить", font="Verdana, 19", width=45) # Создаём новую кнопку
-    btnNext.place(x=300, y=550)
-    btnNext.focus_set()             # Концентрируем на ней внимание (не обязательно нажимать мышью) можно с клавивтуры
-    btnNext["command"] = lambda b=btnNext: nextLevelSet(b) # Передаём в метод nextLevelSet ссылку на виджет (кнопку продолжить)
-                                                           # При нажатии на кнопку продолжить переходим на другой уровень
-    cnv.create_text(WIDTH * SQUARE_SIZE // 2, 200, fill="AAFFCC", text=f"Победа! Вы собрали головоломку за {getMinSec(second)}! Поздравляем!", font="Verdana, 25")
-
-# Организация переключения уровня
-def nextLevelSet(btnNext: Button):
-    global level
-    level += 1                   # Если такого уровня не существует, то программа прекращает работу в момент чтения данных
-    cnv.focus_set()              # Перехватываем нажатие клавиш
-    btnNext.destroy()            # Очищаем кнопку "Продолжить"
-    btnCheat.place(x=10, y=590)  # Возвращаем кнопки на прежние места
-    btnNext.place(x=10, y=550)   # Возвращаем кнопки на прежние места
-    cnv.delete(ALL)              # Очищаем Canvas
-    reset()                      # Вызываем основной метод сброса
+    getLevel(level)
+    clear_setGrass()
+    createLevel()
+    updateText()
 
 # ================== НАЧАЛО ПРОГРАММЫ  =============================
 # Настраиваем основное окно(размеры, заголовок, расположение)
