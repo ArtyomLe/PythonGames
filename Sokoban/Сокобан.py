@@ -120,7 +120,6 @@ def updateText():
     textTime = cnv.create_text(10, 10, fill="#F7F668", anchor="nw", text=txt, font="Verdana, 13")
     timeRun = root.after(1000, updateText)
 
-
 # Проверить клетку на доступность перемещения
 def move(v):
     print("Метод move()")
@@ -270,7 +269,15 @@ def nextLevel():
     cnv.create_text(WIDTH * SQUARE_SIZE // 2, 200, fill="AAFFCC", text=f"Победа! Вы собрали головоломку за {getMinSec(second)}! Поздравляем!", font="Verdana, 25")
 
 # Организация переключения уровня
-def
+def nextLevelSet(btnNext: Button):
+    global level
+    level += 1                   # Если такого уровня не существует, то программа прекращает работу в момент чтения данных
+    cnv.focus_set()              # Перехватываем нажатие клавиш
+    btnNext.destroy()            # Очищаем кнопку "Продолжить"
+    btnCheat.place(x=10, y=590)  # Возвращаем кнопки на прежние места
+    btnNext.place(x=10, y=550)   # Возвращаем кнопки на прежние места
+    cnv.delete(ALL)              # Очищаем Canvas
+    reset()                      # Вызываем основной метод сброса
 
 # ================== НАЧАЛО ПРОГРАММЫ  =============================
 # Настраиваем основное окно(размеры, заголовок, расположение)
@@ -336,7 +343,7 @@ btnCheat.place(x=10, y=590)
 
 textTime = None
 second = None
-level = 5
+level = 1
 
 dataLevel = []  # Указываем что имеется двумерный глобальный список (Вместо [] можно указать None)
 timeRun = None  # Обьект для хранения вызова с помощью .after():
