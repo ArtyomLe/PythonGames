@@ -355,7 +355,7 @@ btnCheat["command"] = goCheat
 
 textTime = None
 second = None
-level = 2
+level = 1
 
 dataLevel = []  # Указываем что имеется двумерный глобальный список (Вместо [] можно указать None)
 timeRun = None  # Обьект для хранения вызова с помощью .after():
