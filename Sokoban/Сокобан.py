@@ -254,6 +254,23 @@ def checkBoxInFinish():
         Beep(1750, 10)
         nextLevel()
 
+# Смена уровня
+def nextLevel():
+    print("Метод nextLevel()")
+    cnv.delete(ALL)
+    stopTimer()
+
+    btnCheat.place(x=-100, y=100)   # Выводим кнопки за границы окна
+    btnReset.place(x=-100, y=-100)  # Выводим кнопки за границы окна
+    btnNext = Button(text="Продолжить", font="Verdana, 19", width=45) # Создаём новую кнопку
+    btnNext.place(x=300, y=550)
+    btnNext.focus_set()             # Концентрируем на ней внимание (не обязательно нажимать мышью) можно с клавивтуры
+    btnNext["command"] = lambda b=btnNext: nextLevelSet(b) # Передаём в метод nextLevelSet ссылку на виджет (кнопку продолжить)
+                                                           # При нажатии на кнопку продолжить переходим на другой уровень
+    cnv.create_text(WIDTH * SQUARE_SIZE // 2, 200, fill="AAFFCC", text=f"Победа! Вы собрали головоломку за {getMinSec(second)}! Поздравляем!", font="Verdana, 25")
+
+# Организация переключения уровня
+def
 
 # ================== НАЧАЛО ПРОГРАММЫ  =============================
 # Настраиваем основное окно(размеры, заголовок, расположение)
