@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Синхронно перемещаем погрузчик и ящик на требуемое расстояние (64 пикселя)">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Проверяем все ли ящики заняли места в точках сбора">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sokoban/Сокобан.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sokoban/Сокобан.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,13 +220,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00063" summary="Library import">
-      <created>1636193063887</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1636193063887</updated>
     </task>
     <task id="LOCAL-00064" summary="Library import">
       <created>1636193269351</created>
@@ -563,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637095363628</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="Проверяем все ли ящики заняли места в точках сбора">
+      <created>1637097149923</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1637097149923</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -622,7 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Foreword" />
     <MESSAGE value="cnv.bind" />
     <MESSAGE value="Создание списков" />
     <MESSAGE value="Создание списков + комментарии" />
@@ -647,6 +647,7 @@
     <MESSAGE value="Функция возвращает номер ящика" />
     <MESSAGE value="Перемещаем погрузчик на требуемое расстояние" />
     <MESSAGE value="Синхронно перемещаем погрузчик и ящик на требуемое расстояние (64 пикселя)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Синхронно перемещаем погрузчик и ящик на требуемое расстояние (64 пикселя)" />
+    <MESSAGE value="Проверяем все ли ящики заняли места в точках сбора" />
+    <option name="LAST_COMMIT_MESSAGE" value="Проверяем все ли ящики заняли места в точках сбора" />
   </component>
 </project>
