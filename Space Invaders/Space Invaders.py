@@ -85,6 +85,24 @@ playGame = False
 defaultName = "Anonymous"
 
 # ===МЕНЮ ИГРЫ===========================================
+menu1 = Button(root, text="Старт", font=", 20", width=20)
+menu1.place(x=-100, y=-100)
+menu1["command"] = startGame
+
+menu2 = Button(root, text"Сброс", font", 20", width=20)
+menu2.place(x=-100, y=-100)
+menu2["command"] = restartGame
+
+btnContinueAfterPause = None
+
+onMenu = False
+playerName = None
+scores = loadScores()
+textScores = None
+
+informationLine = None
+
+# ===НАЧАЛО===============================================
 
 
 root.mainloop()

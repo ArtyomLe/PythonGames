@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="ИГРОК">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="НАСТРОЙКА ИГРОКА">
       <change beforePath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,20 +220,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00079" summary="Убеги от круга (комментарии 2)">
-      <created>1636568699736</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1636568699737</updated>
-    </task>
-    <task id="LOCAL-00080" summary="Убеги от круга (abs - модуль числа)">
-      <created>1636576344469</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1636576344469</updated>
     </task>
     <task id="LOCAL-00081" summary="Убеги от круга (3 шара)&#10;Отсебятина">
       <created>1636578116110</created>
@@ -564,7 +550,21 @@
       <option name="project" value="LOCAL" />
       <updated>1637349515634</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="ТЕКСТУРА ВЗРЫВА">
+      <created>1637349831000</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1637349831000</updated>
+    </task>
+    <task id="LOCAL-00129" summary="НАСТРОЙКА ИГРОКА">
+      <created>1637349986866</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1637349986866</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -623,8 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Проверка значений списка print(finish)" />
-    <MESSAGE value="Проверка значений списков&#10;    print(finish)&#10;    print(player)&#10;    print(boxes)" />
     <MESSAGE value="Проверка значений списков&#10;    print(finish)&#10;    print(player)&#10;    print(boxes)&#10;дополнения" />
     <MESSAGE value="def getMinSec(s):" />
     <MESSAGE value="# Прошедшее время с начала уровня&#10;# Обновляем полоску с текстом вверху" />
@@ -648,6 +646,8 @@
     <MESSAGE value="Создание окна" />
     <MESSAGE value="ИНОПЛАНЕТЯНЕ" />
     <MESSAGE value="ИГРОК" />
-    <option name="LAST_COMMIT_MESSAGE" value="ИГРОК" />
+    <MESSAGE value="ТЕКСТУРА ВЗРЫВА" />
+    <MESSAGE value="НАСТРОЙКА ИГРОКА" />
+    <option name="LAST_COMMIT_MESSAGE" value="НАСТРОЙКА ИГРОКА" />
   </component>
 </project>
