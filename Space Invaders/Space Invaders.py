@@ -103,6 +103,9 @@ textScores = None
 informationLine = None
 
 # ===НАЧАЛО===============================================
-
+globalReset()
+reset()
+playGame = True
+mainloop()
 
 root.mainloop()
