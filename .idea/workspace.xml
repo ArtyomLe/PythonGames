@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="НАЧАЛО">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="НАЧАЛО(поправления)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,13 +221,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00083" summary="foreword cont.">
-      <created>1636746091278</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1636746091278</updated>
     </task>
     <task id="LOCAL-00084" summary="SokoBan">
       <created>1636827797695</created>
@@ -564,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637350471879</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="НАЧАЛО(поправления)">
+      <created>1637350695670</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1637350695670</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -623,7 +624,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="# Прошедшее время с начала уровня&#10;# Обновляем полоску с текстом вверху" />
     <MESSAGE value="def getMinSec&#10;Данная функция преобразовывает секунды =&gt; в &quot;минуты и секунды&quot;" />
     <MESSAGE value="def getMinSec&#10;Данная функция преобразовывает секунды =&gt; в &quot;минуты и секунды&quot; cont." />
     <MESSAGE value="Проверить клетку на доступность перемещения" />
@@ -648,6 +648,7 @@
     <MESSAGE value="НАСТРОЙКА ИГРОКА" />
     <MESSAGE value="МЕНЮ ИГРЫ" />
     <MESSAGE value="НАЧАЛО" />
-    <option name="LAST_COMMIT_MESSAGE" value="НАЧАЛО" />
+    <MESSAGE value="НАЧАЛО(поправления)" />
+    <option name="LAST_COMMIT_MESSAGE" value="НАЧАЛО(поправления)" />
   </component>
 </project>
