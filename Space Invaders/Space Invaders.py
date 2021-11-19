@@ -49,8 +49,8 @@ LEFTKEY = 0
 RIGHTKEY = 1
 cnv.bind("<Left>", lambda e, x=LEFTKEY: move(x))
 cnv.bind("<Right>", lambda e, x=RIGHTKEY: move(x))
-cnv.bind("<space>", lambda e, shoot())
-cnv.bind("<Escape>", lambda e, showMenu())
+cnv.bind("<space>", lambda e: shoot())
+cnv.bind("<Escape>", lambda e: showMenu())
 
 invadersRocketTexture = PhotoImage(file=f"image/rocket/rocket_invaders.png")
 invadersRocket = None
@@ -89,7 +89,7 @@ menu1 = Button(root, text="Старт", font=", 20", width=20)
 menu1.place(x=-100, y=-100)
 menu1["command"] = startGame
 
-menu2 = Button(root, text"Сброс", font", 20", width=20)
+menu2 = Button(root, text="Сброс", font=", 20", width=20)
 menu2.place(x=-100, y=-100)
 menu2["command"] = restartGame
 
