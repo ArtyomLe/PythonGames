@@ -77,7 +77,14 @@ for fileName in explosionFiles:
 level = None
 frame = 0
 
-# ===
+# ===НАСТРОЙКА ИГРОКА====================================
+score = 0
+penalty = 0
+lives = 3
+playGame = False
+defaultName = "Anonymous"
+
+# ===МЕНЮ ИГРЫ===========================================
 
 
 root.mainloop()
