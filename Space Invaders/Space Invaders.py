@@ -68,6 +68,15 @@ rocketSpeedDefault = 8
 rocketSpeedY = rocketSpeedDefault
 rocketScale = 1.05
 
+# ===ТЕКСТУРА ВЗРЫВА====================================
+explosionFiles = ["expl01.png", "expl02.png", "expl03.png", "expl04.png", "expl05.png", "expl06.png", "expl07.png", "expl08.png"]
+explosionTexture = []
+for fileName in explosionFiles:
+    explosionTexture.append(PhotoImage(file=f"image/expl/{fileName}"))
+
+level = None
+frame = 0
+
 # ===
 
 
