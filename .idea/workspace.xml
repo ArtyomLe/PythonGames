@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Создание окна">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="ИНОПЛАНЕТЯНЕ">
       <change beforePath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -221,13 +220,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00076" summary="Не обрабатываем пробел">
-      <created>1636487295853</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1636487295853</updated>
     </task>
     <task id="LOCAL-00077" summary="Убеги от круга">
       <created>1636489581242</created>
@@ -565,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637267378680</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="ИНОПЛАНЕТЯНЕ">
+      <created>1637348673657</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1637348673657</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -624,7 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="def createLevel" />
     <MESSAGE value="def createLevel cont." />
     <MESSAGE value="Проверка значений списка print(finish)" />
     <MESSAGE value="Проверка значений списков&#10;    print(finish)&#10;    print(player)&#10;    print(boxes)" />
@@ -649,6 +647,7 @@
     <MESSAGE value="Updates ver.3" />
     <MESSAGE value="Updates ver.4" />
     <MESSAGE value="Создание окна" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создание окна" />
+    <MESSAGE value="ИНОПЛАНЕТЯНЕ" />
+    <option name="LAST_COMMIT_MESSAGE" value="ИНОПЛАНЕТЯНЕ" />
   </component>
 </project>

@@ -40,6 +40,25 @@ maxY = None
 invadersWidth = None
 invadersHeight = None
 
-# ==================================================
+# ===ИГРОК===============================================
+playerTexture = PhotoImage(file=f"image/player.png")
+player = None
+playerSpeed = None
+
+LEFTKEY = 0
+RIGHTKEY = 1
+cnv.bind("<Left>", lambda e, x=LEFTKEY: move(x))
+cnv.bind("<Right>", lambda e, x=RIGHTKEY: move(x))
+cnv.bind("<space>", lambda e, shoot())
+cnv.bind("<Escape>", lambda e, showMenu())
+
+invadersRocketTexture = PhotoImage(file=f"image/rocket/rocket_invaders.png")
+invadersRocket = None
+invadersRocketSpeedScale = 1.05
+invadersRocketSpeedDefault = 1
+invadersRocketSpeed = invadersRocketSpeedDefault
+
+
+
 
 root.mainloop()
