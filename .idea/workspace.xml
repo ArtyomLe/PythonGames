@@ -222,20 +222,6 @@
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
     </task>
-    <task id="LOCAL-00074" summary="Вызов с интервалом">
-      <created>1636266335658</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1636266335658</updated>
-    </task>
-    <task id="LOCAL-00075" summary="Вызов с интервалом (sleep 0.25)">
-      <created>1636267557457</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1636267557457</updated>
-    </task>
     <task id="LOCAL-00076" summary="Не обрабатываем пробел">
       <created>1636487295853</created>
       <option name="number" value="00076" />
@@ -565,7 +551,21 @@
       <option name="project" value="LOCAL" />
       <updated>1637266953342</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="Создание окна">
+      <created>1637267338208</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1637267338208</updated>
+    </task>
+    <task id="LOCAL-00124" summary="Создание окна">
+      <created>1637267378680</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1637267378680</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

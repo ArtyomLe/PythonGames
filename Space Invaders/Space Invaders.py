@@ -24,6 +24,22 @@ cnv.place(x=0, y=0)
 
 backGround = PhotoImage(file="image/background.png")
 
-# ===========================================================
+# ===ИНОПЛАНЕТЯНЕ=======================================
+invadersFile = ["inv01.png", "inv01_move.png", "inv02.png", "inv02_move.png", "inv03.png", "inv03_move.png"]
+invadersTexture = []
+for fileName in invadersFile:
+    invadersTexture.append(PhotoImage(file=f"image/{fileName}"))
+
+invadersObject = None
+invadersSpeed = None
+
+leftInvadersBorder = None
+rightInvadersBorder = None
+
+maxY = None
+invadersWidth = None
+invadersHeight = None
+
+# ==================================================
 
 root.mainloop()
