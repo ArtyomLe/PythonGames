@@ -58,7 +58,17 @@ invadersRocketSpeedScale = 1.05
 invadersRocketSpeedDefault = 1
 invadersRocketSpeed = invadersRocketSpeedDefault
 
+rocketsFiles = ["rocket01.png", "rocket02.png", "rocket03.png", "rocket04.png"]
+rocketTexture = []
+for fileName in rocketsFiles:
+    rocketTexture.append(PhotoImage(file=f"image/rocket/{fileName}"))
 
+rocketObject = None
+rocketSpeedDefault = 8
+rocketSpeedY = rocketSpeedDefault
+rocketScale = 1.05
+
+# ===
 
 
 root.mainloop()
