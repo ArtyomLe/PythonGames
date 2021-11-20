@@ -113,6 +113,16 @@ def loadScores():
         saveScores(ret)
     return ret
 
+# Запись очков в файл
+def saveScores(scoresToFile):
+    try:
+        f = open("scores.dat", "w", encoding="utf-8")
+        for sc in scoresToFile:
+            f.write(f"{sc[0]} {sc[1]}\n")
+        f.close()
+    except:
+        print("Что-то пошло не так.")
+
 # Создание окна
 root = Tk()
 root.resizable(False, False)
