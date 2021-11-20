@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Запись очков в файл  saveScores(scoresToFile):">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="# Сброс и формирование объектов игрового мира &#10;def reset():">
       <change beforePath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,13 +220,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00091" summary="Комментарии">
-      <created>1636833355211</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1636833355212</updated>
     </task>
     <task id="LOCAL-00092" summary="def reset">
       <created>1636834191124</created>
@@ -564,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637438046634</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="# Сброс и формирование объектов игрового мира &#10;def reset():">
+      <created>1637438347570</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1637438347570</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -623,7 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Перемещаем погрузчик на требуемое расстояние" />
     <MESSAGE value="Синхронно перемещаем погрузчик и ящик на требуемое расстояние (64 пикселя)" />
     <MESSAGE value="Проверяем все ли ящики заняли места в точках сбора" />
     <MESSAGE value="Проверяем все ли ящики заняли места в точках сбора (некоторые пояснения)" />
@@ -648,6 +647,18 @@
     <MESSAGE value="Загрузка очков из scores.dat" />
     <MESSAGE value="Загрузка очков из scores.dat (Список содержит имя игрока и кол-во очков)" />
     <MESSAGE value="Запись очков в файл  saveScores(scoresToFile):" />
-    <option name="LAST_COMMIT_MESSAGE" value="Запись очков в файл  saveScores(scoresToFile):" />
+    <MESSAGE value="# Сброс и формирование объектов игрового мира &#10;def reset():" />
+    <option name="LAST_COMMIT_MESSAGE" value="# Сброс и формирование объектов игрового мира &#10;def reset():" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Space Invaders/Space Invaders.py</url>
+          <line>69</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

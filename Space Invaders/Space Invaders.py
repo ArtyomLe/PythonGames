@@ -51,14 +51,17 @@ def reset():
 
     cnv.delete(ALL)
     cnv.create_image(WIDTH // 2, HEIGHT // 2, image=backGround)
-    cnv.focus_set()
+    cnv.focus_set()                             # Обработчик событий (нажатие клавиш)
 
     rocketObject = None
     invadersRocket = None
-    invadersSpeed = 3 + level // 5              # Чем выше уровень тем быстрее перемещаются пришельцы
+    invadersSpeed = 3 + level // 5              # Вычисление горизонтальной скорости перемещения инопланетян(пиксели за ход)
 
+    # Вычисление прямоугольника инопланетян(ШxВ)
     invadersWidth = (1 + int(level // 3)) * 2
     invadersHeight = 2 + (level // 4)
+
+    # Максимальное значение армады 14x8
     if (invadersWidth > 14):                    # Ограничиваем ширину в 14 единиц в независимости от повышения уровня
         invadersWidth = 14
     if (invadersHeight > 8):                    # Ограничиваем высоту в 8 единиц в независимости от повышения уровня
