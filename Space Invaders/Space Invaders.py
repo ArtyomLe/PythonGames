@@ -106,10 +106,10 @@ def loadScores():
         f.close()
     except:
         print("Файла не существует.")
-    if (len(ret) != 10):              # Файл состоит из 10 строк
+    if (len(ret) != 10):                  # Если файл состоит не из 10 строк
         ret = []
         for i in range(10):
-            ret.append([defaultName, 0])
+            ret.append([defaultName, 0])  # Переписываем в defaultName, 0
         saveScores(ret)
     return ret
 
