@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Сброс и формирование объектов игрового мира (def reset)">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Перемещение игрока def move">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" afterDir="false" />
     </list>
@@ -221,13 +221,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00085" summary="Foreword">
-      <created>1636828230006</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1636828230006</updated>
     </task>
     <task id="LOCAL-00086" summary="cnv.bind">
       <created>1636828513179</created>
@@ -565,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637353135912</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="Перемещение игрока def move">
+      <created>1637408527678</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1637408527678</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -624,7 +624,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="def getMinSec&#10;Данная функция преобразовывает секунды =&gt; в &quot;минуты и секунды&quot; cont." />
     <MESSAGE value="Проверить клетку на доступность перемещения" />
     <MESSAGE value="Проверить клетку на доступность перемещения (пояснения)" />
     <MESSAGE value="Определяем что находится в клетке" />
@@ -649,6 +648,7 @@
     <MESSAGE value="НАЧАЛО" />
     <MESSAGE value="НАЧАЛО(поправления)" />
     <MESSAGE value="Сброс и формирование объектов игрового мира (def reset)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сброс и формирование объектов игрового мира (def reset)" />
+    <MESSAGE value="Перемещение игрока def move" />
+    <option name="LAST_COMMIT_MESSAGE" value="Перемещение игрока def move" />
   </component>
 </project>

@@ -9,14 +9,26 @@ def move(x):
     if (not playGame or onMenu):
         return 0
     if (x == LEFTKEY):
-        cnv.move(player[0], -playerSpeed, 0)
+        cnv.move(player[0], -playerSpeed, 0)     # -playerSpeed это на какое кол-во пикселей перемещается игрок налево
     elif (x == RIGHTKEY):
+        cnv.move(player[0], playerSpeed, 0)      # playerSpeed это на какое кол-во пикселей перемещается игрок направо
+    # Устанавляиваем ограничения чтобы игрок не мог увести корабль за границы окна
+    if (getPlayerX() < SQUARE_SIZE):             # По левому краю
         cnv.move(player[0], playerSpeed, 0)
-    if (getPlayerX() < SQUARE_SIZE):
-        cnv.move(player[0], playerSpeed, 0)
-    elif (getPlayerX() > WIDTH - SQUARE_SIZE):
+    elif (getPlayerX() > WIDTH - SQUARE_SIZE):   # По правому краю
         cnv.move(player[0], -playerSpeed, 0)
 
+"""
+
+Алгоритм по управлению кораблём игрока *****************************************************************************
+
+1) Создаём одномерный список для хранения данных космического корабля игрока.
+2) Устанавливаем вызов метода по нажатии на клавиши влево или вправо.
+3) Если игра не началась, или на экране показано меню, то установленный в предыдущем пункте метод не выполняется.
+4) Перемещаем текстуру космического корабля, изменяя координаты объекта с помощью .move()
+5) Проверяем, выходит ли текстура за границы окна. Если выходит, то перемещаем обратно, в противоположенную сторону.
+
+"""
 # Сброс всего подчистую с установкой первого уровня
 def globalReset():
     global level, score, penalty, playGame, playerSpeed, lives
