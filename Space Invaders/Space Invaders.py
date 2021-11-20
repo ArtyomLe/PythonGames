@@ -105,45 +105,50 @@ backGround = PhotoImage(file="image/background.png")
 
 # ===ИНОПЛАНЕТЯНЕ=======================================
 invadersFile = ["inv01.png", "inv01_move.png", "inv02.png", "inv02_move.png", "inv03.png", "inv03_move.png"]
-invadersTexture = []
+invadersTexture = []    # Список invadersTexture[] хранит обьекты Photoimage с текстурами инопланетян
 for fileName in invadersFile:
     invadersTexture.append(PhotoImage(file=f"image/{fileName}"))
 
-invadersObject = None
-invadersSpeed = None
+# Инициализация глобальных переменных(для захватчиков)
+invadersObject = None  # Список ответственный за хранение текстуры и ранга инопланетянина "получает значения в методе reset()"
+invadersSpeed = None   # Скорость перемещения инопланетян за один кадр "вычисляется в методе reset()"
 
 leftInvadersBorder = None
 rightInvadersBorder = None
 
 maxY = None
+
 invadersWidth = None
 invadersHeight = None
 
 # ===ИГРОК===============================================
 playerTexture = PhotoImage(file=f"image/player.png")
 player = None
-playerSpeed = None
+playerSpeed = None     # Скорость перемещения игрока за один кадр "задаётся в globalReset()"
 
 LEFTKEY = 0
 RIGHTKEY = 1
+
 cnv.bind("<Left>", lambda e, x=LEFTKEY: move(x))
 cnv.bind("<Right>", lambda e, x=RIGHTKEY: move(x))
 cnv.bind("<space>", lambda e: shoot())
 cnv.bind("<Escape>", lambda e: showMenu())
 
+# Вражеская ракета
 invadersRocketTexture = PhotoImage(file=f"image/rocket/rocket_invaders.png")
 invadersRocket = None
-invadersRocketSpeedScale = 1.05
-invadersRocketSpeedDefault = 1
+invadersRocketSpeedScale = 1.05  # Коэфициент ускорения выпущенной ракеты (чем ближе к цели, тем труднее увернуться)
+invadersRocketSpeedDefault = 1   # Каждый запуск ракеты сбрасывает значение начальной скорости на 1
 invadersRocketSpeed = invadersRocketSpeedDefault
 
+# Ракета игрока
 rocketsFiles = ["rocket01.png", "rocket02.png", "rocket03.png", "rocket04.png"]
 rocketTexture = []
 for fileName in rocketsFiles:
     rocketTexture.append(PhotoImage(file=f"image/rocket/{fileName}"))
 
 rocketObject = None
-rocketSpeedDefault = 8
+rocketSpeedDefault = 8   # Начальная скорость выпущенной игроком ракеты выше, нежели скорость вражеской (1:8)
 rocketSpeedY = rocketSpeedDefault
 rocketScale = 1.05
 
@@ -153,15 +158,15 @@ explosionTexture = []
 for fileName in explosionFiles:
     explosionTexture.append(PhotoImage(file=f"image/expl/{fileName}"))
 
-level = None
-frame = 0
+level = None     # Переменная для хранения номера уровня
+frame = 0        # Переменная для хранения текущего кадра отображения текстур инопланетян
 
 # ===НАСТРОЙКА ИГРОКА====================================
-score = 0
-penalty = 0
-lives = 3
+score = 0                   # Очки
+penalty = 0                 # Штрафы за промахи
+lives = 3                   # Жизни
 playGame = False
-defaultName = "Anonymous"
+defaultName = "Anonymous"   # Имя по умолчанию если пользователь не захочет вводить свой ник или оставит поле ввода пустым
 
 # ===МЕНЮ ИГРЫ===========================================
 menu1 = Button(root, text="Старт", font=", 20", width=20)
@@ -170,9 +175,9 @@ menu1["command"] = startGame
 
 menu2 = Button(root, text="Сброс", font=", 20", width=20)
 menu2.place(x=-100, y=-100)
-menu2["command"] = restartGame          # Перезапуск игры полностью
+menu2["command"] = restartGame  # Перезапуск игры полностью
 
-btnContinueAfterPause = None
+btnContinueAfterPause = None    # Переменная кнопки "Продолжить  в момент демонстрации окна рекордов"
 
 onMenu = False
 playerName = None
