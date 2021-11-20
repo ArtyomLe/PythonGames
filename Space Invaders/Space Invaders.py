@@ -4,6 +4,19 @@ from time import sleep
 from winsound import Beep
 
 #============================================================================
+# Перемещение игрока
+def move(x):
+    if (not playGame or onMenu):
+        return 0
+    if (x == LEFTKEY):
+        cnv.move(player[0], -playerSpeed, 0)
+    elif (x == RIGHTKEY):
+        cnv.move(player[0], playerSpeed, 0)
+    if (getPlayerX() < SQUARE_SIZE):
+        cnv.move(player[0], playerSpeed, 0)
+    elif (getPlayerX() > WIDTH - SQUARE_SIZE):
+        cnv.move(player[0], -playerSpeed, 0)
+
 # Сброс всего подчистую с установкой первого уровня
 def globalReset():
     global level, score, penalty, playGame, playerSpeed, lives
