@@ -84,7 +84,7 @@ def reset()
     updateInfoLine()
     mainloop()
 
-# Загрузка очков из scores.dat
+# Загрузка очков из scores.dat (Список содержит имя игрока и кол-во очков)
 def loadScores():
     ret = []
     try:
@@ -93,20 +93,20 @@ def loadScores():
             s = sc.replace("\n", "")
             s = s.split(" ")
 
-            if (len(s[0]) > 20):
-                s[0] = s[0][0:20]
-            elif (s[0] == ""):
+            if (len(s[0]) > 20):      # Длинна имени не может быть больше 20 символов
+                s[0] = s[0][0:20]     # В случае превышения имя обрезается
+            elif (s[0] == ""):        # Если не ввели имя то записываем defaultName
                 s[0] = defaultName
-            s[1] = int(s[1])
+            s[1] = int(s[1])          # Второе значение целое число int т.е рекорд
             if (s[1] > 1000000):
-                s[1] = 1000000
+                s[1] = 1000000        # Рекорд не может превышать число 1000000
             elif (s[1] < 0):
-                s[1] = 0
+                s[1] = 0              # В случае 0 => 0
             ret.append(s)
         f.close()
     except:
         print("Файла не существует.")
-    if (len(ret) != 10):
+    if (len(ret) != 10):              # Файл состоит из 10 строк
         ret = []
         for i in range(10):
             ret.append([defaultName, 0])
