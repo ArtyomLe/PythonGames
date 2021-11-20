@@ -84,6 +84,35 @@ def reset()
     updateInfoLine()
     mainloop()
 
+# Загрузка очков из scores.dat
+def loadScores():
+    ret = []
+    try:
+        f = open("scores.dat", "r", encoding="utf-8")
+        for sc in f.readlines():
+            s = sc.replace("\n", "")
+            s = s.split(" ")
+
+            if (len(s[0]) > 20):
+                s[0] = s[0][0:20]
+            elif (s[0] == ""):
+                s[0] = defaultName
+            s[1] = int(s[1])
+            if (s[1] > 1000000):
+                s[1] = 1000000
+            elif (s[1] < 0):
+                s[1] = 0
+            ret.append(s)
+        f.close()
+    except:
+        print("Файла не существует.")
+    if (len(ret) != 10):
+        ret = []
+        for i in range(10):
+            ret.append([defaultName, 0])
+        saveScores(ret)
+    return ret
+
 # Создание окна
 root = Tk()
 root.resizable(False, False)
