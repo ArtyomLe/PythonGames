@@ -46,7 +46,7 @@ def restartGame():
     showScores(-1)
 
 # Сброс и формирование объектов игрового мира
-def reset()
+def reset():
     global invadersObject, invadersWidth, invadersHeight, invadersSpeed, leftInvadersBorder, rightInvadersBorder, player, maxY, rocketObject, invadersRocket
 
     cnv.delete(ALL)

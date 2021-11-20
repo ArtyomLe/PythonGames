@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Загрузка очков из scores.dat (Список содержит имя игрока и кол-во очков)">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Запись очков в файл  saveScores(scoresToFile):">
       <change beforePath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,20 +220,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00089" summary="Обьекты PhotoImage с загруженными из файлов изображениями">
-      <created>1636831325825</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1636831325826</updated>
-    </task>
-    <task id="LOCAL-00090" summary="Смотрим какие переменные используются в глобальной области">
-      <created>1636832417389</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1636832417389</updated>
     </task>
     <task id="LOCAL-00091" summary="Комментарии">
       <created>1636833355211</created>
@@ -564,7 +550,21 @@
       <option name="project" value="LOCAL" />
       <updated>1637437205061</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="Запись очков в файл  saveScores(scoresToFile):">
+      <created>1637437768243</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1637437768243</updated>
+    </task>
+    <task id="LOCAL-00139" summary="Запись очков в файл  saveScores(scoresToFile):">
+      <created>1637438046634</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1637438046634</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -623,7 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Функция возвращает номер ящика" />
     <MESSAGE value="Перемещаем погрузчик на требуемое расстояние" />
     <MESSAGE value="Синхронно перемещаем погрузчик и ящик на требуемое расстояние (64 пикселя)" />
     <MESSAGE value="Проверяем все ли ящики заняли места в точках сбора" />
@@ -648,6 +647,7 @@
     <MESSAGE value="Коменнтарии к основному циклу" />
     <MESSAGE value="Загрузка очков из scores.dat" />
     <MESSAGE value="Загрузка очков из scores.dat (Список содержит имя игрока и кол-во очков)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Загрузка очков из scores.dat (Список содержит имя игрока и кол-во очков)" />
+    <MESSAGE value="Запись очков в файл  saveScores(scoresToFile):" />
+    <option name="LAST_COMMIT_MESSAGE" value="Запись очков в файл  saveScores(scoresToFile):" />
   </component>
 </project>
