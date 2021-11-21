@@ -5,6 +5,12 @@ from winsound import Beep
 
 #============================================================================
 
+def getInvadersX(obj):
+    return cnv.coords(obj[0])[0]
+
+def getInvadersY(obj):
+    return cnv.coords(obj[0])[1]
+
 # Главный цикл игры
 def mainloop():
     global invadersObject, leftInvadersBorder, rightInvadersBorder, invadersSpeed, playGame, score, maxY, frame
@@ -16,6 +22,25 @@ def mainloop():
 
     for obj in invadersObject:                    # Перерисовываем текстуры
         cnv.move(obj[0], int(invadersSpeed), 0)   # Смещаем каждого инопланетянина по оси Х на скорость invadersSpeed
+        xPos = getInvadersX(obj)                  # Функции getInvadersX,Y созданы для дальнейшего сокращения записи
+        yPos = getInvadersY(obj)
+        cnv.delete(obj[0])
+        obj[0] = cnv.create_image(xPos, yPos, image=invadersTexture[obj[1] * 2 + frame])
+    frame += 1
+    if (frame > 1):
+        frame = 0
+
+    leftInvadersBorder += int(invadersSpeed)
+    rightInvadersBorder += int(invadersSpeed)
+    if (randint(0, 150) < abs(invadersSpeed) and invadersRocket == None):
+        startInvadersRocket()
+
+    if (rightInvadersBorder > WIDTH - SQUARE_SIZE or leftInvadersBorder < SQUARE_SIZE):
+        invadersSpeed *= 1.1
+        invadersSpeed = -invadersSpeed
+        maxY = 0
+        for obj in invadersObject:
+            cnv.move(obj[0], 0, SQUARE_SIZE)
 
 
 
