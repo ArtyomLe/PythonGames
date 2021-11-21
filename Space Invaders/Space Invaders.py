@@ -4,6 +4,23 @@ from time import sleep
 from winsound import Beep
 
 #============================================================================
+
+# Главный цикл игры
+def mainloop():
+    global invadersObject, leftInvadersBorder, rightInvadersBorder, invadersSpeed, playGame, score, maxY, frame
+
+    if (len(invadersObject) == 0):      # Проверяем если инопланетяне уничтожены
+        endLevel()
+    if (not playGame):                  # Если нет игры то прерываем главный цикл
+        return 0
+
+    for obj in invadersObject:                    # Перерисовываем текстуры
+        cnv.move(obj[0], int(invadersSpeed), 0)   # Смещаем каждого инопланетянина по оси Х на скорость invadersSpeed
+
+
+
+    root.after(100, mainloop)
+
 # Перемещение игрока
 def move(x):
     if (not playGame or onMenu):
