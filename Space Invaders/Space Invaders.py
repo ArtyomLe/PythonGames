@@ -69,22 +69,23 @@ def reset():
 
     maxY = (invadersHeight - 1) * 10 + SQUARE_SIZE * invadersHeight + SQUARE_SIZE // 2
 
-    invadersObject = []
+    invadersObject = []                         # Двумерный список инопланетян
     for i in range(invadersWidth):
         for j in range(invadersHeight):
-            rang = randint(0, level // 8)
-            if (rang > 2):
+            rang = randint(0, level // 8)       # После 8 уровня начинают появляться более сложные экземпляры
+            if (rang > 2):                      # С максимальной сложностью = 2
                 rang = 2
             posX = SQUARE_SIZE // 2 + (WIDTH // 2 - (invadersWidth * (SQUARE_SIZE + 10)) // 2) + i * SQUARE_SIZE + i * 10
             posY = 20 + j * 10 + j * SQUARE_SIZE
             invadersObject.append([cnv.create_image(posX, posY, image=invadersTexture[rang * 2]), rang])
 
+    # Левая и правая границы блока для рассчёта столкновения с границами окна
     leftInvadersBorder = cnv.coords(invadersObject[0][0])[0]
     rightInvadersBorder = cnv.coords(invadersObject[len(invadersObject) - 1][0])[0]
 
     player = [cnv.create_image(WIDTH // 2, HEIGHT - SQUARE_SIZE * 2, image=playerTexture), 1]
 
-    updateInfoLine()
+#    updateInfoLine()
     mainloop()
 
 # Загрузка очков из scores.dat (Список содержит имя игрока и кол-во очков)
@@ -213,7 +214,7 @@ defaultName = "Anonymous"   # Имя по умолчанию если польз
 # ===МЕНЮ ИГРЫ===========================================
 menu1 = Button(root, text="Старт", font=", 20", width=20)
 menu1.place(x=-100, y=-100)
-menu1["command"] = startGame
+# menu1["command"] = startGame
 
 menu2 = Button(root, text="Сброс", font=", 20", width=20)
 menu2.place(x=-100, y=-100)

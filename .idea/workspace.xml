@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="# Сброс и формирование объектов игрового мира &#10;def reset():">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,13 +221,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00092" summary="def reset">
-      <created>1636834191124</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1636834191124</updated>
     </task>
     <task id="LOCAL-00093" summary="def getLevel">
       <created>1636916714557</created>
@@ -564,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637438347570</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="# Сброс и формирование объектов игрового мира &#10;def reset():">
+      <created>1637439373503</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1637439373503</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -649,16 +650,5 @@
     <MESSAGE value="Запись очков в файл  saveScores(scoresToFile):" />
     <MESSAGE value="# Сброс и формирование объектов игрового мира &#10;def reset():" />
     <option name="LAST_COMMIT_MESSAGE" value="# Сброс и формирование объектов игрового мира &#10;def reset():" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Space Invaders/Space Invaders.py</url>
-          <line>69</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
