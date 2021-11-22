@@ -11,6 +11,27 @@ def getInvadersX(obj):
 def getInvadersY(obj):
     return cnv.coords(obj[0])[1]
 
+# Стартуем ракету врага
+def startInvadersRocket():
+    global invadersRocket
+    if (not playGame):
+        return 0
+
+    if (len(invadersObject) > 0):                # Если есть в окне хотя бы один пришелец
+        n = randint(0, len(invadersObject) - 1)  # Случайно выбираем пришельца который будет стрелять и помещаем его в переменную n
+        Beep(1200, 40)
+        invadersRocket = cnv.create_image(getInvadersX(invadersObject[n]), getInvadersY(invadersObject[n]), image=invadersRocketTexture)
+        root.after(20, animationInvadersRocket)  # Запускаем анимацию полёта ракеты с интервалом в 20 миллисекунд
+
+# Анимация полёта вражеской ракеты
+def animationInvadersRocket():
+    global invadersRocket, invadersRocketSpeed, lives
+    if (not playGame):
+        invadersRocket = None
+        invadersRocketSpeed = invadersRocketSpeedDefault
+        return 0
+
+
 # Главный цикл игры
 def mainloop():
     global invadersObject, leftInvadersBorder, rightInvadersBorder, invadersSpeed, playGame, score, maxY, frame
