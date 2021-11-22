@@ -14,6 +14,7 @@ def getInvadersY(obj):
 # Стартуем ракету врага
 def startInvadersRocket():
     global invadersRocket
+
     if (not playGame):
         return 0
 
@@ -26,11 +27,35 @@ def startInvadersRocket():
 # Анимация полёта вражеской ракеты
 def animationInvadersRocket():
     global invadersRocket, invadersRocketSpeed, lives
+
     if (not playGame):
         invadersRocket = None
         invadersRocketSpeed = invadersRocketSpeedDefault
         return 0
 
+    cnv.move(invadersRocket, invadersSpeed / 2, int(invadersRocketSpeed))
+    invadersRocketSpeed *= invadersRocketSpeedScale
+
+    x = cnv.coords(invadersRocket)[0]
+    y = cnv.coords(invadersRocket)[1]
+
+    # Расчитываем попадание в игрока
+    if (y > getPlayerY() - SQUARE_SIZE // 2):
+        if (x > getPlayerX() - SQUARE_SIZE and x < getPlayerX() + SQUARE_SIZE):
+            animationExplosion(7, getPlayerX(), getPlayerY())
+            Beep(400, 2)
+            Beep(550, 2)
+            Beep(570, 3)
+            y = HEIGHT
+            lives -= 1
+            cnv.coords(player[0], WIDTH // 2, getPlayerY())
+
+    if (y < HEIGHT):
+        root.after(20, animationInvadersRocket)
+    else:
+        cnv.delete(invadersRocket)
+        invadersRocket = None
+        invadersRocketSpeed = invadersRocketSpeedDefault
 
 # Главный цикл игры
 def mainloop():

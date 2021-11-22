@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Главный цикл игры">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Стартуем ракету врага">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,13 +221,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00096" summary="def createLevel cont.">
-      <created>1636924781562</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1636924781562</updated>
     </task>
     <task id="LOCAL-00097" summary="Проверка значений списка print(finish)">
       <created>1637000943929</created>
@@ -564,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637610034261</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="Стартуем ракету врага">
+      <created>1637611465406</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1637611465406</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -623,7 +624,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Проверяем все ли ящики заняли места в точках сбора" />
     <MESSAGE value="Проверяем все ли ящики заняли места в точках сбора (некоторые пояснения)" />
     <MESSAGE value="# Смена уровня&#10;def nextLevel():" />
     <MESSAGE value="Смена уровня&#10;def nextLevel():" />
@@ -648,6 +648,7 @@
     <MESSAGE value="Запись очков в файл  saveScores(scoresToFile):" />
     <MESSAGE value="# Сброс и формирование объектов игрового мира &#10;def reset():" />
     <MESSAGE value="Главный цикл игры" />
-    <option name="LAST_COMMIT_MESSAGE" value="Главный цикл игры" />
+    <MESSAGE value="Стартуем ракету врага" />
+    <option name="LAST_COMMIT_MESSAGE" value="Стартуем ракету врага" />
   </component>
 </project>
