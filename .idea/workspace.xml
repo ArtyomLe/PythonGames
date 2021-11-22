@@ -222,13 +222,6 @@
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
     </task>
-    <task id="LOCAL-00094" summary="def clear_setGrass">
-      <created>1636917745808</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1636917745808</updated>
-    </task>
     <task id="LOCAL-00095" summary="def createLevel">
       <created>1636920871793</created>
       <option name="number" value="00095" />
@@ -565,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637523214862</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary="Главный цикл игры">
+      <created>1637603909529</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1637603909529</updated>
+    </task>
+    <option name="localTasksCounter" value="144" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -624,7 +624,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Синхронно перемещаем погрузчик и ящик на требуемое расстояние (64 пикселя)" />
     <MESSAGE value="Проверяем все ли ящики заняли места в точках сбора" />
     <MESSAGE value="Проверяем все ли ящики заняли места в точках сбора (некоторые пояснения)" />
     <MESSAGE value="# Смена уровня&#10;def nextLevel():" />
@@ -649,6 +648,7 @@
     <MESSAGE value="Загрузка очков из scores.dat (Список содержит имя игрока и кол-во очков)" />
     <MESSAGE value="Запись очков в файл  saveScores(scoresToFile):" />
     <MESSAGE value="# Сброс и формирование объектов игрового мира &#10;def reset():" />
-    <option name="LAST_COMMIT_MESSAGE" value="# Сброс и формирование объектов игрового мира &#10;def reset():" />
+    <MESSAGE value="Главный цикл игры" />
+    <option name="LAST_COMMIT_MESSAGE" value="Главный цикл игры" />
   </component>
 </project>

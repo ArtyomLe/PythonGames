@@ -24,30 +24,36 @@ def mainloop():
         cnv.move(obj[0], int(invadersSpeed), 0)   # Смещаем каждого инопланетянина по оси Х на скорость invadersSpeed
         xPos = getInvadersX(obj)                  # Функции getInvadersX,Y созданы для дальнейшего сокращения записи
         yPos = getInvadersY(obj)
-        cnv.delete(obj[0])
+        cnv.delete(obj[0])                        # Удаление обьекта с Canvas
+        # Создаём объект с новой текстурой на сохранённых координатах
         obj[0] = cnv.create_image(xPos, yPos, image=invadersTexture[obj[1] * 2 + frame])
-    frame += 1
+
+    frame += 1                                  # Контролируем кол-во кадров, их может быть только два (invadersTexture)
     if (frame > 1):
         frame = 0
-
+    # Условные границы прямоугольника (Левый и Правый)
+    # Изменяем на скорость смещения и делаем число целым (из-за ускорения invadersSpeed на 1.1 )
     leftInvadersBorder += int(invadersSpeed)
     rightInvadersBorder += int(invadersSpeed)
-    if (randint(0, 150) < abs(invadersSpeed) and invadersRocket == None):
+
+    # Вычисляем могут ли пришельцы пульнуть (метод startInvadersRocket)
+    if (randint(0, 150) < abs(invadersSpeed) and invadersRocket == None): # Пришельцы движутся и не выпустили ракету
         startInvadersRocket()
 
-    if (rightInvadersBorder > WIDTH - SQUARE_SIZE or leftInvadersBorder < SQUARE_SIZE):
-        invadersSpeed *= 1.1
-        invadersSpeed = -invadersSpeed
-        maxY = 0
+    # Проверяеям если не вышли за границу окна (блок инопланетян)
+    if (rightInvadersBorder > WIDTH - SQUARE_SIZE or leftInvadersBorder < SQUARE_SIZE): # Если условие верно
+        invadersSpeed *= 1.1                  # Ускоряемся
+        invadersSpeed = -invadersSpeed        # Инверсируем скорость ( движение в противоположную сторону )
+        maxY = 0                              # Поиск максимальной точки Y для всего блока
         for obj in invadersObject:
-            cnv.move(obj[0], 0, SQUARE_SIZE)
+            cnv.move(obj[0], 0, SQUARE_SIZE)  # Смещаем на расстояние фигурки (32пикселя)
             if (cnv.coords(obj[0])[1] + SQUARE_SIZE // 2 > maxY):
                 maxY = cnv.coords(obj[0])[1] + SQUARE_SIZE // 2
     root.after(100, mainloop)
-    score -= .1
-    updateInfoLine()
+    score -= .1                               # За 10 вызовов в секунду пропадает одно очко
+    updateInfoLine()                          # Обновляем информационную строку внизу окна
 
-    if (maxY > getPlayerY() or lives < 0):
+    if (maxY > getPlayerY() or lives < 0): # Условия проигрыша
         endGame()
 
 # Перемещение игрока
