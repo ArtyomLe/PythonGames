@@ -41,10 +41,14 @@ def mainloop():
         maxY = 0
         for obj in invadersObject:
             cnv.move(obj[0], 0, SQUARE_SIZE)
-
-
-
+            if (cnv.coords(obj[0])[1] + SQUARE_SIZE // 2 > maxY):
+                maxY = cnv.coords(obj[0])[1] + SQUARE_SIZE // 2
     root.after(100, mainloop)
+    score -= .1
+    updateInfoLine()
+
+    if (maxY > getPlayerY() or lives < 0):
+        endGame()
 
 # Перемещение игрока
 def move(x):
