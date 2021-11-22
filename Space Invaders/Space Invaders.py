@@ -33,7 +33,9 @@ def animationInvadersRocket():
         invadersRocketSpeed = invadersRocketSpeedDefault
         return 0
 
+    # Смещаем ракету
     cnv.move(invadersRocket, invadersSpeed / 2, int(invadersRocketSpeed))
+
     invadersRocketSpeed *= invadersRocketSpeedScale
 
     x = cnv.coords(invadersRocket)[0]
