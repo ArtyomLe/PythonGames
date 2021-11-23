@@ -104,6 +104,23 @@ def animationShoot(frame):
     cnv.delete(rocketObject)
     rocketObject = cnv.create_image(x, y, image=rocketTexture[frame])
 
+    if (cnv.coords(rocketObject)[1] < maxY + SQUARE_SIZE) # Координата ракеты по Y меньше (т.е находится в прямоугольнике врага)
+        rocketX = getRocketX()
+        rocketY = getRocketY()
+        find = 0                # Сравнение координат ракеты с координатами каждого пришельца
+
+        while (find < len(invadersObject)):
+            invadersX = getInvadersX(invadersObject[find])
+            invadersY = getInvadersY(invadersObject[find])
+
+            # Чем меньше цифра коэфициента, тем тяжелее попасть
+            if (abs(invadersX - rocketX) < SQUARE_SIZE * 0.4 and abs(invadersY - rocketY) < SQUARE_SIZE * 0.8):
+                score += 50 * (level + 1)  # При попадании увеличиваем кол-во очков
+                startExplosion(find)       # Вызываем метод взрыва
+                y = -1                     # Прекращаем вызов метода анимации полёта ракеты animationShoot()
+                find = len(invadersObject) # Прекращаем цикл while
+                penalty -= 5               # Уменьшаем штрафные очки
+
 
 # Главный цикл игры
 def mainloop():
@@ -145,7 +162,7 @@ def mainloop():
                 maxY = cnv.coords(obj[0])[1] + SQUARE_SIZE // 2
     root.after(100, mainloop)
     score -= .1                               # За 10 вызовов в секунду пропадает одно очко
-    updateInfoLine()                          # Обновляем информационную строку внизу окна
+#    updateInfoLine()                          # Обновляем информационную строку внизу окна
 
     if (maxY > getPlayerY() or lives < 0): # Условия проигрыша
         endGame()
@@ -231,7 +248,7 @@ def reset():
 
     player = [cnv.create_image(WIDTH // 2, HEIGHT - SQUARE_SIZE * 2, image=playerTexture), 1]
 
-    updateInfoLine()
+#    updateInfoLine()
     mainloop()
 
 # Загрузка очков из scores.dat (Список содержит имя игрока и кол-во очков)
