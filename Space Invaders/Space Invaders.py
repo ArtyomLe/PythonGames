@@ -71,6 +71,19 @@ def animationExplosion(frame, x, y):
     sleep(0.01 + frame / 1000)
     cnv.delete(tempExpl)
 
+# Выстрел при нажатии на пробел
+def shoot():
+    global player, rocketObject
+
+    if (not playGame or onMenu):
+        return 0
+    if (player[1] == 0):
+        return 0
+    player[1] -= 1                  # При выстреле уменьшаем заряд с 1 до 0
+    rocketObject = cnv.create_image(getPlayerX(), getPlayerY(), image=rocketTexture[0])
+    root.after(10, lambda frame=0: animationShoot(frame))
+
+# Анимация ракеты игрока
 
 # Главный цикл игры
 def mainloop():
