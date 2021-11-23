@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Анимация взрыва">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Выстрел при нажатии на пробел">
       <change beforePath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -221,13 +220,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00099" summary="Проверка значений списков&#10;    print(finish)&#10;    print(player)&#10;    print(boxes)&#10;дополнения">
-      <created>1637002388363</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1637002388363</updated>
     </task>
     <task id="LOCAL-00100" summary="def getMinSec(s):">
       <created>1637004235735</created>
@@ -565,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637692778277</updated>
     </task>
-    <option name="localTasksCounter" value="148" />
+    <task id="LOCAL-00148" summary="Выстрел при нажатии на пробел">
+      <created>1637695818098</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1637695818098</updated>
+    </task>
+    <option name="localTasksCounter" value="149" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -624,7 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Смена уровня&#10;def nextLevel():" />
     <MESSAGE value="Организация переключения уровня" />
     <MESSAGE value="goCheat" />
     <MESSAGE value="Updates ver.2" />
@@ -649,6 +647,7 @@
     <MESSAGE value="Стартуем ракету врага" />
     <MESSAGE value="def animationInvadersRocket():" />
     <MESSAGE value="Анимация взрыва" />
-    <option name="LAST_COMMIT_MESSAGE" value="Анимация взрыва" />
+    <MESSAGE value="Выстрел при нажатии на пробел" />
+    <option name="LAST_COMMIT_MESSAGE" value="Выстрел при нажатии на пробел" />
   </component>
 </project>

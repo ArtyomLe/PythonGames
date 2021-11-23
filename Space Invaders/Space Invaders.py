@@ -83,7 +83,27 @@ def shoot():
     rocketObject = cnv.create_image(getPlayerX(), getPlayerY(), image=rocketTexture[0])
     root.after(10, lambda frame=0: animationShoot(frame))
 
-# Анимация ракеты игрока
+# Анимация полёта ракеты игрока
+def animationShoot(frame):
+    global rocketObject, rocketSpeedY, penalty, score, player
+    if (not playGame):
+        rocketObject = None
+        rocketSpeedY = rocketSpeedYDefault
+        return 0
+
+    cnv.move(rocketObject, 0, -rocketSpeedY)
+    rocketSpeedY *= rocketScale
+
+    x = getRocketX()
+    y = getRocketY()
+
+    frame += 1
+    if (frame > len(rocketTexture) - 1):
+        frame = 0
+    sleep(0.02)
+    cnv.delete(rocketObject)
+    rocketObject = cnv.create_image(x, y, image=rocketTexture[frame])
+
 
 # Главный цикл игры
 def mainloop():
@@ -211,7 +231,7 @@ def reset():
 
     player = [cnv.create_image(WIDTH // 2, HEIGHT - SQUARE_SIZE * 2, image=playerTexture), 1]
 
-#    updateInfoLine()
+    updateInfoLine()
     mainloop()
 
 # Загрузка очков из scores.dat (Список содержит имя игрока и кол-во очков)
