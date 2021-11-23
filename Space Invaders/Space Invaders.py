@@ -142,6 +142,9 @@ def startExplosion(n):   # (n) он же (find) Номер конкретног�
     animationExplosion(7, getInvadersX(invadersObject[n]), getInvadersY(invadersObject[n]))
     # Уменьшаем ранг пришельца, и проверяем если можно его удалить
     invadersObject[n][1] -= 1
+    if (invadersObject[n][1] < 0):       # Если ранг отрицательный то можно удалять
+        cnv.delete(invadersObject[n][0])
+        del.invadersObject[n]
 
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Анимация полёта ракеты игрока">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Старт анимации взрыва пришельца">
       <change beforePath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,13 +220,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00103" summary="def getMinSec&#10;Данная функция преобразовывает секунды =&gt; в &quot;минуты и секунды&quot; cont.">
-      <created>1637009241979</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1637009241979</updated>
     </task>
     <task id="LOCAL-00104" summary="def getMinSec&#10;Данная функция преобразовывает секунды =&gt; в &quot;минуты и секунды&quot; cont.">
       <created>1637010060812</created>
@@ -564,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637699086015</updated>
     </task>
-    <option name="localTasksCounter" value="152" />
+    <task id="LOCAL-00152" summary="Старт анимации взрыва пришельца">
+      <created>1637699944679</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1637699944679</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -623,7 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="goCheat" />
     <MESSAGE value="Updates ver.2" />
     <MESSAGE value="Updates ver.3" />
     <MESSAGE value="Updates ver.4" />
@@ -648,6 +647,7 @@
     <MESSAGE value="Анимация взрыва" />
     <MESSAGE value="Выстрел при нажатии на пробел" />
     <MESSAGE value="Анимация полёта ракеты игрока" />
-    <option name="LAST_COMMIT_MESSAGE" value="Анимация полёта ракеты игрока" />
+    <MESSAGE value="Старт анимации взрыва пришельца" />
+    <option name="LAST_COMMIT_MESSAGE" value="Старт анимации взрыва пришельца" />
   </component>
 </project>
