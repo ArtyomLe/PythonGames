@@ -37,26 +37,25 @@ def animationInvadersRocket():
     cnv.move(invadersRocket, invadersSpeed / 2, int(invadersRocketSpeed))
 
     invadersRocketSpeed *= invadersRocketSpeedScale
-
+    # Помещаем координаты ракеты в переменные
     x = cnv.coords(invadersRocket)[0]
     y = cnv.coords(invadersRocket)[1]
-
     # Расчитываем попадание в игрока
-    if (y > getPlayerY() - SQUARE_SIZE // 2):
-        if (x > getPlayerX() - SQUARE_SIZE and x < getPlayerX() + SQUARE_SIZE):
-            animationExplosion(7, getPlayerX(), getPlayerY())
+    if (y > getPlayerY() - SQUARE_SIZE // 2): # Если Y ракеты больше чем у игрока (начало координат в верхней левой точке)
+        if (x > getPlayerX() - SQUARE_SIZE and x < getPlayerX() + SQUARE_SIZE): # А Х находится между левой и правой границой игрока
+            animationExplosion(7, getPlayerX(), getPlayerY()) # Если попали
             Beep(400, 2)
             Beep(550, 2)
             Beep(570, 3)
-            y = HEIGHT
-            lives -= 1
-            cnv.coords(player[0], WIDTH // 2, getPlayerY())
+            y = HEIGHT                                        # Удаляем текстуру чтобы можно было выпустить след. ракету (потому что попали)
+            lives -= 1                                        # Отнимаем жизнь
+            cnv.coords(player[0], WIDTH // 2, getPlayerY())   # Возвращаем игрока на середину (начальную позицию)
 
-    if (y < HEIGHT):
+    if (y < HEIGHT):                                          # Повторный запуск ракеты
         root.after(20, animationInvadersRocket)
-    else:
+    else:                                                     # Если ракета не попала и вылетела за границы окна то удаляем её текстуру
         cnv.delete(invadersRocket)
-        invadersRocket = None
+        invadersRocket = None                                 # Задаём скорость по умолчанию
         invadersRocketSpeed = invadersRocketSpeedDefault
 
 # Главный цикл игры
