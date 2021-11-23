@@ -120,6 +120,17 @@ def animationShoot(frame):
                 y = -1                     # Прекращаем вызов метода анимации полёта ракеты animationShoot()
                 find = len(invadersObject) # Прекращаем цикл while
                 penalty -= 5               # Уменьшаем штрафные очки
+        find += 1                          # Продолжаем проверять остальных пришельцев ( если не попали )
+
+        # Y находится в пространстве окна (ракета движется дальше)
+        if (y > 0):
+            root.after(3, lambda frame=frame: animationShoot(frame))
+        else:
+           Beep(700, 20)
+           cnv.delete(rocketObject)           # Удаляем обьект если он находится за границами окна (ракету)
+           penalty += 5                       # Добавляем к штрафному (за промах)
+           player[1] += 1                     # Перезаряд
+           rocketSpeedY = rocketSpeedYDefault # Скорость ставим на default значение
 
 
 # Главный цикл игры
