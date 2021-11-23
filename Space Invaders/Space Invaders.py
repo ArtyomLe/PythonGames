@@ -43,7 +43,7 @@ def animationInvadersRocket():
     # Расчитываем попадание в игрока
     if (y > getPlayerY() - SQUARE_SIZE // 2): # Если Y ракеты больше чем у игрока (начало координат в верхней левой точке)
         if (x > getPlayerX() - SQUARE_SIZE and x < getPlayerX() + SQUARE_SIZE): # А Х находится между левой и правой границой игрока
-            animationExplosion(7, getPlayerX(), getPlayerY()) # Если попали
+            animationExplosion(7, getPlayerX(), getPlayerY()) # Если попали (отрисовка текстуры взрыва с индекса 7 (список explotionTexture))
             Beep(400, 2)
             Beep(550, 2)
             Beep(570, 3)
@@ -57,6 +57,20 @@ def animationInvadersRocket():
         cnv.delete(invadersRocket)
         invadersRocket = None                                 # Задаём скорость по умолчанию
         invadersRocketSpeed = invadersRocketSpeedDefault
+
+
+# Анимация взрыва
+def animationExplosion(frame, x, y):
+    if (not playGame):
+        return 0
+    # Каждый цикл отрисовываем и удаляем фрэйм для эффекта взрыва (всего 0:7)
+    tempExpl = cnv.create_image(x, y, image=explosionTexture[frame])
+    if (frame > -1):
+        root.after(10, lambda frame=frame - 1, x=x, y=y: animationExplosion(frame, x, y))
+    cnv.update
+    sleep(0.01 + frame / 1000)
+    cnv.delete(tempExpl)
+
 
 # Главный цикл игры
 def mainloop():

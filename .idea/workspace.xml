@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Стартуем ракету врага">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="def animationInvadersRocket():">
       <change beforePath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -221,13 +220,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00097" summary="Проверка значений списка print(finish)">
-      <created>1637000943929</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1637000943929</updated>
     </task>
     <task id="LOCAL-00098" summary="Проверка значений списков&#10;    print(finish)&#10;    print(player)&#10;    print(boxes)">
       <created>1637002267033</created>
@@ -565,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637611465406</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="def animationInvadersRocket():">
+      <created>1637691840120</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1637691840120</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -624,7 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Проверяем все ли ящики заняли места в точках сбора (некоторые пояснения)" />
     <MESSAGE value="# Смена уровня&#10;def nextLevel():" />
     <MESSAGE value="Смена уровня&#10;def nextLevel():" />
     <MESSAGE value="Организация переключения уровня" />
@@ -649,6 +647,7 @@
     <MESSAGE value="# Сброс и формирование объектов игрового мира &#10;def reset():" />
     <MESSAGE value="Главный цикл игры" />
     <MESSAGE value="Стартуем ракету врага" />
-    <option name="LAST_COMMIT_MESSAGE" value="Стартуем ракету врага" />
+    <MESSAGE value="def animationInvadersRocket():" />
+    <option name="LAST_COMMIT_MESSAGE" value="def animationInvadersRocket():" />
   </component>
 </project>
