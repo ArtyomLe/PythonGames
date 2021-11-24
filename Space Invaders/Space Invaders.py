@@ -386,6 +386,22 @@ def sortScoreTable(score):
             getPlayerName(positionPlayer)
             return  positionPlayer
 
+# Окно для ввода имени
+def getPlayerName(positionPlayer):
+    global playerName
+
+    inputWindow = Toplevel(root) # Формируем окно верхнего уровня (поверх основного)
+    inputWindow.grab_set()       # Блокируем работу основного "родительского" окна (переделываем вторичное окно в модальное)
+
+    # Геометрия нового окна
+    X_NEW = root.winfo_screenwidth() // 2 - 150
+    Y_NEW = root.winfo_screenheight() // 2 - 260
+    inputWindow.geometry(f"{300}x{120}+{X_NEW}+{Y_NEW}")
+    inputWindow.overrideredirect(True)
+    inputWindow.focus_set()
+
+
+
 
 # Создание окна
 root = Tk()

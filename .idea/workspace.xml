@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Находим номер игрока с списке лучших">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Задача функции определить позицию игрока в таблице рекордов, &#10;организовать ввод ника (если он не был введён ранее) &#10;и вернуть номер позиции в таблице">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,13 +221,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00110" summary="Перемещаем погрузчик на требуемое расстояние">
-      <created>1637094142858</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1637094142858</updated>
     </task>
     <task id="LOCAL-00111" summary="Синхронно перемещаем погрузчик и ящик на требуемое расстояние (64 пикселя)">
       <created>1637095363628</created>
@@ -564,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637783053062</updated>
     </task>
-    <option name="localTasksCounter" value="159" />
+    <task id="LOCAL-00159" summary="Задача функции определить позицию игрока в таблице рекордов, &#10;организовать ввод ника (если он не был введён ранее) &#10;и вернуть номер позиции в таблице">
+      <created>1637783570856</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1637783570856</updated>
+    </task>
+    <option name="localTasksCounter" value="160" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -623,7 +624,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ИНОПЛАНЕТЯНЕ" />
     <MESSAGE value="ИГРОК" />
     <MESSAGE value="ТЕКСТУРА ВЗРЫВА" />
     <MESSAGE value="НАСТРОЙКА ИГРОКА" />
@@ -648,6 +648,7 @@
     <MESSAGE value="Удаление таблицы очков" />
     <MESSAGE value="Конец игры" />
     <MESSAGE value="Находим номер игрока с списке лучших" />
-    <option name="LAST_COMMIT_MESSAGE" value="Находим номер игрока с списке лучших" />
+    <MESSAGE value="Задача функции определить позицию игрока в таблице рекордов, &#10;организовать ввод ника (если он не был введён ранее) &#10;и вернуть номер позиции в таблице" />
+    <option name="LAST_COMMIT_MESSAGE" value="Задача функции определить позицию игрока в таблице рекордов, &#10;организовать ввод ника (если он не был введён ранее) &#10;и вернуть номер позиции в таблице" />
   </component>
 </project>
