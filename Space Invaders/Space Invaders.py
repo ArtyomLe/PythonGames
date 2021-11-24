@@ -328,9 +328,9 @@ def showScores(numberPlayer):
             colorText = "#AA9922"  # Всё остальное жёлтым
         # Номер строки
         textScores.append(cnv.create_text(210, 170 + i * 22, fill=colorText, font=", 14", text=str(i + 1)))
-        # Ник игрока [0]
+        # Ник игрока [0]      (anchor - это координаты в окне)
         textScores.append(cnv.create_text(240, 170 + i * 22, fill=colorText, anchor="w", font=", 14", text=scores[i][0]))
-        # Кол-во очков [1]
+        # Кол-во очков [1]    (anchor - это координаты в окне)
         textScores.append(cnv.create_text(590, 170 + i * 22, fill=colorText, anchor="e", font=", 14", text=scores[i][1]))
 
 # Удаление таблицы очков
@@ -339,7 +339,18 @@ def hideScores():
     for i in textScores:
         cnv.delete(i)
 
-
+# Конец игры
+def endGame():
+    global playGame, btnContinueAfterPause, score
+    playGame = False
+    root.focus_set()
+    cnv.create_image(WIDTH // 2, HEIGHT // 2, image=backGround)
+    cnv.create_text(160, 80, fill="#FFFFFF", anchor="nw", font=f", 22", text=f"КОНЕЦ ИГРЫ. ЛУЧШИЕ ИГРОКИ:")
+    score -= penalty
+    showScores(sortScoreTable(int(score)))
+    btnContinueAfterPause = Button(root, text="Продолжить", width=70)
+    btnContinueAfterPause.place(x=140, y=HEIGHT - 50)
+    btnContinueAfterPause["command"] = continueAfterPause
 
 # Создание окна
 root = Tk()
