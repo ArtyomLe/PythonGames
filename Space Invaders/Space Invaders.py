@@ -316,6 +316,25 @@ def saveScores(scoresToFile):
     except:
         print("Что-то пошло не так.")
 
+# Рисуем таблицу очков
+def showScores(numberPlayer):
+    global textScores
+    textScores = []
+
+    for i in range(len(scores)):
+        if (i == numberPlayer):
+            colorText = "#00FF55"  # Подсвечиваем зелёным если попадаем в список
+        else:
+            colorText = "#AA9922"  # Всё остальное жёлтым
+        # Номер строки
+        textScores.append(cnv.create_text(210, 170 + i * 22, fill=colorText, font=", 14", text=str(i + 1)))
+        # Ник игрока [0]
+        textScores.append(cnv.create_text(240, 170 + i * 22, fill=colorText, anchor="w", font=", 14", text=scores[i][0]))
+        # Кол-во очков [1]
+        textScores.append(cnv.create_text(590, 170 + i * 22, fill=colorText, anchor="e", font=", 14", text=scores[i][1]))
+
+# Удаление таблицы очков
+
 # Создание окна
 root = Tk()
 root.resizable(False, False)
