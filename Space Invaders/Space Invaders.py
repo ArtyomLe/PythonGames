@@ -334,6 +334,12 @@ def showScores(numberPlayer):
         textScores.append(cnv.create_text(590, 170 + i * 22, fill=colorText, anchor="e", font=", 14", text=scores[i][1]))
 
 # Удаление таблицы очков
+def hideScores():
+    global textScores
+    for i in textScores:
+        cnv.delete(i)
+
+
 
 # Создание окна
 root = Tk()
