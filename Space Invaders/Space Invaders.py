@@ -347,7 +347,7 @@ def endGame():
     cnv.create_image(WIDTH // 2, HEIGHT // 2, image=backGround)
     cnv.create_text(160, 80, fill="#FFFFFF", anchor="nw", font=f", 22", text=f"КОНЕЦ ИГРЫ. ЛУЧШИЕ ИГРОКИ:")
     score -= penalty
-    showScores(sortScoreTable(int(score)))
+    showScores(sortScoreTable(int(score))) # Аргументом должен стать номер позиции занятый игроком либо число вне диапазона строк
     btnContinueAfterPause = Button(root, text="Продолжить", width=70)
     btnContinueAfterPause.place(x=140, y=HEIGHT - 50)
     btnContinueAfterPause["command"] = continueAfterPause
@@ -357,6 +357,31 @@ def endGame():
 3. Вызываем прорисовку таблицы рекордов
 4. Выводим кнопку продолжить
 """
+
+# Находим номер игрока с списке лучших
+def sortScoreTable(score):
+    global scores
+    name = playerName
+    if (playerName == None):
+        name = "Вы"
+
+    scores.append([name, score]) # Добавляем 11 строку в рекорды
+    positionPlayer = 10
+
+    # Применяем метод пузырьковой сортировки работающий с конца списка
+    for i in range(len(scores) - 1, 0, -1):   # Начинаем с конца и считаем в начало с шагом в -1
+        if (scores[i][1] > scores[i - 1][1]): # Если последний больше предыдущего
+            scores[i][0], scores[i - 1][0] = scores[i - 1][0], scores[i][0] # Меняем местами Ник
+            scores[i][1], scores[i - 1][1] = scores[i - 1][1], scores[i][1] # Меняем местами кол-во очков
+            # Смещаем значение для того чтобы верно определить номер занятого игроком места
+            positionPlayer -= 1
+            del scores[10] # Удаляем десятый (по факту 11) элемент из таблицы рекордов
+        # Если игрок позицию меньше 10 и ещё не вводил имя (в данной сессии)
+        if (positionPlayer < 10 and playerName == None):
+            getPlayerName(positionPlayer)
+            return  positionPlayer
+
+
 # Создание окна
 root = Tk()
 root.resizable(False, False)

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Удаление таблицы очков">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Конец игры">
       <change beforePath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,20 +220,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00107" summary="Проверить клетку на доступность перемещения (пояснения)">
-      <created>1637091015393</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1637091015393</updated>
-    </task>
-    <task id="LOCAL-00108" summary="Определяем что находится в клетке">
-      <created>1637091710228</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1637091710228</updated>
     </task>
     <task id="LOCAL-00109" summary="Функция возвращает номер ящика">
       <created>1637092404378</created>
@@ -564,7 +550,21 @@
       <option name="project" value="LOCAL" />
       <updated>1637778446382</updated>
     </task>
-    <option name="localTasksCounter" value="156" />
+    <task id="LOCAL-00156" summary="Конец игры">
+      <created>1637779393288</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1637779393288</updated>
+    </task>
+    <task id="LOCAL-00157" summary="Конец игры">
+      <created>1637779593661</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1637779593661</updated>
+    </task>
+    <option name="localTasksCounter" value="158" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -623,7 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updates ver.4" />
     <MESSAGE value="Создание окна" />
     <MESSAGE value="ИНОПЛАНЕТЯНЕ" />
     <MESSAGE value="ИГРОК" />
@@ -648,6 +647,7 @@
     <MESSAGE value="Старт анимации взрыва пришельца" />
     <MESSAGE value="Рисуем таблицу очков" />
     <MESSAGE value="Удаление таблицы очков" />
-    <option name="LAST_COMMIT_MESSAGE" value="Удаление таблицы очков" />
+    <MESSAGE value="Конец игры" />
+    <option name="LAST_COMMIT_MESSAGE" value="Конец игры" />
   </component>
 </project>
