@@ -400,6 +400,20 @@ def getPlayerName(positionPlayer):
     inputWindow.overrideredirect(True)
     inputWindow.focus_set()
 
+    Label(inputWindow, text="Вы - один из лучших! Введите ник:").place(x=13, y=10)
+
+    playerName = StringVar()
+    playerName.set(defaultName)
+    newName = Entry(inputWindow, textvariable=playerName, width=45)
+    newName.place(x=13, y=40)
+    newName.focus_set()
+    newName.select_range(0, END)                  # Выделяем содержимое поля ввода
+    newName.bind("<KeyRelease>", inputNameFilter) # Привязываем inputNameFilter() к любому нажатию клавиш
+
+    # Кнопка продолжить
+    btnGo = Button(inputWindow, text="Продолжить...", width=38)
+    btnGo.place(x=13, y=70)
+    btnGo["command"] = lambda  iW=inputWindow, posP=positionPlayer: endTableScore(iW, posP)
 
 
 
