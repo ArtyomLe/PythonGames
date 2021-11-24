@@ -351,7 +351,12 @@ def endGame():
     btnContinueAfterPause = Button(root, text="Продолжить", width=70)
     btnContinueAfterPause.place(x=140, y=HEIGHT - 50)
     btnContinueAfterPause["command"] = continueAfterPause
-
+"""
+1. Прекращаем игру
+2. Выводим фоновое изображение, тем самым скрывая ранее выведенные объекты
+3. Вызываем прорисовку таблицы рекордов
+4. Выводим кнопку продолжить
+"""
 # Создание окна
 root = Tk()
 root.resizable(False, False)
