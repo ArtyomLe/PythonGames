@@ -415,7 +415,19 @@ def getPlayerName(positionPlayer):
     btnGo.place(x=13, y=70)
     btnGo["command"] = lambda  iW=inputWindow, posP=positionPlayer: endTableScore(iW, posP)
 
-
+# Фильтрация вводимых знаков
+def inputNameFilter(event):
+    global playerName
+    filter = "_0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ" # Разрешенные символы для ввода имени
+    pN = ""                          # Имя
+    for i in playerName.get():
+        if (i.upper() in filter):
+            pN += i
+    if (len(pN) > 20):               # Ограничиваем длинну имени до 20 символов
+        pN = pN[0:20]
+    elif (pN == ""):                 # Если поле пустое то вводим значение прописанное в defaultName
+        pN = defaultName
+    playerName.set(pN)               # Установка отфильтрованого имени в виджет
 
 # Создание окна
 root = Tk()
