@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Запись очков в файл">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Очистить всё и начать игру заново">
       <change beforePath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,13 +220,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00115" summary="Смена уровня&#10;def nextLevel():">
-      <created>1637172795926</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1637172795926</updated>
     </task>
     <task id="LOCAL-00116" summary="Организация переключения уровня">
       <created>1637173769765</created>
@@ -564,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637868607310</updated>
     </task>
-    <option name="localTasksCounter" value="164" />
+    <task id="LOCAL-00164" summary="Очистить всё и начать игру заново">
+      <created>1637869037229</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1637869037229</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -623,7 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="МЕНЮ ИГРЫ" />
     <MESSAGE value="НАЧАЛО" />
     <MESSAGE value="НАЧАЛО(поправления)" />
     <MESSAGE value="Сброс и формирование объектов игрового мира (def reset)" />
@@ -648,6 +647,7 @@
     <MESSAGE value="Окно для ввода имени" />
     <MESSAGE value="Фильтрация вводимых знаков" />
     <MESSAGE value="Запись очков в файл" />
-    <option name="LAST_COMMIT_MESSAGE" value="Запись очков в файл" />
+    <MESSAGE value="Очистить всё и начать игру заново" />
+    <option name="LAST_COMMIT_MESSAGE" value="Очистить всё и начать игру заново" />
   </component>
 </project>

@@ -449,6 +449,26 @@ def continueAfterPause():
     showMenu()                      # Показываем меню
     restartGame()                   # Перезапускаем игру с последующим нажатием на СТАРТ
 
+# Конец уровня
+def endLevel():
+    global playGame
+    playGame = False
+    cnv.delete(ALL)
+    cnv.create_text(WIDTH // 2, HEIGHT // 2, fill="#FFFFFF", font=f", 15", text=f"ПОБЕДА! ЗАГРУЖАЕМ СЛЕДУЮЩИЙ УРОВЕНЬ!")
+
+    root.focus_set()
+    root.update()
+    Beep(randint(850, 1000), 400)
+    sleep(0.01)
+    Beep(randint(750, 1000), 200)
+    sleep(0.03)
+    Beep(randint(950, 1000), 600)
+    sleep(0.07)
+    Beep(randint(850, 1000), 500)
+    sleep(0.5)
+    root.after(300, nextLevel)
+
+
 # Создание окна
 root = Tk()
 root.resizable(False, False)
