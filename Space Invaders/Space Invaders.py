@@ -429,6 +429,18 @@ def inputNameFilter(event):
         pN = defaultName
     playerName.set(pN)               # Установка отфильтрованого имени в виджет
 
+# Запись очков в файл
+def endTableScore(inputWindow, positionPlayer):
+    global playerName, scores
+
+    root.deiconify()                            # Возвращаем к жизни главное окно (для взаимодействия с пользователем)
+    inputWindow.destroy()                       # Удаляем окно ввода
+    playerName = playerName.get()               # Задаём значение playerName
+    if (playerName == ""):                      # Проверяем на пустоту
+        playerName = defaultName
+    scores[positionPlayer][0] = playerName
+    continueAfterPause()
+
 # Создание окна
 root = Tk()
 root.resizable(False, False)
