@@ -475,6 +475,20 @@ def nextLevel():
     playGame = True
     reset()
 
+# Обновляем ИнфоСтроку
+def updateInfoLine():
+    global informationLine
+    if (informationLine != None):
+        for i in informationLine:
+            cnv.delete(i)
+
+    informationLine = []
+    informationLine.append(cnv.create_text(20, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"ОЧКИ: {int(score)}"))
+    informationLine.append(cnv.create_text(170, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"ВРАГИ: {len(invadersObject)}"))
+    informationLine.append(cnv.create_text(320, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"ЖИЗНИ: {lives}"))
+    informationLine.append(cnv.create_text(480, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"УРОВЕНЬ: {level}"))
+    informationLine.append(cnv.create_text(650, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"ШТРАФЫ: -{penalty}"))
+
 
 # Создание окна
 root = Tk()
