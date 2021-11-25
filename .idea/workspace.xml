@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Переключение на следующий уровень">
+    <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Обновляем ИнфоСтроку">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,13 +221,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00118" summary="Updates ver.2">
-      <created>1637178150483</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1637178150483</updated>
     </task>
     <task id="LOCAL-00119" summary="Updates ver.3">
       <created>1637179886309</created>
@@ -564,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637869885151</updated>
     </task>
-    <option name="localTasksCounter" value="167" />
+    <task id="LOCAL-00167" summary="Обновляем ИнфоСтроку">
+      <created>1637870856076</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1637870856076</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -623,7 +624,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Сброс и формирование объектов игрового мира (def reset)" />
     <MESSAGE value="Перемещение игрока def move" />
     <MESSAGE value="Коменнтарии к основному циклу" />
     <MESSAGE value="Загрузка очков из scores.dat" />
@@ -648,6 +648,7 @@
     <MESSAGE value="Очистить всё и начать игру заново" />
     <MESSAGE value="Конец уровня" />
     <MESSAGE value="Переключение на следующий уровень" />
-    <option name="LAST_COMMIT_MESSAGE" value="Переключение на следующий уровень" />
+    <MESSAGE value="Обновляем ИнфоСтроку" />
+    <option name="LAST_COMMIT_MESSAGE" value="Обновляем ИнфоСтроку" />
   </component>
 </project>

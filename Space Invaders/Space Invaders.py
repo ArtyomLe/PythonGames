@@ -5,11 +5,24 @@ from winsound import Beep
 
 #============================================================================
 
+# Геттеры
 def getInvadersX(obj):
     return cnv.coords(obj[0])[0]
 
 def getInvadersY(obj):
     return cnv.coords(obj[0])[1]
+
+def getPlayerX():
+    return cnv.coords(player[0])[0]
+
+def getPlayerY():
+    return cnv.coords(player[0])[1]
+
+def getRocketX():
+    return cnv.coords(rocketObject)[0]
+
+def getRocketY():
+    return cnv.coords(rocketObject)[1]
 
 # Стартуем ракету врага
 def startInvadersRocket():
@@ -104,7 +117,7 @@ def animationShoot(frame):
     cnv.delete(rocketObject)
     rocketObject = cnv.create_image(x, y, image=rocketTexture[frame])
 
-    if (cnv.coords(rocketObject)[1] < maxY + SQUARE_SIZE) # Координата ракеты по Y меньше (т.е находится в прямоугольнике врага)
+    if (cnv.coords(rocketObject)[1] < maxY + SQUARE_SIZE): # Координата ракеты по Y меньше (т.е находится в прямоугольнике врага)
         rocketX = getRocketX()
         rocketY = getRocketY()
         find = 0                # Сравнение координат ракеты с координатами каждого пришельца
@@ -136,7 +149,7 @@ def animationShoot(frame):
 def startExplosion(n):   # (n) он же (find) Номер конкретного инопланетянина
     global invadersObject
     if (not playGame):
-        returm 0
+        return 0
 
     Beep(650, 20)
     animationExplosion(7, getInvadersX(invadersObject[n]), getInvadersY(invadersObject[n]))
@@ -144,8 +157,7 @@ def startExplosion(n):   # (n) он же (find) Номер конкретног�
     invadersObject[n][1] -= 1
     if (invadersObject[n][1] < 0):       # Если ранг отрицательный то можно удалять
         cnv.delete(invadersObject[n][0])
-        del.invadersObject[n]
-
+        del invadersObject[n]
 
 
 # Главный цикл игры
