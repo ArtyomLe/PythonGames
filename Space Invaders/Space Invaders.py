@@ -441,6 +441,14 @@ def endTableScore(inputWindow, positionPlayer):
     scores[positionPlayer][0] = playerName
     continueAfterPause()
 
+# Очистить всё и начать игру заново
+def continueAfterPause():
+    btnContinueAfterPause.destroy() # Удаляем кнопку продолжить
+    saveScores(scores)              # Записываем таблицу рекордов в файл
+    cnv.delete(ALL)                 # Очищаем окно
+    showMenu()                      # Показываем меню
+    restartGame()                   # Перезапускаем игру с последующим нажатием на СТАРТ
+
 # Создание окна
 root = Tk()
 root.resizable(False, False)
