@@ -465,8 +465,15 @@ def endLevel():
     Beep(randint(950, 1000), 600)
     sleep(0.07)
     Beep(randint(850, 1000), 500)
-    sleep(0.5)
     root.after(300, nextLevel)
+
+# Переключение на следующий уровень
+def nextLevel():
+    global level, playGame
+    cnv.delete(ALL)
+    level += 1
+    playGame = True
+    reset()
 
 
 # Создание окна
