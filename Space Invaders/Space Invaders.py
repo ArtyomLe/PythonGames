@@ -24,19 +24,6 @@ def getRocketX():
 def getRocketY():
     return cnv.coords(rocketObject)[1]
 
-# Стартуем ракету врага
-def startInvadersRocket():
-    global invadersRocket
-
-    if (not playGame):
-        return 0
-
-    if (len(invadersObject) > 0):                # Если есть в окне хотя бы один пришелец
-        n = randint(0, len(invadersObject) - 1)  # Случайно выбираем пришельца который будет стрелять и помещаем его в переменную n
-        Beep(1200, 40)
-        invadersRocket = cnv.create_image(getInvadersX(invadersObject[n]), getInvadersY(invadersObject[n]), image=invadersRocketTexture)
-        root.after(20, animationInvadersRocket)  # Запускаем анимацию полёта ракеты с интервалом в 20 миллисекунд
-
 # Анимация полёта вражеской ракеты
 def animationInvadersRocket():
     global invadersRocket, invadersRocketSpeed, lives
@@ -70,121 +57,6 @@ def animationInvadersRocket():
         cnv.delete(invadersRocket)
         invadersRocket = None                                 # Задаём скорость по умолчанию
         invadersRocketSpeed = invadersRocketSpeedDefault
-
-
-# Анимация взрыва
-def animationExplosion(frame, x, y):
-    if (not playGame):
-        return 0
-    # Каждый цикл отрисовываем и удаляем фрэйм для эффекта взрыва (всего 0:7)
-    tempExpl = cnv.create_image(x, y, image=explosionTexture[frame])
-    if (frame > -1):
-        root.after(10, lambda frame=frame - 1, x=x, y=y: animationExplosion(frame, x, y))
-    cnv.update
-    sleep(0.01 + frame / 1000)
-    cnv.delete(tempExpl)
-
-# Выстрел при нажатии на пробел
-def shoot():
-    global player, rocketObject
-
-    if (not playGame or onMenu):
-        return 0
-    if (player[1] == 0):
-        return 0
-    player[1] -= 1                  # При выстреле уменьшаем заряд с 1 до 0
-    rocketObject = cnv.create_image(getPlayerX(), getPlayerY(), image=rocketTexture[0])
-    root.after(10, lambda frame=0: animationShoot(frame))
-
-# Анимация полёта ракеты игрока
-def animationShoot(frame):
-    global rocketObject, rocketSpeedY, penalty, score, player
-    if (not playGame):
-        rocketObject = None
-        rocketSpeedY = rocketSpeedYDefault
-        return 0
-
-    cnv.move(rocketObject, 0, -rocketSpeedY)
-    rocketSpeedY *= rocketScale
-
-    x = getRocketX()
-    y = getRocketY()
-
-    frame += 1
-    if (frame > len(rocketTexture) - 1):
-        frame = 0
-    sleep(0.02)
-    cnv.delete(rocketObject)
-    rocketObject = cnv.create_image(x, y, image=rocketTexture[frame])
-
-    if (cnv.coords(rocketObject)[1] < maxY + SQUARE_SIZE): # Координата ракеты по Y меньше (т.е находится в прямоугольнике врага)
-        rocketX = getRocketX()
-        rocketY = getRocketY()
-        find = 0                # Сравнение координат ракеты с координатами каждого пришельца
-
-        while (find < len(invadersObject)):
-            invadersX = getInvadersX(invadersObject[find])
-            invadersY = getInvadersY(invadersObject[find])
-
-            # Чем меньше цифра коэфициента, тем тяжелее попасть
-            if (abs(invadersX - rocketX) < SQUARE_SIZE * 0.4 and abs(invadersY - rocketY) < SQUARE_SIZE * 0.8):
-                score += 50 * (level + 1)  # При попадании увеличиваем кол-во очков
-                startExplosion(find)       # Вызываем метод взрыва
-                y = -1                     # Прекращаем вызов метода анимации полёта ракеты animationShoot()
-                find = len(invadersObject) # Прекращаем цикл while
-                penalty -= 5               # Уменьшаем штрафные очки
-            find += 1                          # Продолжаем проверять остальных пришельцев ( если не попали )
-
-    # Y находится в пространстве окна (ракета движется дальше)
-    if (y > 0):
-        root.after(3, lambda frame=frame: animationShoot(frame))
-    else:
-        Beep(700, 20)
-        cnv.delete(rocketObject)           # Удаляем обьект если он находится за границами окна (ракету)
-        penalty += 5                       # Добавляем к штрафному (за промах)
-        player[1] += 1                     # Перезаряд
-        rocketSpeedY = rocketSpeedYDefault # Скорость ставим на default значение
-
-# Старт анимации взрыва пришельца
-def startExplosion(n):   # (n) он же (find) Номер конкретного инопланетянина
-    global invadersObject
-    if (not playGame):
-        return 0
-
-    Beep(650, 20)
-    animationExplosion(7, getInvadersX(invadersObject[n]), getInvadersY(invadersObject[n]))
-    # Уменьшаем ранг пришельца, и проверяем если можно его удалить
-    invadersObject[n][1] -= 1
-    if (invadersObject[n][1] < 0):       # Если ранг отрицательный то можно удалять
-        cnv.delete(invadersObject[n][0])
-        del invadersObject[n]
-
-
-# Перемещение игрока
-def move(x):
-    if (not playGame or onMenu):
-        return 0
-    if (x == LEFTKEY):
-        cnv.move(player[0], -playerSpeed, 0)     # -playerSpeed это на какое кол-во пикселей перемещается игрок налево
-    elif (x == RIGHTKEY):
-        cnv.move(player[0], playerSpeed, 0)      # playerSpeed это на какое кол-во пикселей перемещается игрок направо
-    # Устанавляиваем ограничения чтобы игрок не мог увести корабль за границы окна
-    if (getPlayerX() < SQUARE_SIZE):             # По левому краю
-        cnv.move(player[0], playerSpeed, 0)
-    elif (getPlayerX() > WIDTH - SQUARE_SIZE):   # По правому краю
-        cnv.move(player[0], -playerSpeed, 0)
-
-"""
-
-Алгоритм по управлению кораблём игрока *****************************************************************************
-
-1) Создаём одномерный список для хранения данных космического корабля игрока.
-2) Устанавливаем вызов метода по нажатии на клавиши влево или вправо.
-3) Если игра не началась, или на экране показано меню, то установленный в предыдущем пункте метод не выполняется.
-4) Перемещаем текстуру космического корабля, изменяя координаты объекта с помощью .move()
-5) Проверяем, выходит ли текстура за границы окна. Если выходит, то перемещаем обратно, в противоположенную сторону.
-
-"""
 
 # Загрузка очков из scores.dat (Список содержит имя игрока и кол-во очков)
 def loadScores():
@@ -358,6 +230,154 @@ def continueAfterPause():
     showMenu()                      # Показываем меню
     restartGame()                   # Перезапускаем игру с последующим нажатием на СТАРТ
 
+# Обновляем ИнфоСтроку
+def updateInfoLine():
+    global informationLine
+    if (informationLine != None):
+        for i in informationLine:
+            cnv.delete(i)
+
+    informationLine = []
+    informationLine.append(cnv.create_text(20, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"ОЧКИ: {int(score)}"))
+    informationLine.append(cnv.create_text(170, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"ВРАГИ: {len(invadersObject)}"))
+    informationLine.append(cnv.create_text(320, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"ЖИЗНИ: {lives}"))
+    informationLine.append(cnv.create_text(480, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"УРОВЕНЬ: {level}"))
+    informationLine.append(cnv.create_text(650, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"ШТРАФЫ: -{penalty}"))
+
+# Стартуем ракету врага
+def startInvadersRocket():
+    global invadersRocket
+
+    if (not playGame):
+        return 0
+
+    if (len(invadersObject) > 0):                # Если есть в окне хотя бы один пришелец
+        n = randint(0, len(invadersObject) - 1)  # Случайно выбираем пришельца который будет стрелять и помещаем его в переменную n
+        Beep(1200, 40)
+        invadersRocket = cnv.create_image(getInvadersX(invadersObject[n]), getInvadersY(invadersObject[n]), image=invadersRocketTexture)
+        root.after(20, animationInvadersRocket)  # Запускаем анимацию полёта ракеты с интервалом в 20 миллисекунд
+
+# Анимация взрыва
+def animationExplosion(frame, x, y):
+    if (not playGame):
+        return 0
+    # Каждый цикл отрисовываем и удаляем фрэйм для эффекта взрыва (всего 0:7)
+    tempExpl = cnv.create_image(x, y, image=explosionTexture[frame])
+    if (frame > -1):
+        root.after(10, lambda frame=frame - 1, x=x, y=y: animationExplosion(frame, x, y))
+    cnv.update()
+    sleep(0.01 + frame / 1000)
+    cnv.delete(tempExpl)
+
+# Старт анимации взрыва пришельца
+def startExplosion(n):   # (n) он же (find) Номер конкретного инопланетянина
+    global invadersObject
+    if (not playGame):
+        return 0
+
+    Beep(650, 20)
+    animationExplosion(7, getInvadersX(invadersObject[n]), getInvadersY(invadersObject[n]))
+    # Уменьшаем ранг пришельца, и проверяем если можно его удалить
+    invadersObject[n][1] -= 1
+    if (invadersObject[n][1] < 0):       # Если ранг отрицательный то можно удалять
+        cnv.delete(invadersObject[n][0])
+        del invadersObject[n]
+
+# Анимация полёта ракеты игрока
+def animationShoot(frame):
+    global rocketObject, rocketSpeedY, penalty, score, player
+    if (not playGame):
+        rocketObject = None
+        rocketSpeedY = rocketSpeedYDefault
+        return 0
+
+    cnv.move(rocketObject, 0, -rocketSpeedY)
+    rocketSpeedY *= rocketScale
+
+    x = getRocketX()
+    y = getRocketY()
+
+    frame += 1
+    if (frame > len(rocketTexture) - 1):
+        frame = 0
+    sleep(0.02)
+    cnv.delete(rocketObject)
+    rocketObject = cnv.create_image(x, y, image=rocketTexture[frame])
+
+    if (cnv.coords(rocketObject)[1] < maxY + SQUARE_SIZE): # Координата ракеты по Y меньше (т.е находится в прямоугольнике врага)
+        rocketX = getRocketX()
+        rocketY = getRocketY()
+        find = 0                # Сравнение координат ракеты с координатами каждого пришельца
+
+        while (find < len(invadersObject)):
+            invadersX = getInvadersX(invadersObject[find])
+            invadersY = getInvadersY(invadersObject[find])
+
+            # Чем меньше цифра коэфициента, тем тяжелее попасть
+            if (abs(invadersX - rocketX) < SQUARE_SIZE * 0.4 and abs(invadersY - rocketY) < SQUARE_SIZE * 0.8):
+                score += 50 * (level + 1)  # При попадании увеличиваем кол-во очков
+                startExplosion(find)       # Вызываем метод взрыва
+                y = -1                     # Прекращаем вызов метода анимации полёта ракеты animationShoot()
+                find = len(invadersObject) # Прекращаем цикл while
+                penalty -= 5               # Уменьшаем штрафные очки
+            find += 1                          # Продолжаем проверять остальных пришельцев ( если не попали )
+
+    # Y находится в пространстве окна (ракета движется дальше)
+    if (y > 0):
+        root.after(3, lambda frame=frame: animationShoot(frame))
+    else:
+        Beep(700, 20)
+        cnv.delete(rocketObject)           # Удаляем обьект если он находится за границами окна (ракету)
+        penalty += 5                       # Добавляем к штрафному (за промах)
+        player[1] += 1                     # Перезаряд
+        rocketSpeedY = rocketSpeedYDefault # Скорость ставим на default значение
+
+# Выстрел при нажатии на пробел
+def shoot():
+    global player, rocketObject
+
+    if (not playGame or onMenu):
+        return 0
+    if (player[1] == 0):
+        return 0
+    player[1] -= 1                  # При выстреле уменьшаем заряд с 1 до 0
+    rocketObject = cnv.create_image(getPlayerX(), getPlayerY(), image=rocketTexture[0])
+    root.after(10, lambda frame=0: animationShoot(frame))
+
+# Перемещение игрока
+def move(x):
+    if (not playGame or onMenu):
+        return 0
+    if (x == LEFTKEY):
+        cnv.move(player[0], -playerSpeed, 0)     # -playerSpeed это на какое кол-во пикселей перемещается игрок налево
+    elif (x == RIGHTKEY):
+        cnv.move(player[0], playerSpeed, 0)      # playerSpeed это на какое кол-во пикселей перемещается игрок направо
+    # Устанавляиваем ограничения чтобы игрок не мог увести корабль за границы окна
+    if (getPlayerX() < SQUARE_SIZE):             # По левому краю
+        cnv.move(player[0], playerSpeed, 0)
+    elif (getPlayerX() > WIDTH - SQUARE_SIZE):   # По правому краю
+        cnv.move(player[0], -playerSpeed, 0)
+
+"""
+
+Алгоритм по управлению кораблём игрока *****************************************************************************
+
+1) Создаём одномерный список для хранения данных космического корабля игрока.
+2) Устанавливаем вызов метода по нажатии на клавиши влево или вправо.
+3) Если игра не началась, или на экране показано меню, то установленный в предыдущем пункте метод не выполняется.
+4) Перемещаем текстуру космического корабля, изменяя координаты объекта с помощью .move()
+5) Проверяем, выходит ли текстура за границы окна. Если выходит, то перемещаем обратно, в противоположенную сторону.
+
+"""
+
+# Переключение на следующий уровень
+def nextLevel():
+    global level, playGame
+    cnv.delete(ALL)
+    level += 1
+    playGame = True
+    reset()
+
 # Конец уровня
 def endLevel():
     global playGame
@@ -375,28 +395,6 @@ def endLevel():
     sleep(0.07)
     Beep(randint(850, 1000), 500)
     root.after(300, nextLevel)
-
-# Переключение на следующий уровень
-def nextLevel():
-    global level, playGame
-    cnv.delete(ALL)
-    level += 1
-    playGame = True
-    reset()
-
-# Обновляем ИнфоСтроку
-def updateInfoLine():
-    global informationLine
-    if (informationLine != None):
-        for i in informationLine:
-            cnv.delete(i)
-
-    informationLine = []
-    informationLine.append(cnv.create_text(20, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"ОЧКИ: {int(score)}"))
-    informationLine.append(cnv.create_text(170, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"ВРАГИ: {len(invadersObject)}"))
-    informationLine.append(cnv.create_text(320, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"ЖИЗНИ: {lives}"))
-    informationLine.append(cnv.create_text(480, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"УРОВЕНЬ: {level}"))
-    informationLine.append(cnv.create_text(650, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"ШТРАФЫ: -{penalty}"))
 
 # Главный цикл игры
 def mainloop():
