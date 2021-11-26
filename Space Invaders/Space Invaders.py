@@ -5,133 +5,39 @@ from winsound import Beep
 
 #============================================================================
 
-# Геттеры
-def getInvadersX(obj):
-    return cnv.coords(obj[0])[0]
-
-def getInvadersY(obj):
-    return cnv.coords(obj[0])[1]
-
-def getPlayerX():
-    return cnv.coords(player[0])[0]
-
-def getPlayerY():
-    return cnv.coords(player[0])[1]
-
-def getRocketX():
-    return cnv.coords(rocketObject)[0]
-
-def getRocketY():
-    return cnv.coords(rocketObject)[1]
-
-# Загрузка очков из scores.dat (Список содержит имя игрока и кол-во очков)
-def loadScores():
-    ret = []
-    try:
-        f = open("scores.dat", "r", encoding="utf-8")
-        for sc in f.readlines():
-            s = sc.replace("\n", "")
-            s = s.split(" ")
-
-            if (len(s[0]) > 20):      # Длинна имени не может быть больше 20 символов
-                s[0] = s[0][0:20]     # В случае превышения имя обрезается
-            elif (s[0] == ""):        # Если не ввели имя то записываем defaultName
-                s[0] = defaultName
-            s[1] = int(s[1])          # Второе значение целое число int т.е рекорд
-            if (s[1] > 1000000):
-                s[1] = 1000000        # Рекорд не может превышать число 1000000
-            elif (s[1] < 0):
-                s[1] = 0              # В случае 0 => 0
-            ret.append(s)
-        f.close()
-    except:
-        print("Файла не существует.")
-    if (len(ret) != 10):                  # Если файл состоит не из 10 строк
-        ret = []
-        for i in range(10):
-            ret.append([defaultName, 0])  # Переписываем в defaultName, 0
-        saveScores(ret)
-    return ret
+# Очистить всё и начать игру заново
+def continueAfterPause():
+    btnContinueAfterPause.destroy() # Удаляем кнопку продолжить
+    saveScores(scores)              # Записываем таблицу рекордов в файл
+    cnv.delete(ALL)                 # Очищаем окно
+    showMenu()                      # Показываем меню
+    restartGame()                   # Перезапускаем игру с последующим нажатием на СТАРТ
 
 # Запись очков в файл
-def saveScores(scoresToFile):
-    try:
-        f = open("scores.dat", "w", encoding="utf-8")
-        for sc in scoresToFile:
-            f.write(f"{sc[0]} {sc[1]}\n")
-        f.close()
-    except:
-        print("Что-то пошло не так.")
+def endTableScore(inputWindow, positionPlayer):
+    global playerName, scores
 
-# Рисуем таблицу очков
-def showScores(numberPlayer):
-    global textScores
-    textScores = []
+    root.deiconify()                            # Возвращаем к жизни главное окно (для взаимодействия с пользователем)
+    inputWindow.destroy()                       # Удаляем окно ввода
+    playerName = playerName.get()               # Задаём значение playerName
+    if (playerName == ""):                      # Проверяем на пустоту
+        playerName = defaultName
+    scores[positionPlayer][0] = playerName
+    continueAfterPause()
 
-    for i in range(len(scores)):
-        if (i == numberPlayer):
-            colorText = "#00FF55"  # Подсвечиваем зелёным если попадаем в список
-        else:
-            colorText = "#AA9922"  # Всё остальное жёлтым
-        # Номер строки
-        textScores.append(cnv.create_text(210, 170 + i * 22, fill=colorText, font=", 14", text=str(i + 1)))
-        # Ник игрока [0]      (anchor - это координаты в окне)
-        textScores.append(cnv.create_text(240, 170 + i * 22, fill=colorText, anchor="w", font=", 14", text=scores[i][0]))
-        # Кол-во очков [1]    (anchor - это координаты в окне)
-        textScores.append(cnv.create_text(590, 170 + i * 22, fill=colorText, anchor="e", font=", 14", text=scores[i][1]))
-
-# Удаление таблицы очков
-def hideScores():
-    global textScores
-    for i in textScores:
-        cnv.delete(i)
-
-# Конец игры
-def endGame():
-    global playGame, btnContinueAfterPause, score
-    playGame = False
-    root.focus_set()
-    cnv.create_image(WIDTH // 2, HEIGHT // 2, image=backGround)
-    cnv.create_text(160, 80, fill="#FFFFFF", anchor="nw", font=f", 22", text=f"КОНЕЦ ИГРЫ. ЛУЧШИЕ ИГРОКИ:")
-    score -= penalty
-    showScores(sortScoreTable(int(score))) # Аргументом должен стать номер позиции занятый игроком либо число вне диапазона строк
-    btnContinueAfterPause = Button(root, text="Продолжить", width=70)
-    btnContinueAfterPause.place(x=140, y=HEIGHT - 50)
-    btnContinueAfterPause["command"] = continueAfterPause
-"""
-1. Прекращаем игру
-2. Выводим фоновое изображение, тем самым скрывая ранее выведенные объекты
-3. Вызываем прорисовку таблицы рекордов
-4. Выводим кнопку продолжить
-"""
-
-# Находим номер игрока с списке лучших
-"""
-Задача функции определить позицию игрока в таблице рекордов, 
-организовать ввод ника (если он не был введён ранее) 
-и вернуть номер позиции в таблице
-"""
-def sortScoreTable(score):
-    global scores
-    name = playerName
-    if (playerName == None):
-        name = "Вы"
-
-    scores.append([name, score]) # Добавляем 11 строку в рекорды
-    positionPlayer = 10
-
-    # Применяем метод пузырьковой сортировки работающий с конца списка
-    for i in range(len(scores) - 1, 0, -1):   # Начинаем с конца и считаем в начало с шагом в -1
-        if (scores[i][1] > scores[i - 1][1]): # Если последний больше предыдущего
-            scores[i][0], scores[i - 1][0] = scores[i - 1][0], scores[i][0] # Меняем местами Ник
-            scores[i][1], scores[i - 1][1] = scores[i - 1][1], scores[i][1] # Меняем местами кол-во очков
-            # Смещаем значение для того чтобы верно определить номер занятого игроком места
-            positionPlayer -= 1
-            del scores[10] # Удаляем десятый (по факту 11) элемент из таблицы рекордов
-        # Если игрок позицию меньше 10 и ещё не вводил имя (в данной сессии)
-        if (positionPlayer < 10 and playerName == None):
-            getPlayerName(positionPlayer)
-            return  positionPlayer
+# Фильтрация вводимых знаков
+def inputNameFilter(event):
+    global playerName
+    filter = "_0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ" # Разрешенные символы для ввода имени
+    pN = ""                          # Имя
+    for i in playerName.get():
+        if (i.upper() in filter):
+            pN += i
+    if (len(pN) > 20):               # Ограничиваем длинну имени до 20 символов
+        pN = pN[0:20]
+    elif (pN == ""):                 # Если поле пустое то вводим значение прописанное в defaultName
+        pN = defaultName
+    playerName.set(pN)               # Установка отфильтрованого имени в виджет
 
 # Окно для ввода имени
 def getPlayerName(positionPlayer):
@@ -162,39 +68,71 @@ def getPlayerName(positionPlayer):
     btnGo.place(x=13, y=70)
     btnGo["command"] = lambda  iW=inputWindow, posP=positionPlayer: endTableScore(iW, posP)
 
-# Фильтрация вводимых знаков
-def inputNameFilter(event):
-    global playerName
-    filter = "_0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ" # Разрешенные символы для ввода имени
-    pN = ""                          # Имя
-    for i in playerName.get():
-        if (i.upper() in filter):
-            pN += i
-    if (len(pN) > 20):               # Ограничиваем длинну имени до 20 символов
-        pN = pN[0:20]
-    elif (pN == ""):                 # Если поле пустое то вводим значение прописанное в defaultName
-        pN = defaultName
-    playerName.set(pN)               # Установка отфильтрованого имени в виджет
+# Находим номер игрока с списке лучших
+"""
+Задача функции определить позицию игрока в таблице рекордов, 
+организовать ввод ника (если он не был введён ранее) 
+и вернуть номер позиции в таблице
+"""
+def sortScoreTable(score):
+    global scores
+    name = playerName
+    if (playerName == None):
+        name = "Вы"
 
-# Запись очков в файл
-def endTableScore(inputWindow, positionPlayer):
-    global playerName, scores
+    scores.append([name, score]) # Добавляем 11 строку в рекорды
+    positionPlayer = 10
 
-    root.deiconify()                            # Возвращаем к жизни главное окно (для взаимодействия с пользователем)
-    inputWindow.destroy()                       # Удаляем окно ввода
-    playerName = playerName.get()               # Задаём значение playerName
-    if (playerName == ""):                      # Проверяем на пустоту
-        playerName = defaultName
-    scores[positionPlayer][0] = playerName
-    continueAfterPause()
+    # Применяем метод пузырьковой сортировки работающий с конца списка
+    for i in range(len(scores) - 1, 0, -1):   # Начинаем с конца и считаем в начало с шагом в -1
+        if (scores[i][1] > scores[i - 1][1]): # Если последний больше предыдущего
+            scores[i][0], scores[i - 1][0] = scores[i - 1][0], scores[i][0] # Меняем местами Ник
+            scores[i][1], scores[i - 1][1] = scores[i - 1][1], scores[i][1] # Меняем местами кол-во очков
+            # Смещаем значение для того чтобы верно определить номер занятого игроком места
+            positionPlayer -= 1
+    del scores[10] # Удаляем десятый (по факту 11) элемент из таблицы рекордов
+        # Если игрок позицию меньше 10 и ещё не вводил имя (в данной сессии)
+    if (positionPlayer < 10 and playerName == None):
+        getPlayerName(positionPlayer)
+    return  positionPlayer
 
-# Очистить всё и начать игру заново
-def continueAfterPause():
-    btnContinueAfterPause.destroy() # Удаляем кнопку продолжить
-    saveScores(scores)              # Записываем таблицу рекордов в файл
-    cnv.delete(ALL)                 # Очищаем окно
-    showMenu()                      # Показываем меню
-    restartGame()                   # Перезапускаем игру с последующим нажатием на СТАРТ
+# Конец игры
+def endGame():
+    global playGame, btnContinueAfterPause, score
+    playGame = False
+    root.focus_set()
+    cnv.create_image(WIDTH // 2, HEIGHT // 2, image=backGround)
+    cnv.create_text(160, 80, fill="#FFFFFF", anchor="nw", font=f", 22", text=f"КОНЕЦ ИГРЫ. ЛУЧШИЕ ИГРОКИ:")
+    score -= penalty
+    showScores(sortScoreTable(int(score))) # Аргументом должен стать номер позиции занятый игроком либо число вне диапазона строк
+    btnContinueAfterPause = Button(root, text="Продолжить", width=70)
+    btnContinueAfterPause.place(x=140, y=HEIGHT - 50)
+    btnContinueAfterPause["command"] = continueAfterPause
+"""
+1. Прекращаем игру
+2. Выводим фоновое изображение, тем самым скрывая ранее выведенные объекты
+3. Вызываем прорисовку таблицы рекордов
+4. Выводим кнопку продолжить
+"""
+
+# Геттеры
+def getInvadersX(obj):
+    return cnv.coords(obj[0])[0]
+
+def getInvadersY(obj):
+    return cnv.coords(obj[0])[1]
+
+def getPlayerX():
+    return cnv.coords(player[0])[0]
+
+def getPlayerY():
+    return cnv.coords(player[0])[1]
+
+def getRocketX():
+    return cnv.coords(rocketObject)[0]
+
+def getRocketY():
+    return cnv.coords(rocketObject)[1]
 
 # Обновляем ИнфоСтроку
 def updateInfoLine():
@@ -209,6 +147,68 @@ def updateInfoLine():
     informationLine.append(cnv.create_text(320, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"ЖИЗНИ: {lives}"))
     informationLine.append(cnv.create_text(480, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"УРОВЕНЬ: {level}"))
     informationLine.append(cnv.create_text(650, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"ШТРАФЫ: -{penalty}"))
+
+# Запись очков в файл
+def saveScores(scoresToFile):
+    try:
+        f = open("scores.dat", "w", encoding="utf-8")
+        for sc in scoresToFile:
+            f.write(f"{sc[0]} {sc[1]}\n")
+        f.close()
+    except:
+        print("Что-то пошло не так.")
+
+# Загрузка очков из scores.dat (Список содержит имя игрока и кол-во очков)
+def loadScores():
+    ret = []
+    try:
+        f = open("scores.dat", "r", encoding="utf-8")
+        for sc in f.readlines():
+            s = sc.replace("\n", "")
+            s = s.split(" ")
+
+            if (len(s[0]) > 20):      # Длинна имени не может быть больше 20 символов
+                s[0] = s[0][0:20]     # В случае превышения имя обрезается
+            elif (s[0] == ""):        # Если не ввели имя то записываем defaultName
+                s[0] = defaultName
+            s[1] = int(s[1])          # Второе значение целое число int т.е рекорд
+            if (s[1] > 1000000):
+                s[1] = 1000000        # Рекорд не может превышать число 1000000
+            elif (s[1] < 0):
+                s[1] = 0              # В случае 0 => 0
+            ret.append(s)
+        f.close()
+    except:
+        print("Файла не существует.")
+    if (len(ret) != 10):                  # Если файл состоит не из 10 строк
+        ret = []
+        for i in range(10):
+            ret.append([defaultName, 0])  # Переписываем в defaultName, 0
+        saveScores(ret)
+    return ret
+
+# Удаление таблицы очков
+def hideScores():
+    global textScores
+    for i in textScores:
+        cnv.delete(i)
+
+# Рисуем таблицу очков
+def showScores(numberPlayer):
+    global textScores
+    textScores = []
+
+    for i in range(len(scores)):
+        if (i == numberPlayer):
+            colorText = "#00FF55"  # Подсвечиваем зелёным если попадаем в список
+        else:
+            colorText = "#AA9922"  # Всё остальное жёлтым
+        # Номер строки
+        textScores.append(cnv.create_text(210, 170 + i * 22, fill=colorText, font=", 14", text=str(i + 1)))
+        # Ник игрока [0]      (anchor - это координаты в окне)
+        textScores.append(cnv.create_text(240, 170 + i * 22, fill=colorText, anchor="w", font=", 14", text=scores[i][0]))
+        # Кол-во очков [1]    (anchor - это координаты в окне)
+        textScores.append(cnv.create_text(590, 170 + i * 22, fill=colorText, anchor="e", font=", 14", text=scores[i][1]))
 
 # Показываем кнопки меню
 def showMenu():
