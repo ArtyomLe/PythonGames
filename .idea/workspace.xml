@@ -4,6 +4,7 @@
     <list default="true" id="22ed3966-5b6f-4c08-9622-ee289badf526" name="Changes" comment="Fix some bags">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/Space Invaders/Space Invaders.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Space Invaders/scores.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Space Invaders/scores.dat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +33,6 @@
     <setting file="file://$PROJECT_DIR$/Canvas/Предисловие_к_ игре.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Space Invaders/Space Invaders.py" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Sliding_puzzle/Пятнашки.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$USER_HOME$/Desktop/Space Invaders/éΓ«αªÑ¡¿Ñ ¿¡«»½á¡ÑΓ∩¡.pyw" root0="SKIP_INSPECTION" />
     <setting file="file://$USER_HOME$/Desktop/Space Invaders/Space Invaders.pyw" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Canvas/Canvas.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Sokoban/Сокобан.py" root0="SKIP_INSPECTION" />
@@ -223,13 +223,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632686557890</updated>
-    </task>
-    <task id="LOCAL-00125" summary="ИНОПЛАНЕТЯНЕ">
-      <created>1637348673657</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1637348673657</updated>
     </task>
     <task id="LOCAL-00126" summary="ИГРОК">
       <created>1637349189763</created>
@@ -567,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637938919055</updated>
     </task>
-    <option name="localTasksCounter" value="174" />
+    <task id="LOCAL-00174" summary="Fix some bags">
+      <created>1637941922358</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1637941922358</updated>
+    </task>
+    <option name="localTasksCounter" value="175" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

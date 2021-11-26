@@ -396,7 +396,7 @@ def move(x):
 def nextLevel():
     global level, playGame
     cnv.delete(ALL)
-    level += 1
+    level += 2
     playGame = True
     reset()
 
@@ -477,11 +477,11 @@ def startGame():
 def globalReset():
     global level, score, penalty, playGame, playerSpeed, lives
     playGame = False
-    playerSpeed = 5
+    playerSpeed = 12
     level = 1
     score = 0
     penalty = 0
-    lives = 3
+    lives = 2
 
 # Перезапуск игры полностью
 def restartGame():
