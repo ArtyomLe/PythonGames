@@ -160,51 +160,6 @@ def startExplosion(n):   # (n) он же (find) Номер конкретног�
         del invadersObject[n]
 
 
-# Главный цикл игры
-def mainloop():
-    global invadersObject, leftInvadersBorder, rightInvadersBorder, invadersSpeed, playGame, score, maxY, frame
-
-    if (len(invadersObject) == 0):      # Проверяем если инопланетяне уничтожены
-        endLevel()
-    if (not playGame):                  # Если нет игры то прерываем главный цикл
-        return 0
-
-    for obj in invadersObject:                    # Перерисовываем текстуры
-        cnv.move(obj[0], int(invadersSpeed), 0)   # Смещаем каждого инопланетянина по оси Х на скорость invadersSpeed
-        xPos = getInvadersX(obj)                  # Функции getInvadersX,Y созданы для дальнейшего сокращения записи
-        yPos = getInvadersY(obj)
-        cnv.delete(obj[0])                        # Удаление обьекта с Canvas
-        # Создаём объект с новой текстурой на сохранённых координатах
-        obj[0] = cnv.create_image(xPos, yPos, image=invadersTexture[obj[1] * 2 + frame])
-
-    frame += 1                                  # Контролируем кол-во кадров, их может быть только два (invadersTexture)
-    if (frame > 1):
-        frame = 0
-    # Условные границы прямоугольника (Левый и Правый)
-    # Изменяем на скорость смещения и делаем число целым (из-за ускорения invadersSpeed на 1.1 )
-    leftInvadersBorder += int(invadersSpeed)
-    rightInvadersBorder += int(invadersSpeed)
-
-    # Вычисляем могут ли пришельцы пульнуть (метод startInvadersRocket)
-    if (randint(0, 150) < abs(invadersSpeed) and invadersRocket == None): # Пришельцы движутся и не выпустили ракету
-        startInvadersRocket()
-
-    # Проверяеям если не вышли за границу окна (блок инопланетян)
-    if (rightInvadersBorder > WIDTH - SQUARE_SIZE or leftInvadersBorder < SQUARE_SIZE): # Если условие верно
-        invadersSpeed *= 1.1                  # Ускоряемся
-        invadersSpeed = -invadersSpeed        # Инверсируем скорость ( движение в противоположную сторону )
-        maxY = 0                              # Поиск максимальной точки Y для всего блока
-        for obj in invadersObject:
-            cnv.move(obj[0], 0, SQUARE_SIZE)  # Смещаем на расстояние фигурки (32пикселя)
-            if (cnv.coords(obj[0])[1] + SQUARE_SIZE // 2 > maxY):
-                maxY = cnv.coords(obj[0])[1] + SQUARE_SIZE // 2
-    root.after(100, mainloop)
-    score -= .1                               # За 10 вызовов в секунду пропадает одно очко
-#    updateInfoLine()                          # Обновляем информационную строку внизу окна
-
-    if (maxY > getPlayerY() or lives < 0): # Условия проигрыша
-        endGame()
-
 # Перемещение игрока
 def move(x):
     if (not playGame or onMenu):
@@ -442,6 +397,61 @@ def updateInfoLine():
     informationLine.append(cnv.create_text(320, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"ЖИЗНИ: {lives}"))
     informationLine.append(cnv.create_text(480, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"УРОВЕНЬ: {level}"))
     informationLine.append(cnv.create_text(650, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"ШТРАФЫ: -{penalty}"))
+
+# Главный цикл игры
+def mainloop():
+    global invadersObject, leftInvadersBorder, rightInvadersBorder, invadersSpeed, playGame, score, maxY, frame
+
+    if (len(invadersObject) == 0):      # Проверяем если инопланетяне уничтожены
+        endLevel()
+    if (not playGame):                  # Если нет игры то прерываем главный цикл
+        return 0
+
+    for obj in invadersObject:                    # Перерисовываем текстуры
+        cnv.move(obj[0], int(invadersSpeed), 0)   # Смещаем каждого инопланетянина по оси Х на скорость invadersSpeed
+        xPos = getInvadersX(obj)                  # Функции getInvadersX,Y созданы для дальнейшего сокращения записи
+        yPos = getInvadersY(obj)
+        cnv.delete(obj[0])                        # Удаление обьекта с Canvas
+        # Создаём объект с новой текстурой на сохранённых координатах
+        obj[0] = cnv.create_image(xPos, yPos, image=invadersTexture[obj[1] * 2 + frame])
+
+    frame += 1                                  # Контролируем кол-во кадров, их может быть только два (invadersTexture)
+    if (frame > 1):
+        frame = 0
+    # Условные границы прямоугольника (Левый и Правый)
+    # Изменяем на скорость смещения и делаем число целым (из-за ускорения invadersSpeed на 1.1 )
+    leftInvadersBorder += int(invadersSpeed)
+    rightInvadersBorder += int(invadersSpeed)
+
+    # Вычисляем могут ли пришельцы пульнуть (метод startInvadersRocket)
+    if (randint(0, 150) < abs(invadersSpeed) and invadersRocket == None): # Пришельцы движутся и не выпустили ракету
+        startInvadersRocket()
+
+    # Проверяеям если не вышли за границу окна (блок инопланетян)
+    if (rightInvadersBorder > WIDTH - SQUARE_SIZE or leftInvadersBorder < SQUARE_SIZE): # Если условие верно
+        invadersSpeed *= 1.1                  # Ускоряемся
+        invadersSpeed = -invadersSpeed        # Инверсируем скорость ( движение в противоположную сторону )
+        maxY = 0                              # Поиск максимальной точки Y для всего блока
+        for obj in invadersObject:
+            cnv.move(obj[0], 0, SQUARE_SIZE)  # Смещаем на расстояние фигурки (32пикселя)
+            if (cnv.coords(obj[0])[1] + SQUARE_SIZE // 2 > maxY):
+                maxY = cnv.coords(obj[0])[1] + SQUARE_SIZE // 2
+    root.after(100, mainloop)
+    score -= .1                               # За 10 вызовов в секунду пропадает одно очко
+    updateInfoLine()                          # Обновляем информационную строку внизу окна
+
+    if (maxY > getPlayerY() or lives < 0):    # Условия проигрыша
+        endGame()
+
+# Нажатие на кнопку СТАРТ
+def startGame():
+    global playGame
+    if (playGame):
+        hideMenu()
+        return 0
+    playGame = True
+    hideMenu()
+    mainloop()
 
 # Сброс всего подчистую с установкой первого уровня
 def globalReset():
