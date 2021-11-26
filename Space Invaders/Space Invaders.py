@@ -230,64 +230,6 @@ def move(x):
 5) Проверяем, выходит ли текстура за границы окна. Если выходит, то перемещаем обратно, в противоположенную сторону.
 
 """
-# Сброс всего подчистую с установкой первого уровня
-def globalReset():
-    global level, score, penalty, playGame, playerSpeed, lives
-    playGame = False
-    playerSpeed = 5
-    level = 1
-    score = 0
-    penalty = 0
-    lives = 3
-
-# Перезапуск игры полностью
-def restartGame():
-    globalReset()
-    reset()
-    showScores(-1)
-
-# Сброс и формирование объектов игрового мира
-def reset():
-    global invadersObject, invadersWidth, invadersHeight, invadersSpeed, leftInvadersBorder, rightInvadersBorder, player, maxY, rocketObject, invadersRocket
-
-    cnv.delete(ALL)
-    cnv.create_image(WIDTH // 2, HEIGHT // 2, image=backGround)
-    cnv.focus_set()                             # Обработчик событий (нажатие клавиш)
-
-    rocketObject = None
-    invadersRocket = None
-    invadersSpeed = 3 + level // 5              # Вычисление горизонтальной скорости перемещения инопланетян(пиксели за ход)
-
-    # Вычисление прямоугольника инопланетян(ШxВ)
-    invadersWidth = (1 + int(level // 3)) * 2
-    invadersHeight = 2 + (level // 4)
-
-    # Максимальное значение армады 14x8
-    if (invadersWidth > 14):                    # Ограничиваем ширину в 14 единиц в независимости от повышения уровня
-        invadersWidth = 14
-    if (invadersHeight > 8):                    # Ограничиваем высоту в 8 единиц в независимости от повышения уровня
-        invadersHeight = 8
-
-    maxY = (invadersHeight - 1) * 10 + SQUARE_SIZE * invadersHeight + SQUARE_SIZE // 2
-
-    invadersObject = []                         # Двумерный список инопланетян
-    for i in range(invadersWidth):
-        for j in range(invadersHeight):
-            rang = randint(0, level // 8)       # После 8 уровня начинают появляться более сложные экземпляры
-            if (rang > 2):                      # С максимальной сложностью = 2
-                rang = 2
-            posX = SQUARE_SIZE // 2 + (WIDTH // 2 - (invadersWidth * (SQUARE_SIZE + 10)) // 2) + i * SQUARE_SIZE + i * 10
-            posY = 20 + j * 10 + j * SQUARE_SIZE
-            invadersObject.append([cnv.create_image(posX, posY, image=invadersTexture[rang * 2]), rang])
-
-    # Левая и правая границы блока для рассчёта столкновения с границами окна
-    leftInvadersBorder = cnv.coords(invadersObject[0][0])[0]
-    rightInvadersBorder = cnv.coords(invadersObject[len(invadersObject) - 1][0])[0]
-
-    player = [cnv.create_image(WIDTH // 2, HEIGHT - SQUARE_SIZE * 2, image=playerTexture), 1]
-
-#    updateInfoLine()
-    mainloop()
 
 # Загрузка очков из scores.dat (Список содержит имя игрока и кол-во очков)
 def loadScores():
@@ -501,6 +443,64 @@ def updateInfoLine():
     informationLine.append(cnv.create_text(480, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"УРОВЕНЬ: {level}"))
     informationLine.append(cnv.create_text(650, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"ШТРАФЫ: -{penalty}"))
 
+# Сброс всего подчистую с установкой первого уровня
+def globalReset():
+    global level, score, penalty, playGame, playerSpeed, lives
+    playGame = False
+    playerSpeed = 5
+    level = 1
+    score = 0
+    penalty = 0
+    lives = 3
+
+# Перезапуск игры полностью
+def restartGame():
+    globalReset()
+    reset()
+    showScores(-1)
+
+# Сброс и формирование объектов игрового мира
+def reset():
+    global invadersObject, invadersWidth, invadersHeight, invadersSpeed, leftInvadersBorder, rightInvadersBorder, player, maxY, rocketObject, invadersRocket
+
+    cnv.delete(ALL)
+    cnv.create_image(WIDTH // 2, HEIGHT // 2, image=backGround)
+    cnv.focus_set()                             # Обработчик событий (нажатие клавиш)
+
+    rocketObject = None
+    invadersRocket = None
+    invadersSpeed = 3 + level // 5              # Вычисление горизонтальной скорости перемещения инопланетян(пиксели за ход)
+
+    # Вычисление прямоугольника инопланетян(ШxВ)
+    invadersWidth = (1 + int(level // 3)) * 2
+    invadersHeight = 2 + (level // 4)
+
+    # Максимальное значение армады 14x8
+    if (invadersWidth > 14):                    # Ограничиваем ширину в 14 единиц в независимости от повышения уровня
+        invadersWidth = 14
+    if (invadersHeight > 8):                    # Ограничиваем высоту в 8 единиц в независимости от повышения уровня
+        invadersHeight = 8
+
+    maxY = (invadersHeight - 1) * 10 + SQUARE_SIZE * invadersHeight + SQUARE_SIZE // 2
+
+    invadersObject = []                         # Двумерный список инопланетян
+    for i in range(invadersWidth):
+        for j in range(invadersHeight):
+            rang = randint(0, level // 8)       # После 8 уровня начинают появляться более сложные экземпляры
+            if (rang > 2):                      # С максимальной сложностью = 2
+                rang = 2
+            posX = SQUARE_SIZE // 2 + (WIDTH // 2 - (invadersWidth * (SQUARE_SIZE + 10)) // 2) + i * SQUARE_SIZE + i * 10
+            posY = 20 + j * 10 + j * SQUARE_SIZE
+            invadersObject.append([cnv.create_image(posX, posY, image=invadersTexture[rang * 2]), rang])
+
+    # Левая и правая границы блока для рассчёта столкновения с границами окна
+    leftInvadersBorder = cnv.coords(invadersObject[0][0])[0]
+    rightInvadersBorder = cnv.coords(invadersObject[len(invadersObject) - 1][0])[0]
+
+    player = [cnv.create_image(WIDTH // 2, HEIGHT - SQUARE_SIZE * 2, image=playerTexture), 1]
+
+    updateInfoLine() # Обновляем информационный текст внизу экрана
+    mainloop()       # Запускаем игру
 
 # Создание окна
 root = Tk()
@@ -566,9 +566,9 @@ for fileName in rocketsFiles:
     rocketTexture.append(PhotoImage(file=f"image/rocket/{fileName}"))
 
 rocketObject = None
-rocketSpeedDefault = 8   # Начальная скорость выпущенной игроком ракеты выше, нежели скорость вражеской (1:8)
-rocketSpeedY = rocketSpeedDefault
-rocketScale = 1.05
+rocketSpeedYDefault = 8            # Начальная скорость выпущенной игроком ракеты выше, нежели скорость вражеской (1:8)
+rocketSpeedY = rocketSpeedYDefault # Скорость ракеты по Y
+rocketScale = 1.05                # Коэфициент ускорения ракеты выпущенной игроком
 
 # ===ТЕКСТУРА ВЗРЫВА====================================
 explosionFiles = ["expl01.png", "expl02.png", "expl03.png", "expl04.png", "expl05.png", "expl06.png", "expl07.png", "expl08.png"]
