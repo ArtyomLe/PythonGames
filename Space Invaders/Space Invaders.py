@@ -24,40 +24,6 @@ def getRocketX():
 def getRocketY():
     return cnv.coords(rocketObject)[1]
 
-# Анимация полёта вражеской ракеты
-def animationInvadersRocket():
-    global invadersRocket, invadersRocketSpeed, lives
-
-    if (not playGame):
-        invadersRocket = None
-        invadersRocketSpeed = invadersRocketSpeedDefault
-        return 0
-
-    # Смещаем ракету
-    cnv.move(invadersRocket, invadersSpeed / 2, int(invadersRocketSpeed))
-
-    invadersRocketSpeed *= invadersRocketSpeedScale
-    # Помещаем координаты ракеты в переменные
-    x = cnv.coords(invadersRocket)[0]
-    y = cnv.coords(invadersRocket)[1]
-    # Расчитываем попадание в игрока
-    if (y > getPlayerY() - SQUARE_SIZE // 2): # Если Y ракеты больше чем у игрока (начало координат в верхней левой точке)
-        if (x > getPlayerX() - SQUARE_SIZE and x < getPlayerX() + SQUARE_SIZE): # А Х находится между левой и правой границой игрока
-            animationExplosion(7, getPlayerX(), getPlayerY()) # Если попали (отрисовка текстуры взрыва с индекса 7 (список explotionTexture))
-            Beep(400, 2)
-            Beep(550, 2)
-            Beep(570, 3)
-            y = HEIGHT                                        # Удаляем текстуру чтобы можно было выпустить след. ракету (потому что попали)
-            lives -= 1                                        # Отнимаем жизнь
-            cnv.coords(player[0], WIDTH // 2, getPlayerY())   # Возвращаем игрока на середину (начальную позицию)
-
-    if (y < HEIGHT):                                          # Повторный запуск ракеты
-        root.after(20, animationInvadersRocket)
-    else:                                                     # Если ракета не попала и вылетела за границы окна то удаляем её текстуру
-        cnv.delete(invadersRocket)
-        invadersRocket = None                                 # Задаём скорость по умолчанию
-        invadersRocketSpeed = invadersRocketSpeedDefault
-
 # Загрузка очков из scores.dat (Список содержит имя игрока и кол-во очков)
 def loadScores():
     ret = []
@@ -243,6 +209,62 @@ def updateInfoLine():
     informationLine.append(cnv.create_text(320, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"ЖИЗНИ: {lives}"))
     informationLine.append(cnv.create_text(480, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"УРОВЕНЬ: {level}"))
     informationLine.append(cnv.create_text(650, 440, fill="#ABCDEF", anchor="nw", font=f", 12", text=f"ШТРАФЫ: -{penalty}"))
+
+# Показываем кнопки меню
+def showMenu():
+    global menu1, menu2, onMenu
+    if (not onMenu):
+        menu1.place(x=235, y=37)
+        menu2.place(x=235, y=97)
+        showScores(-1)
+        onMenu = True
+    else:
+        hideMenu()
+
+# Скрываем кнопки меню, меняя их координаты
+def hideMenu():
+    global menu1, menu2, onMenu
+    if (onMenu):
+        menu1.place(x=-100, y=-100)
+        menu2.place(x=-100, y=-100)
+        onMenu = False
+        hideScores() # Скрываем таблицу очков
+    else:
+        showMenu()
+
+# Анимация полёта вражеской ракеты
+def animationInvadersRocket():
+    global invadersRocket, invadersRocketSpeed, lives
+
+    if (not playGame):
+        invadersRocket = None
+        invadersRocketSpeed = invadersRocketSpeedDefault
+        return 0
+
+    # Смещаем ракету
+    cnv.move(invadersRocket, invadersSpeed / 2, int(invadersRocketSpeed))
+
+    invadersRocketSpeed *= invadersRocketSpeedScale
+    # Помещаем координаты ракеты в переменные
+    x = cnv.coords(invadersRocket)[0]
+    y = cnv.coords(invadersRocket)[1]
+    # Расчитываем попадание в игрока
+    if (y > getPlayerY() - SQUARE_SIZE // 2): # Если Y ракеты больше чем у игрока (начало координат в верхней левой точке)
+        if (x > getPlayerX() - SQUARE_SIZE and x < getPlayerX() + SQUARE_SIZE): # А Х находится между левой и правой границой игрока
+            animationExplosion(7, getPlayerX(), getPlayerY()) # Если попали (отрисовка текстуры взрыва с индекса 7 (список explotionTexture))
+            Beep(400, 2)
+            Beep(550, 2)
+            Beep(570, 3)
+            y = HEIGHT                                        # Удаляем текстуру чтобы можно было выпустить след. ракету (потому что попали)
+            lives -= 1                                        # Отнимаем жизнь
+            cnv.coords(player[0], WIDTH // 2, getPlayerY())   # Возвращаем игрока на середину (начальную позицию)
+
+    if (y < HEIGHT):                                          # Повторный запуск ракеты
+        root.after(20, animationInvadersRocket)
+    else:                                                     # Если ракета не попала и вылетела за границы окна то удаляем её текстуру
+        cnv.delete(invadersRocket)
+        invadersRocket = None                                 # Задаём скорость по умолчанию
+        invadersRocketSpeed = invadersRocketSpeedDefault
 
 # Стартуем ракету врага
 def startInvadersRocket():
